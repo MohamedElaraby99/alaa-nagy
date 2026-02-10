@@ -9,6 +9,7 @@ import { getFeaturedCourses } from "../Redux/Slices/CourseSlice";
 import { getAllStages } from "../Redux/Slices/StageSlice";
 import { generateImageUrl } from "../utils/fileUtils";
 import AnimatedHero from "../Components/AnimatedHero";
+import DownloadApp from "../Components/DownloadApp";
 import { CONTACT, SOCIAL_MEDIA, PAYMENT } from "../Constants/LayoutConfig";
 // Lazy load components
 const FAQAccordion = lazy(() => import("../Components/FAQAccordion"));
@@ -121,42 +122,6 @@ export default function HomePage() {
   const onGetStarted = () => {
     // Navigate to signup page
     window.location.href = '/signup';
-  };
-
-  // APK Download Handler
-  const handleAPKDownload = () => {
-    // Create a download link for the APK file
-    const link = document.createElement('a');
-    link.href = '/downloads/mrayman.apk'; // Update this path to your APK file location
-    link.download = 'mrayman.apk';
-    link.target = '_blank';
-
-    // Fallback for mobile browsers
-    if (navigator.userAgent.toLowerCase().indexOf('android') > -1) {
-      // For Android devices, open the download directly
-      window.open('/downloads/mrayman.apk', '_blank');
-    } else {
-      // For other devices, trigger download
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
-
-    // Show download started message
-    if (window.toast) {
-      window.toast.success('بدأ تحميل التطبيق...');
-    }
-  };
-
-  // Google Play Store redirect (for future when app is published)
-  const handlePlayStoreRedirect = () => {
-    // Replace with your actual Google Play Store URL when published
-    // Show a "Coming Soon" message instead of redirecting
-    if (window.toast) {
-      window.toast.info('قريباً على Google Play!');
-    } else {
-      alert('قريباً على Google Play!');
-    }
   };
 
   const formatDate = (dateString) => {
@@ -532,6 +497,9 @@ export default function HomePage() {
         </div>
       </section>
 
+         {/* Download Android App Section */}
+         <DownloadApp />
+
       {/* Features Section - What You'll Find on the Platform */}
       <section className={`py-20 bg-white dark:bg-gray-800 transition-all duration-700 ease-out ${heroLoaded
         ? 'opacity-100 translate-y-0'
@@ -672,6 +640,8 @@ export default function HomePage() {
         </div>
       </section>
 
+
+
       {/* Featured Subjects Section */}
       {/* <section className={`py-20 bg-gray-50 dark:bg-gray-900 transition-all duration-700 ease-out ${
         heroLoaded 
@@ -800,7 +770,7 @@ export default function HomePage() {
         </div>
       </section>
 
-
+     
 
       {/* Static FAQ Section */}
       <section className="py-16 px-4 lg:px-20 bg-gradient-to-br from-gray-50 to-primary-light/10 dark:from-gray-900 dark:to-gray-800" dir="rtl">
