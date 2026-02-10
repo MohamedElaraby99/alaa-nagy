@@ -1,5 +1,5 @@
 import app from "./app.js";
-const PORT = process.env.PORT || 4090;
+const PORT = process.env.PORT || 4092;
 // Set default environment variables if not provided
 process.env.JWT_SECRET = process.env.JWT_SECRET || 'Sasaomar123@';
 process.env.JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET || process.env.JWT_SECRET || 'Sasaomar123@';

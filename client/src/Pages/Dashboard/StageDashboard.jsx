@@ -160,7 +160,7 @@ export default function StageDashboard() {
     });
     // Set existing image preview
     if (stage.image?.secure_url) {
-      const baseUrl = import.meta.env.VITE_REACT_APP_API_URL?.replace('/api/v1', '') || 'http://localhost:4090';
+      const baseUrl = import.meta.env.VITE_REACT_APP_API_URL?.replace('/api/v1', '') || 'http://localhost:4092';
       setImagePreview(`${baseUrl}${stage.image.secure_url}`);
     } else {
       setImagePreview(null);

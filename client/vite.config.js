@@ -8,7 +8,7 @@ export default defineConfig({
     'import.meta.env.VITE_REACT_APP_API_URL': JSON.stringify(
       process.env.NODE_ENV === 'production'
         ? 'https://api.alaanagi.online/api/v1'
-        : (process.env.VITE_REACT_APP_API_URL || 'http://localhost:4090/api/v1')
+        : (process.env.VITE_REACT_APP_API_URL || 'http://localhost:4092/api/v1')
     )
   },
   build: {

@@ -265,7 +265,7 @@ export default function HomePage() {
                   (c.stage?._id || c.stage?.id || c.stage) === stageId
                 ).length || 0;
                 const stageImage = stage.image?.secure_url;
-                const baseUrl = import.meta.env.VITE_REACT_APP_API_URL?.replace('/api/v1', '') || 'http://localhost:4090';
+                const baseUrl = import.meta.env.VITE_REACT_APP_API_URL?.replace('/api/v1', '') || 'http://localhost:4092';
 
                 return (
                   <Link

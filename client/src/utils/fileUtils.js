@@ -13,7 +13,7 @@ const getBaseApiUrl = () => {
     window.location.hostname === '127.0.0.1' ||
     window.location.port === '5173' ||
     window.location.port === '5190') {
-    const devUrl = 'http://localhost:4090/api/v1';
+    const devUrl = 'http://localhost:4092/api/v1';
 
     return devUrl;
   }
