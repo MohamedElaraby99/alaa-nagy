@@ -74,8 +74,8 @@ const VideoScheduler = ({
       <div className="flex items-center gap-2">
         {isScheduled ? (
           <div className="flex items-center gap-2 text-sm">
-            <FaClock className="text-green-500" />
-            <span className="text-green-600 font-medium">
+            <FaClock className="text-blue-500" />
+            <span className="text-blue-600 font-medium">
               {isPublished() ? 'Published' : 'Scheduled'}
             </span>
             {scheduledPublishDate && (
@@ -86,14 +86,14 @@ const VideoScheduler = ({
           </div>
         ) : (
           <div className="flex items-center gap-2 text-sm text-gray-500">
-            <FaEye className="text-green-500" />
+            <FaEye className="text-blue-500" />
             <span>Available Now</span>
           </div>
         )}
         
         <button
           onClick={() => setShowScheduler(!showScheduler)}
-          className="text-green-500 hover:text-green-700 text-sm font-medium"
+          className="text-blue-500 hover:text-blue-700 text-sm font-medium"
         >
           {isScheduled ? 'Edit Schedule' : 'Schedule Video'}
         </button>
@@ -104,7 +104,7 @@ const VideoScheduler = ({
         <div className="absolute top-full left-0 mt-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-4 z-10 min-w-80">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <FaCalendar className="text-green-500" />
+              <FaCalendar className="text-blue-500" />
               <h4 className="font-medium text-gray-900 dark:text-white">
                 Schedule Video Publication
               </h4>
@@ -116,7 +116,7 @@ const VideoScheduler = ({
                   type="checkbox"
                   checked={isScheduling}
                   onChange={(e) => setIsScheduling(e.target.checked)}
-                  className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                 />
                 <span className="text-sm text-gray-700 dark:text-gray-300">
                   Schedule this video for later publication
@@ -133,7 +133,7 @@ const VideoScheduler = ({
                     value={scheduledDate}
                     onChange={(e) => setScheduledDate(e.target.value)}
                     min={new Date().toISOString().slice(0, 16)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                   />
                   <p className="text-xs text-gray-500 mt-1">
                     Select when this video should become available to students
@@ -146,7 +146,7 @@ const VideoScheduler = ({
               <button
                 onClick={handleScheduleUpdate}
                 disabled={loading}
-                className="flex-1 bg-green-500 text-white px-3 py-2 rounded-lg hover:bg-green-600 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                className="flex-1 bg-blue-500 text-white px-3 py-2 rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
               >
                 {loading ? 'Updating...' : isScheduling ? 'Schedule Video' : 'Remove Schedule'}
               </button>

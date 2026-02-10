@@ -24,7 +24,7 @@ const PricingSection = () => {
       period: "per month",
       description: "Most popular choice",
       icon: FaRocket,
-      color: "bg-green-500",
+      color: "bg-blue-500",
       features: [
         "Access to all courses",
         "Priority support",
@@ -41,7 +41,7 @@ const PricingSection = () => {
       period: "per month",
       description: "For teams and organizations",
       icon: FaCrown,
-      color: "bg-green-500",
+      color: "bg-blue-500",
       features: [
         "Everything in Pro",
         "Team management",
@@ -72,13 +72,13 @@ const PricingSection = () => {
             <div 
               key={index}
               className={`relative bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
-                plan.popular ? 'ring-2 ring-green-500 scale-105' : ''
+                plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
               }`}
               style={{ animationDelay: `${index * 200}ms` }}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                  <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                     Most Popular
                   </span>
                 </div>
@@ -107,7 +107,7 @@ const PricingSection = () => {
               <ul className="space-y-4 mb-8">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center">
-                    <FaCheck className="text-green-500 w-5 h-5 mr-3 flex-shrink-0" />
+                    <FaCheck className="text-blue-500 w-5 h-5 mr-3 flex-shrink-0" />
                     <span className="text-gray-700 dark:text-gray-300">
                       {feature}
                     </span>
@@ -117,7 +117,7 @@ const PricingSection = () => {
 
               <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                 plan.popular
-                  ? 'bg-green-600 hover:bg-green-700 text-white transform hover:scale-105'
+                  ? 'bg-blue-600 hover:bg-blue-700 text-white transform hover:scale-105'
                   : 'bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white'
               }`}>
                 {plan.name === "Free" ? "Get Started" : "Choose Plan"}
@@ -130,7 +130,7 @@ const PricingSection = () => {
           <p className="text-gray-600 dark:text-gray-400 mb-4">
             All plans include a 30-day money-back guarantee
           </p>
-          <button className="text-green-600 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300 font-semibold">
+          <button className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-semibold">
             View detailed comparison →
           </button>
         </div>

@@ -71,34 +71,25 @@ const AnimatedHero = ({ onGetStarted }) => {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Illustration (Top on mobile) */}
           <div className="relative order-1 lg:order-2">
-            <div className="relative">
+            <div className="relative inline-block p-4 rounded-full ring-4 ring-blue-500 dark:ring-blue-400">
               <img
                 src={HERO.teacherImageUrl || logo}
                 alt={BRAND.teacherName}
-                className="w-100 h-100 object-contain relative z-10 animate-float"
+                className="w-100 h-100 object-contain relative z-10 rounded-full"
               />
-              {/* Subtle glow effect behind logo */}
-              <div className={`absolute inset-0 w-full h-full rounded-full blur-3xl transition-all duration-300 ${isDarkMode ? 'bg-primary/20' : 'bg-primary/30'}`}></div>
             </div>
-
-            {/* Small Circles */}
-
-            <div className={`absolute top-16 right-16 w-3 h-3 rounded-full transition-colors duration-300 ${isDarkMode ? 'bg-primary-light' : 'bg-primary/30'}`}></div>
-            <div className={`absolute bottom-16 left-16 w-5 h-5 rounded-full transition-colors duration-300 ${isDarkMode ? 'bg-primary-light' : 'bg-primary/30'}`}></div>
-            <div className={`absolute bottom-8 right-8 w-3 h-3 rounded-full transition-colors duration-300 ${isDarkMode ? 'bg-primary-light' : 'bg-primary/30'}`}></div>
-
           </div>
 
           {/* Right Side - Text Content (Bottom on mobile) */}
           <div className="text-right space-y-6 order-2 lg:order-1 relative z-10">
-            <div className="inline-flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 bg-primary-light/20 text-primary dark:text-primary-light rounded-full text-xs md:text-sm font-medium font-cairo">{HERO.topText}</div>
+            <div className="inline-flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 bg-primary-light/20 text-primary dark:text-primary-light rounded-full text-[0.65rem] font-medium font-cairo">{HERO.topText}</div>
             <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight transition-colors duration-300 text-primary dark:text-primary-light">
               {HERO.mainTitle}
             </h1>
 
-            <p className={`text-2xl leading-relaxed max-w-2xl transition-colors duration-300 ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>
+            <h2 className="text-2xl lg:text-3xl font-extrabold leading-tight transition-colors duration-300 text-primary dark:text-primary-light">
               {HERO.subtitle}
-            </p>
+            </h2>
 
             <div className="pt-6">
               <button
@@ -106,7 +97,7 @@ const AnimatedHero = ({ onGetStarted }) => {
                 className="btn-primary px-8 py-4 rounded-lg text-xl font-semibold shadow-lg hover:shadow-xl relative overflow-hidden group"
               >
                 {/* Button background effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <span className="relative z-10">{HERO.ctaButtonText}</span>
               </button>
             </div>

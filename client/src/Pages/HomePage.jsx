@@ -168,10 +168,10 @@ export default function HomePage() {
   };
 
   const stats = [
-    { icon: FaUsers, number: "10K+", label: "طالب مسجل", color: "text-green-600" },
-    { icon: FaGraduationCap, number: "100+", label: "مادة متاحة", color: "text-green-600" },
+    { icon: FaUsers, number: "10K+", label: "طالب مسجل", color: "text-blue-600" },
+    { icon: FaGraduationCap, number: "100+", label: "مادة متاحة", color: "text-blue-600" },
     { icon: FaStar, number: "4.9", label: "متوسط التقييم", color: "text-yellow-600" },
-    { icon: FaAward, number: "50+", label: "مدرس خبير", color: "text-green-600" }
+    { icon: FaAward, number: "50+", label: "مدرس خبير", color: "text-blue-600" }
   ];
 
   const features = [
@@ -179,37 +179,37 @@ export default function HomePage() {
       icon: FaRocket,
       title: "تعلم بوتيرتك الخاصة",
       description: "جداول تعلم مرنة تناسب نمط حياتك والتزاماتك.",
-      color: "text-green-600",
-      bgColor: "bg-green-50 dark:bg-green-900/20"
+      color: "text-blue-600",
+      bgColor: "bg-blue-50 dark:bg-blue-900/20"
     },
     {
       icon: FaLightbulb,
       title: "دورات بقيادة الخبراء",
       description: "تعلم من المحترفين في المجال مع سنوات من الخبرة العملية.",
-      color: "text-green-600",
-      bgColor: "bg-green-50 dark:bg-green-900/20"
+      color: "text-blue-600",
+      bgColor: "bg-blue-50 dark:bg-blue-900/20"
     },
     {
       icon: FaShieldAlt,
       title: "التعلم المعتمد",
       description: "احصل على شهادات معترف بها من أفضل الشركات في العالم.",
-      color: "text-green-600",
-      bgColor: "bg-green-50 dark:bg-green-900/20"
+      color: "text-blue-600",
+      bgColor: "bg-blue-50 dark:bg-blue-900/20"
     },
     {
       icon: FaGlobe,
       title: "المجتمع العالمي",
       description: "تواصل مع المتعلمين من جميع أنحاء العالم وشارك الخبرات.",
-      color: "text-green-600",
-      bgColor: "bg-green-50 dark:bg-green-900/20"
+      color: "text-blue-600",
+      bgColor: "bg-blue-50 dark:bg-blue-900/20"
     }
   ];
 
   const categories = [
-    { icon: FaCode, name: "البرمجة", count: "150+ دورة", color: "bg-green-500" },
-    { icon: FaPalette, name: "التصميم", count: "120+ دورة", color: "bg-green-500" },
-    { icon: FaChartLine, name: "الأعمال", count: "200+ دورة", color: "bg-green-500" },
-    { icon: FaBookOpen, name: "التسويق", count: "180+ دورة", color: "bg-green-500" }
+    { icon: FaCode, name: "البرمجة", count: "150+ دورة", color: "bg-blue-500" },
+    { icon: FaPalette, name: "التصميم", count: "120+ دورة", color: "bg-blue-500" },
+    { icon: FaChartLine, name: "الأعمال", count: "200+ دورة", color: "bg-blue-500" },
+    { icon: FaBookOpen, name: "التسويق", count: "180+ دورة", color: "bg-blue-500" }
   ];
 
   return (
@@ -962,7 +962,7 @@ export default function HomePage() {
                 href="https://fikra.solutions/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-green-600 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300"
+                className="font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
               >
                 Fikra Software
               </a>
@@ -998,7 +998,7 @@ export default function HomePage() {
         href={`https://wa.me/2${PAYMENT.whatsappContact.phone}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed left-8 bottom-8 z-50 p-4 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 group animate-bounce"
+        className="fixed left-8 bottom-8 z-50 p-4 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 group animate-bounce"
         aria-label="Contact us on WhatsApp"
         title="تواصل معنا على واتساب"
       >

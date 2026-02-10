@@ -298,7 +298,7 @@ const AddExpenseModal = ({ isOpen, onClose, onSubmit }) => {
           >
             <div className={`flex items-center p-4 rounded-lg shadow-lg max-w-md ${
               toast.type === 'success' 
-                ? 'bg-green-500 text-white' 
+                ? 'bg-blue-500 text-white' 
                 : 'bg-red-500 text-white'
             }`}>
               <div className="flex-shrink-0">

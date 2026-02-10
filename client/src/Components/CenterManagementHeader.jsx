@@ -12,14 +12,14 @@ const CenterManagementHeader = () => {
       name: 'نظرة عامة',
       icon: FaChartLine,
       path: '/admin/center-management',
-      color: 'text-green-600 dark:text-green-400'
+      color: 'text-blue-600 dark:text-blue-400'
     },
     {
       id: 'attendance',
       name: 'إدارة الحضور',
       icon: FaQrcode,
       path: '/admin/center-management/attendance',
-      color: 'text-green-600 dark:text-green-400'
+      color: 'text-blue-600 dark:text-blue-400'
     },
     {
       id: 'groups',
@@ -40,14 +40,14 @@ const CenterManagementHeader = () => {
       name: 'إدارة المالية',
       icon: FaMoneyBillWave,
       path: '/admin/center-management/financial',
-      color: 'text-emerald-600 dark:text-emerald-400'
+      color: 'text-sky-600 dark:text-sky-400'
     },
     {
       id: 'offline-grades',
       name: ' رصد الدرجات  ',
       icon: FaGraduationCap,
       path: '/admin/center-management/offline-grades',
-      color: 'text-green-600 dark:text-green-400'
+      color: 'text-blue-600 dark:text-blue-400'
     },
     {
       id: 'achievements',
@@ -81,7 +81,7 @@ const CenterManagementHeader = () => {
           </p>
         </div>
         <div className="flex items-center space-x-2 space-x-reverse">
-          <FaChartLine className="text-3xl text-green-500" />
+          <FaChartLine className="text-3xl text-blue-500" />
         </div>
       </div>
 
@@ -98,7 +98,7 @@ const CenterManagementHeader = () => {
                 onClick={() => handleTabClick(tab.path)}
                 className={`flex items-center space-x-2 space-x-reverse py-4 px-1 border-b-2 font-medium text-sm whitespace-nowrap transition-colors ${
                   isActive
-                    ? `border-green-500 ${tab.color}`
+                    ? `border-blue-500 ${tab.color}`
                     : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600'
                 }`}
               >

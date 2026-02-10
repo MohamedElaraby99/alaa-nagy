@@ -167,7 +167,7 @@ const InstructorDashboard = () => {
       stars.push(
         <FaStar
           key={i}
-          className={`text-sm ${i <= rating ? 'text-green-400' : 'text-gray-300'}`}
+          className={`text-sm ${i <= rating ? 'text-blue-400' : 'text-gray-300'}`}
         />
       );
     }
@@ -176,7 +176,7 @@ const InstructorDashboard = () => {
 
   if (role !== 'ADMIN' && role !== 'SUPER_ADMIN') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-green-50 via-indigo-50 to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
             غير مصرح لك بالوصول إلى هذه الصفحة
@@ -191,7 +191,7 @@ const InstructorDashboard = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-green-50 via-indigo-50 to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900" dir="rtl">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900" dir="rtl">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
@@ -209,7 +209,7 @@ const InstructorDashboard = () => {
               resetForm();
               setShowModal(true);
             }}
-            className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 transition-colors"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 transition-colors"
           >
             <FaPlus />
             إضافة مدرس جديد
@@ -227,7 +227,7 @@ const InstructorDashboard = () => {
                   placeholder="البحث في المدرسين..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pr-10 pl-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full pr-10 pl-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 />
               </div>
             </div>
@@ -235,7 +235,7 @@ const InstructorDashboard = () => {
               <select
                 value={filterFeatured}
                 onChange={(e) => setFilterFeatured(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               >
                 <option value="">جميع المدرسين</option>
                 <option value="true">المدرسين المميزين</option>
@@ -253,7 +253,7 @@ const InstructorDashboard = () => {
               className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
             >
               {/* Instructor Header */}
-              <div className="relative p-6 bg-gradient-to-r from-green-500 to-green-600">
+              <div className="relative p-6 bg-gradient-to-r from-blue-500 to-blue-600">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
                     {instructor.profileImage?.secure_url ? (
@@ -273,7 +273,7 @@ const InstructorDashboard = () => {
                     </div>
                   </div>
                   {instructor.featured && (
-                    <span className="bg-green-400 text-green-900 px-2 py-1 rounded-full text-xs font-semibold">
+                    <span className="bg-blue-400 text-blue-900 px-2 py-1 rounded-full text-xs font-semibold">
                       مميز
                     </span>
                   )}
@@ -315,7 +315,7 @@ const InstructorDashboard = () => {
                         href={instructor.socialLinks.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-green-600 hover:text-green-700 transition-colors"
+                        className="text-blue-600 hover:text-blue-700 transition-colors"
                       >
                         <FaLinkedin />
                       </a>
@@ -325,7 +325,7 @@ const InstructorDashboard = () => {
                         href={instructor.socialLinks.twitter}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-green-400 hover:text-green-500 transition-colors"
+                        className="text-blue-400 hover:text-blue-500 transition-colors"
                       >
                         <FaTwitter />
                       </a>
@@ -335,7 +335,7 @@ const InstructorDashboard = () => {
                          href={instructor.socialLinks.facebook}
                          target="_blank"
                          rel="noopener noreferrer"
-                         className="text-green-600 hover:text-green-700 transition-colors"
+                         className="text-blue-600 hover:text-blue-700 transition-colors"
                        >
                          <FaFacebook />
                        </a>
@@ -348,7 +348,7 @@ const InstructorDashboard = () => {
                   <div className="flex gap-2">
                     <button
                       onClick={() => handleEdit(instructor)}
-                      className="p-2 text-green-600 hover:bg-green-50 dark:hover:bg-green-900/20 rounded-lg transition-colors"
+                      className="p-2 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg transition-colors"
                       title="تعديل"
                     >
                       <FaEdit />
@@ -413,7 +413,7 @@ const InstructorDashboard = () => {
                       type="text"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right"
+                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right"
                       required
                     />
                   </div>
@@ -425,7 +425,7 @@ const InstructorDashboard = () => {
                       type="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right"
+                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right"
                       required
                     />
                   </div>
@@ -457,7 +457,7 @@ const InstructorDashboard = () => {
                         <img
                           src={URL.createObjectURL(formData.photo)}
                           alt="New photo"
-                          className="w-16 h-16 rounded-full object-cover border-2 border-green-300"
+                          className="w-16 h-16 rounded-full object-cover border-2 border-blue-300"
                         />
                         <button
                           type="button"
@@ -480,7 +480,7 @@ const InstructorDashboard = () => {
                             setFormData({ ...formData, photo: file });
                           }
                         }}
-                        className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white file:ml-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-green-50 file:text-green-700 hover:file:bg-green-100"
+                        className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white file:ml-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
                       />
                     </div>
                   </div>
@@ -497,7 +497,7 @@ const InstructorDashboard = () => {
                     type="text"
                     value={formData.specialization}
                     onChange={(e) => setFormData({ ...formData, specialization: e.target.value })}
-                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right"
+                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right"
                   />
                 </div>
 
@@ -510,7 +510,7 @@ const InstructorDashboard = () => {
                       type="number"
                       value={formData.experience}
                       onChange={(e) => setFormData({ ...formData, experience: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right"
+                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right"
                     />
                   </div>
                   <div>
@@ -521,7 +521,7 @@ const InstructorDashboard = () => {
                       type="text"
                       value={formData.education}
                       onChange={(e) => setFormData({ ...formData, education: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right"
+                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right"
                     />
                   </div>
                 </div>
@@ -534,7 +534,7 @@ const InstructorDashboard = () => {
                     value={formData.bio}
                     onChange={(e) => setFormData({ ...formData, bio: e.target.value })}
                     rows="3"
-                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right"
+                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right"
                   />
                 </div>
 
@@ -552,7 +552,7 @@ const InstructorDashboard = () => {
                         ...formData,
                         socialLinks: { ...formData.socialLinks, linkedin: e.target.value }
                       })}
-                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right"
+                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right"
                     />
                     <input
                       type="url"
@@ -562,7 +562,7 @@ const InstructorDashboard = () => {
                         ...formData,
                         socialLinks: { ...formData.socialLinks, twitter: e.target.value }
                       })}
-                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right"
+                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right"
                     />
                                          <input
                        type="url"
@@ -572,7 +572,7 @@ const InstructorDashboard = () => {
                          ...formData,
                          socialLinks: { ...formData.socialLinks, facebook: e.target.value }
                        })}
-                       className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right"
+                       className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right"
                      />
                     <input
                       type="text"
@@ -582,7 +582,7 @@ const InstructorDashboard = () => {
                         ...formData,
                         socialLinks: { ...formData.socialLinks, whatsapp: e.target.value }
                       })}
-                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right"
+                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right"
                     />
                   </div>
                 </div>
@@ -593,7 +593,7 @@ const InstructorDashboard = () => {
                     id="featured"
                     checked={formData.featured}
                     onChange={(e) => setFormData({ ...formData, featured: e.target.checked })}
-                    className="w-4 h-4 text-green-600 bg-white border-gray-300 rounded focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    className="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                   />
                   <label htmlFor="featured" className="mr-2 text-sm font-medium text-gray-700 dark:text-gray-300">
                     مدرس مميز
@@ -614,7 +614,7 @@ const InstructorDashboard = () => {
                   </button>
                   <button
                     type="submit"
-                    className="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold transition-colors"
+                    className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
                   >
                     {editingInstructor ? 'تحديث' : 'إضافة'}
                   </button>

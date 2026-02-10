@@ -6,7 +6,7 @@ process.env.JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET || process.env.J
 process.env.JWT_ACCESS_EXPIRE = process.env.JWT_ACCESS_EXPIRE || '3650d'; // Short-lived access token
 process.env.JWT_REFRESH_EXPIRE = process.env.JWT_REFRESH_EXPIRE || '3650d'; // Very long-lived refresh token (~10 years)
 process.env.JWT_EXPIRE = process.env.JWT_EXPIRE || '150d'; // Keep for backward compatibility
-process.env.MONGODB_URI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/demo";
+process.env.MONGODB_URI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/alaanagy";
 process.env.CLIENT_URL = process.env.CLIENT_URL || 'https://demo.fikra.solutions';
 process.env.BACKEND_URL = process.env.BACKEND_URL || 'https://api.demo.fikra.solutions';
 // Ensure cookies work across subdomains in production

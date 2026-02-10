@@ -55,17 +55,17 @@ const ExamSearchDashboard = () => {
 
   // Get score color
   const getScoreColor = (score) => {
-    if (score >= 90) return 'text-green-600';
-    if (score >= 80) return 'text-green-600';
-    if (score >= 70) return 'text-green-600';
-    if (score >= 50) return 'text-green-600';
+    if (score >= 90) return 'text-blue-600';
+    if (score >= 80) return 'text-blue-600';
+    if (score >= 70) return 'text-blue-600';
+    if (score >= 50) return 'text-blue-600';
     return 'text-red-600';
   };
 
   // Get status badge
   const getStatusBadge = (passed) => {
     return passed ? (
-      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
         <FaTrophy className="w-3 h-3 mr-1" />
         ناجح
       </span>
@@ -213,12 +213,12 @@ const ExamSearchDashboard = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-green-50 via-indigo-50 to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <div className="container mx-auto px-4 py-8">
           {/* Header */}
           <div className="mb-8">
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2 text-right">
-              <FaClipboardList className="inline-block mr-3 text-green-600" />
+              <FaClipboardList className="inline-block mr-3 text-blue-600" />
               جميع الامتحانات والنتائج
             </h1>
             <p className="text-gray-600 dark:text-gray-300 text-right">
@@ -237,7 +237,7 @@ const ExamSearchDashboard = () => {
                   placeholder="البحث عن طالب أو دورة أو درس..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
 
@@ -246,7 +246,7 @@ const ExamSearchDashboard = () => {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
                   <option value="percentage">الترتيب حسب النتيجة</option>
                   <option value="name">الترتيب حسب اسم الطالب</option>
@@ -272,7 +272,7 @@ const ExamSearchDashboard = () => {
                     type="checkbox"
                     checked={showOnlyHighest}
                     onChange={(e) => setShowOnlyHighest(e.target.checked)}
-                    className="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                   />
                   <span className="text-sm text-gray-700 dark:text-gray-300">
                     أعلى الدرجات فقط
@@ -305,7 +305,7 @@ const ExamSearchDashboard = () => {
           {/* Loading State */}
           {loading ? (
             <div className="text-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto mb-4"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
               <p className="text-gray-600 dark:text-gray-300">جاري تحميل الامتحانات...</p>
             </div>
           ) : (
@@ -318,8 +318,8 @@ const ExamSearchDashboard = () => {
                     <div className="flex items-center justify-between">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <div className="w-10 h-10 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
-                            <FaBook className="text-green-600 dark:text-green-400" />
+                          <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
+                            <FaBook className="text-blue-600 dark:text-blue-400" />
                           </div>
                           <div>
                             <h3 className="text-xl font-bold text-gray-900 dark:text-white">
@@ -381,8 +381,8 @@ const ExamSearchDashboard = () => {
                           
                           <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                             examData.examType === 'training' 
-                              ? 'bg-green-100 text-green-800' 
-                              : 'bg-green-100 text-green-800'
+                              ? 'bg-blue-100 text-blue-800' 
+                              : 'bg-blue-100 text-blue-800'
                           }`}>
                             {examData.examType === 'training' ? 'تدريب' : 'امتحان نهائي'}
                           </span>
@@ -391,7 +391,7 @@ const ExamSearchDashboard = () => {
                       
                       <button
                         onClick={() => viewExamDetails(examData)}
-                        className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2"
+                        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2"
                       >
                         <FaEye />
                         عرض التفاصيل
@@ -477,8 +477,8 @@ const ExamSearchDashboard = () => {
                                 <td className="px-4 py-4 whitespace-nowrap">
                                   <div className="flex items-center">
                                     <div className="flex-shrink-0 h-8 w-8">
-                                      <div className="h-8 w-8 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center">
-                                        <FaUser className="h-4 w-4 text-green-600 dark:text-green-400" />
+                                      <div className="h-8 w-8 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center">
+                                        <FaUser className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                                       </div>
                                     </div>
                                     <div className="mr-3 text-right">
@@ -505,7 +505,7 @@ const ExamSearchDashboard = () => {
 
           {/* Top Performers Section - Only show when showing highest grades */}
           {!loading && showOnlyHighest && processExams().length > 0 && (
-            <div className="bg-gradient-to-r from-yellow-50 to-green-50 dark:from-yellow-900/20 dark:to-green-900/20 rounded-xl shadow-lg p-6 mb-8">
+            <div className="bg-gradient-to-r from-yellow-50 to-blue-50 dark:from-yellow-900/20 dark:to-blue-900/20 rounded-xl shadow-lg p-6 mb-8">
               <div className="flex items-center gap-3 mb-4">
                 <FaTrophy className="text-2xl text-yellow-600 dark:text-yellow-400" />
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white">أفضل الطلاب</h2>
@@ -524,7 +524,7 @@ const ExamSearchDashboard = () => {
                           <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${
                             index === 0 ? 'bg-yellow-500' : 
                             index === 1 ? 'bg-gray-400' : 
-                            index === 2 ? 'bg-green-600' : 'bg-green-500'
+                            index === 2 ? 'bg-blue-600' : 'bg-blue-500'
                           }`}>
                             {index + 1}
                           </div>
@@ -533,9 +533,9 @@ const ExamSearchDashboard = () => {
                           </span>
                         </div>
                         <span className={`text-lg font-bold ${
-                          exam.percentage >= 90 ? 'text-green-600' :
-                          exam.percentage >= 80 ? 'text-green-600' :
-                          exam.percentage >= 70 ? 'text-green-600' :
+                          exam.percentage >= 90 ? 'text-blue-600' :
+                          exam.percentage >= 80 ? 'text-blue-600' :
+                          exam.percentage >= 70 ? 'text-blue-600' :
                           'text-red-600'
                         }`}>
                           {exam.percentage}%
@@ -674,20 +674,20 @@ const ExamSearchDashboard = () => {
 
                 {/* Statistics */}
                 {selectedExam.students.length > 0 && (
-                  <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4 mb-6">
-                    <h4 className="font-semibold text-green-900 dark:text-green-100 mb-3">إحصائيات الامتحان</h4>
+                  <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 mb-6">
+                    <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">إحصائيات الامتحان</h4>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-green-600">
+                        <div className="text-2xl font-bold text-blue-600">
                           {selectedExam.students.length}
                         </div>
-                        <div className="text-green-700 dark:text-green-300">إجمالي الطلاب</div>
+                        <div className="text-blue-700 dark:text-blue-300">إجمالي الطلاب</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-green-600">
+                        <div className="text-2xl font-bold text-blue-600">
                           {selectedExam.students.filter(s => s.passed).length}
                         </div>
-                        <div className="text-green-700 dark:text-green-300">ناجحون</div>
+                        <div className="text-blue-700 dark:text-blue-300">ناجحون</div>
                       </div>
                       <div className="text-center">
                         <div className="text-2xl font-bold text-red-600">
@@ -696,10 +696,10 @@ const ExamSearchDashboard = () => {
                         <div className="text-red-700 dark:text-red-300">راسبون</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-green-600">
+                        <div className="text-2xl font-bold text-blue-600">
                           {Math.round(selectedExam.students.reduce((sum, s) => sum + s.percentage, 0) / selectedExam.students.length)}%
                         </div>
-                        <div className="text-green-700 dark:text-green-300">متوسط النتيجة</div>
+                        <div className="text-blue-700 dark:text-blue-300">متوسط النتيجة</div>
                       </div>
                     </div>
                   </div>

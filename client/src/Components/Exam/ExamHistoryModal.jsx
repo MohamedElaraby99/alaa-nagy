@@ -117,11 +117,11 @@ const ExamHistoryModal = ({ isOpen, onClose, exam, courseId, lessonId, examType 
             </span>
             {result && (
               <div className={`flex items-center gap-2 text-sm font-medium ${
-                isCorrect ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'
+                isCorrect ? 'text-blue-600 dark:text-blue-400' : 'text-red-600 dark:text-red-400'
               }`}>
                 {isCorrect ? (
                   <>
-                    <FaCheck className="text-green-500" />
+                    <FaCheck className="text-blue-500" />
                     <span>صحيح</span>
                   </>
                 ) : (
@@ -171,8 +171,8 @@ const ExamHistoryModal = ({ isOpen, onClose, exam, courseId, lessonId, examType 
             
             if (showAnswers) {
               if (isCorrectOption) {
-                optionClass += 'border-green-500 bg-green-50 dark:bg-green-900/20';
-                textClass = 'text-green-800 dark:text-green-200 font-semibold flex-1';
+                optionClass += 'border-blue-500 bg-blue-50 dark:bg-blue-900/20';
+                textClass = 'text-blue-800 dark:text-blue-200 font-semibold flex-1';
               } else if (isUserAnswer && !isCorrect) {
                 optionClass += 'border-red-500 bg-red-50 dark:bg-red-900/20';
                 textClass = 'text-red-800 dark:text-red-200 font-semibold flex-1';
@@ -181,8 +181,8 @@ const ExamHistoryModal = ({ isOpen, onClose, exam, courseId, lessonId, examType 
               }
             } else {
               if (isUserAnswer) {
-                optionClass += 'border-green-500 bg-green-50 dark:bg-green-900/20';
-                textClass = 'text-green-800 dark:text-green-200 font-semibold flex-1';
+                optionClass += 'border-blue-500 bg-blue-50 dark:bg-blue-900/20';
+                textClass = 'text-blue-800 dark:text-blue-200 font-semibold flex-1';
               } else {
                 optionClass += 'border-gray-200 dark:border-gray-600';
               }
@@ -192,9 +192,9 @@ const ExamHistoryModal = ({ isOpen, onClose, exam, courseId, lessonId, examType 
               <div key={optionIndex} className={optionClass}>
                 <div className={`w-5 h-5 rounded-full border-2 mr-3 flex items-center justify-center ${
                   showAnswers && isCorrectOption
-                    ? 'border-green-500 bg-green-500'
+                    ? 'border-blue-500 bg-blue-500'
                     : isUserAnswer
-                    ? 'border-green-500 bg-green-500'
+                    ? 'border-blue-500 bg-blue-500'
                     : 'border-gray-300 dark:border-gray-500'
                 }`}>
                   {(showAnswers && isCorrectOption) || isUserAnswer ? (
@@ -206,7 +206,7 @@ const ExamHistoryModal = ({ isOpen, onClose, exam, courseId, lessonId, examType 
                 {showAnswers && (
                   <div className="ml-2 flex items-center gap-2">
                     {isCorrectOption && (
-                      <span className="text-green-600 dark:text-green-400 text-sm font-semibold">
+                      <span className="text-blue-600 dark:text-blue-400 text-sm font-semibold">
                         ✓ صحيح
                       </span>
                     )}
@@ -230,7 +230,7 @@ const ExamHistoryModal = ({ isOpen, onClose, exam, courseId, lessonId, examType 
                 <span className="text-sm font-medium text-gray-600 dark:text-gray-300">إجابتك:</span>
                 <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
                   isCorrect 
-                    ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
+                    ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
                     : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
                 }`}>
                   {validUserAnswer !== undefined && questionOptions[validUserAnswer] ? questionOptions[validUserAnswer] : 'لم تجب'}
@@ -238,7 +238,7 @@ const ExamHistoryModal = ({ isOpen, onClose, exam, courseId, lessonId, examType 
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-sm font-medium text-gray-600 dark:text-gray-300">الإجابة الصحيحة:</span>
-                <span className="px-3 py-1 rounded-full text-sm font-semibold bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                <span className="px-3 py-1 rounded-full text-sm font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
                   {questionOptions[validCorrectAnswer] || 'غير متوفر'}
                 </span>
               </div>
@@ -283,9 +283,9 @@ const ExamHistoryModal = ({ isOpen, onClose, exam, courseId, lessonId, examType 
               onClick={() => setCurrentQuestionIndex(index)}
               className={`w-10 h-10 rounded-lg text-sm font-medium transition-all duration-200 ${
                 index === currentQuestionIndex
-                  ? 'bg-green-600 text-white'
+                  ? 'bg-blue-600 text-white'
                   : isCorrect === true
-                  ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 border-2 border-green-300'
+                  ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 border-2 border-blue-300'
                   : isCorrect === false
                   ? 'bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 border-2 border-red-300'
                   : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
@@ -305,11 +305,11 @@ const ExamHistoryModal = ({ isOpen, onClose, exam, courseId, lessonId, examType 
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm">
       <div className="bg-gray-100 dark:bg-gray-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[95vh] overflow-hidden">
         {/* Header */}
-        <div className="bg-gradient-to-r from-green-600 to-green-600 text-white p-6">
+        <div className="bg-gradient-to-r from-blue-600 to-blue-600 text-white p-6">
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-2xl font-bold">تاريخ الامتحان - {exam.title}</h2>
-              <p className="text-green-100 mt-1">مراجعة الأسئلة والإجابات الصحيحة</p>
+              <p className="text-blue-100 mt-1">مراجعة الأسئلة والإجابات الصحيحة</p>
             </div>
             <div className="flex items-center gap-4">
               <button
@@ -338,7 +338,7 @@ const ExamHistoryModal = ({ isOpen, onClose, exam, courseId, lessonId, examType 
 
           {loading && !examResult ? (
             <div className="text-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
               <p className="mt-4 text-gray-600 dark:text-gray-300">جاري تحميل تاريخ الامتحان...</p>
             </div>
           ) : (examResult || (examHistoryDetails && examHistoryDetails.length > 0)) ? (
@@ -393,7 +393,7 @@ const ExamHistoryModal = ({ isOpen, onClose, exam, courseId, lessonId, examType 
               </p>
               <button
                 onClick={onClose}
-                className="bg-green-600 hover:bg-green-700 text-white py-2 px-6 rounded-lg font-medium transition-colors"
+                className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-lg font-medium transition-colors"
               >
                 إغلاق
               </button>

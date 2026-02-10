@@ -383,7 +383,7 @@ const VideoController = ({
                 {youtubeVideoId && (
                   <button 
                     onClick={() => window.open(getYouTubeEmbedUrl(youtubeVideoId), '_blank')}
-                    className="mt-2 px-2 py-1 bg-green-500 text-white rounded text-xs"
+                    className="mt-2 px-2 py-1 bg-blue-500 text-white rounded text-xs"
                   >
                     Test YouTube URL
                   </button>
@@ -445,12 +445,12 @@ const VideoController = ({
                   {getVideoUrl(video) && (
                     <div className="mt-4 p-3 bg-black/30 rounded-lg">
                       <p className="text-sm text-gray-300 mb-2">Video Source:</p>
-                      <p className="text-xs text-green-400 break-all">{getVideoUrl(video)}</p>
+                      <p className="text-xs text-blue-400 break-all">{getVideoUrl(video)}</p>
                     </div>
                   )}
                   {videoState.seeking && (
                     <div className="mt-4">
-                      <FaSpinner className="animate-spin text-green-500 text-2xl mx-auto" />
+                      <FaSpinner className="animate-spin text-blue-500 text-2xl mx-auto" />
                       <p className="text-sm text-gray-400 mt-2">Seeking...</p>
                     </div>
                   )}
@@ -490,7 +490,7 @@ const VideoController = ({
                   <button
                     onClick={() => setIsBookmarked(!isBookmarked)}
                     className={`p-2 rounded-lg transition-colors ${
-                      isBookmarked ? 'text-green-500 bg-green-500/20' : 'text-white hover:bg-black/30'
+                      isBookmarked ? 'text-blue-500 bg-blue-500/20' : 'text-white hover:bg-black/30'
                     }`}
                   >
                     <FaBookmark className="text-lg" />
@@ -571,12 +571,12 @@ const VideoController = ({
                     ></div>
                     {/* Played progress */}
                     <div 
-                      className="bg-green-500 h-1 rounded-full transition-all duration-200 relative z-10"
+                      className="bg-blue-500 h-1 rounded-full transition-all duration-200 relative z-10"
                       style={{ width: `${(currentTime / duration) * 100}%` }}
                     ></div>
                     {/* Progress indicator */}
                     <div 
-                      className="absolute top-1/2 transform -translate-y-1/2 w-3 h-3 bg-green-500 rounded-full shadow-lg z-20"
+                      className="absolute top-1/2 transform -translate-y-1/2 w-3 h-3 bg-blue-500 rounded-full shadow-lg z-20"
                       style={{ left: `${(currentTime / duration) * 100}%`, marginLeft: '-6px' }}
                     ></div>
                   </div>
@@ -663,7 +663,7 @@ const VideoController = ({
                     <button
                       onClick={() => setShowCaptions(!showCaptions)}
                       className={`p-2 rounded-lg transition-colors ${
-                        showCaptions ? 'text-green-500 bg-green-500/20' : 'text-white hover:bg-black/30'
+                        showCaptions ? 'text-blue-500 bg-blue-500/20' : 'text-white hover:bg-black/30'
                       }`}
                     >
                       <FaClosedCaptioning className="text-lg" />
@@ -689,7 +689,7 @@ const VideoController = ({
 
                               }}
                               className={`block w-full text-left px-2 py-1 rounded text-sm ${
-                                playbackRate === rate ? 'bg-green-500' : 'hover:bg-white/20'
+                                playbackRate === rate ? 'bg-blue-500' : 'hover:bg-white/20'
                               }`}
                             >
                               {rate}x

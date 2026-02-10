@@ -207,21 +207,21 @@ const FinancialReportModal = ({ isOpen, onClose }) => {
 
         {/* Summary Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <div className="summary-card bg-green-100 p-4 rounded-lg text-center">
-            <h3 className="font-bold text-green-800">إجمالي الدخل</h3>
-            <p className="text-2xl font-bold text-green-900">{formatAmount(summary.totalIncome)} جنيه</p>
+          <div className="summary-card bg-blue-100 p-4 rounded-lg text-center">
+            <h3 className="font-bold text-blue-800">إجمالي الدخل</h3>
+            <p className="text-2xl font-bold text-blue-900">{formatAmount(summary.totalIncome)} جنيه</p>
           </div>
           <div className="summary-card bg-red-100 p-4 rounded-lg text-center">
             <h3 className="font-bold text-red-800">إجمالي المصروفات</h3>
             <p className="text-2xl font-bold text-red-900">{formatAmount(summary.totalExpenses)} جنيه</p>
           </div>
-          <div className="summary-card bg-green-100 p-4 rounded-lg text-center">
-            <h3 className="font-bold text-green-800">صافي الربح</h3>
-            <p className="text-2xl font-bold text-green-900">{formatAmount(summary.netProfit)} جنيه</p>
+          <div className="summary-card bg-blue-100 p-4 rounded-lg text-center">
+            <h3 className="font-bold text-blue-800">صافي الربح</h3>
+            <p className="text-2xl font-bold text-blue-900">{formatAmount(summary.netProfit)} جنيه</p>
           </div>
-          <div className="summary-card bg-green-100 p-4 rounded-lg text-center">
-            <h3 className="font-bold text-green-800">عدد المعاملات</h3>
-            <p className="text-2xl font-bold text-green-900">{formatInt(summary.totalTransactions)}</p>
+          <div className="summary-card bg-blue-100 p-4 rounded-lg text-center">
+            <h3 className="font-bold text-blue-800">عدد المعاملات</h3>
+            <p className="text-2xl font-bold text-blue-900">{formatInt(summary.totalTransactions)}</p>
           </div>
         </div>
 
@@ -329,7 +329,7 @@ const FinancialReportModal = ({ isOpen, onClose }) => {
                 name="reportType"
                 value={reportData.reportType}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-gray-700 dark:text-white"
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
               >
                 <option value="comprehensive">تقرير شامل (إيرادات ومصروفات)</option>
                 <option value="income">تقرير الإيرادات فقط</option>
@@ -350,7 +350,7 @@ const FinancialReportModal = ({ isOpen, onClose }) => {
                   name="startDate"
                   value={reportData.startDate}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-gray-700 dark:text-white"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
                   required
                 />
               </div>
@@ -364,7 +364,7 @@ const FinancialReportModal = ({ isOpen, onClose }) => {
                   name="endDate"
                   value={reportData.endDate}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-gray-700 dark:text-white"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
                   required
                 />
               </div>
@@ -422,7 +422,7 @@ const FinancialReportModal = ({ isOpen, onClose }) => {
         {toast.show && (
           <div className={`fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg transform transition-all duration-300 ${
             toast.type === 'success' 
-              ? 'bg-green-500 text-white' 
+              ? 'bg-blue-500 text-white' 
               : 'bg-red-500 text-white'
           }`}>
             <div className="flex items-center space-x-2 rtl:space-x-reverse" dir="rtl">

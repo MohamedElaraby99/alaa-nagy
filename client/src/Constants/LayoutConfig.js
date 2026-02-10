@@ -15,13 +15,13 @@
 // ============================================
 export const BRAND = {
     // اسم المنصة
-    platformName: "فكرة",
+    platformName: "منصة مستر علاء ناجي",
     // اسم المعلم
-    teacherName: "منصة فكرة",
+    teacherName: "مستر علاء ناجي",
     // الاسم الكامل
-    fullName: "فكرة",
+    fullName: "منصة مستر علاء ناجي",
     // وصف قصير
-    shortDescription: "منصة الفكرة",
+    shortDescription: "مدرس مادة العلوم والكيمياء ",
     // الشعار (اتركه فارغاً لاستخدام الشعار الافتراضي)
     // يمكنك وضع رابط صورة هنا
     logoUrl: "",
@@ -40,7 +40,7 @@ export const NAVBAR = {
     // لون الخلفية (يمكنك تغييره لـ tailwind classes)
     bgColor: "bg-white dark:bg-gray-900",
     // لون الخط الملون أعلى النافبار
-    accentLineColors: "from-green-400 via-green-500 to-emerald-600",
+    accentLineColors: "from-blue-400 via-blue-500 to-blue-600",
     // ارتفاع النافبار
     height: "h-16 md:h-20",
 };
@@ -50,11 +50,11 @@ export const NAVBAR = {
 // ============================================
 export const HERO = {
     // العنوان الرئيسي
-    mainTitle: "منصتك المتكاملة للتفوق والتميز ",
+    mainTitle: "منصتك المتكاملة للتفوق والتميز",
     // العنوان الفرعي
-    subtitle: "لو انت اولى او تانية او تالته اتأكد ان هنا المكان الصح عشان تتميز ",
+    subtitle: "مدرس مادة العلوم والكيمياء ",
     // النص أعلى العنوان
-    topText: "🎓 تعلم الفكرة بطريقة عملية وممتعة!",
+    topText: "🎓 العلوم والكيمياء - تعلم بطريقة عملية وممتعة!",
     // نص زر الاشتراك
     ctaButtonText: "اشترك دلوقتي ! 🤩",
     // رابط زر الاشتراك
@@ -64,7 +64,7 @@ export const HERO = {
     // إظهار صورة المعلم
     showTeacherImage: true,
     // لون الخلفية
-    bgGradient: "from-green-50 via-white to-emerald-50",
+    bgGradient: "from-blue-50 via-white to-blue-50",
 };
 
 // ============================================
@@ -72,10 +72,10 @@ export const HERO = {
 // ============================================
 export const CONTACT = {
     // رقم الحجز والاستفسارات
-    bookingPhone: "+201207039410",
+    bookingPhone: "+201008769549",
     bookingPhoneLabel: "الحجز والاستفسارات",
     // رقم الدعم الفني
-    supportPhone: "+201207039410",
+    supportPhone: "+201008769549",
     supportPhoneLabel: "الدعم الفني",
     // البريد الإلكتروني
     email: "support@mansety.com",
@@ -91,17 +91,17 @@ export const CONTACT = {
 // ============================================
 export const SOCIAL_MEDIA = {
     facebook: {
-        url: "https://www.facebook.com/",
+        url: "https://www.facebook.com/@mr.alaanagi",
         label: "Facebook",
         enabled: true,
     },
     youtube: {
-        url: "https://youtube.com/",
+        url: "https://www.youtube.com/@mr.alaanagi",
         label: "YouTube",
         enabled: true,
     },
     tiktok: {
-        url: "https://www.tiktok.com/",
+        url: "https://www.tiktok.com/@3laanagi22?_r=1&_t=ZS-93oXgyM1hEW",
         label: "Tiktok",
         enabled: true,
     },
@@ -116,7 +116,7 @@ export const SOCIAL_MEDIA = {
         enabled: false,
     },
     whatsapp: {
-        url: "https://wa.me/201207039410",
+        url: "https://wa.me/201008769549",
         label: "WhatsApp",
         enabled: true,
     },
@@ -154,20 +154,20 @@ export const FOOTER = {
 export const PAYMENT = {
     // واتساب للحصول على كود شحن
     whatsappForCodes: {
-        phone: "01555559887",
+        phone: "01008769549",
         label: "للحصول على كود شحن - تواصل معنا على واتساب",
         enabled: true,
     },
     // رقم واتساب للتواصل
     whatsappContact: {
-        phone: "01080808667",
+        phone: "01008769549",
         label: "رقم الواتساب",
         description: "متاح على مدار 24/7",
         enabled: true,
     },
     // فودافون كاش
     vodafoneCash: {
-        phone: "01080808667",
+        phone: "01008769549",
         label: "رقم فودافون كاش",
         description: "ادفع المبلغ وسيصلك الكود فوراً",
         enabled: true,
@@ -189,7 +189,7 @@ export const PAYMENT = {
 // ============================================
 export const SIDEBAR = {
     // عنوان السايدبار
-    title: "منصة م/ كريم جابر",
+    title: "منصة مستر علاء ناجي",
     // إظهار رصيد المحفظة
     showWalletBalance: true,
     // ألوان السايدبار
@@ -205,29 +205,29 @@ export const SIDEBAR = {
  * 2. غيّر قيم CSS variables في قسم :root
  * 
  * أمثلة للألوان الشائعة:
- * - أخضر (الحالي): #22c55e
- * - أزرق: #3b82f6
+ * - أزرق (الحالي): #3b82f6
+ * - أخضر: #22c55e
  * - بنفسجي: #8b5cf6
  * - أحمر: #ef4444
  * - برتقالي: #f97316
  */
 export const COLORS = {
-    // اللون الرئيسي (أخضر)
+    // اللون الرئيسي (أزرق)
     primary: {
-        50: "#f0fdf4",    // خلفية فاتحة جداً
-        100: "#dcfce7",   // خلفية فاتحة
-        200: "#bbf7d0",
-        300: "#86efac",
-        400: "#4ade80",   // نص في الوضع الداكن
-        500: "#22c55e",   // اللون الأساسي
-        600: "#16a34a",   // hover
-        700: "#15803d",
-        gradient: "from-green-500 via-green-600 to-emerald-600",
+        50: "#eff6ff",
+        100: "#dbeafe",
+        200: "#bfdbfe",
+        300: "#93c5fd",
+        400: "#60a5fa",
+        500: "#3b82f6",
+        600: "#2563eb",
+        700: "#1d4ed8",
+        gradient: "from-blue-500 via-blue-600 to-blue-700",
     },
-    // اللون الثانوي (زمردي)
+    // اللون الثانوي
     secondary: {
-        500: "#10b981",
-        gradient: "from-emerald-500 to-teal-600",
+        500: "#0ea5e9",
+        gradient: "from-sky-500 to-blue-600",
     },
     // لون التمييز (ذهبي)
     accent: {
@@ -236,8 +236,8 @@ export const COLORS = {
     },
     // أسماء الألوان للاستخدام في الكود
     tailwind: {
-        primary: "green",      // غيّر هذا لتغيير اللون (green, blue, purple, red, orange)
-        secondary: "emerald",
+        primary: "blue",
+        secondary: "sky",
         accent: "amber",
     }
 };

@@ -107,14 +107,14 @@ const ApiTest = () => {
         <button
           onClick={testApiConnection}
           disabled={loading}
-          className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 disabled:opacity-50"
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 disabled:opacity-50"
         >
           {loading ? 'Testing...' : 'Test API Health'}
         </button>
         <button
           onClick={testCaptcha}
           disabled={loading}
-          className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 disabled:opacity-50"
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 disabled:opacity-50"
         >
           {loading ? 'Testing...' : 'Test CAPTCHA'}
         </button>
@@ -122,7 +122,7 @@ const ApiTest = () => {
 
       {/* Test Results */}
       {testResult && (
-        <div className={`p-4 rounded-lg ${testResult.success ? 'bg-green-100' : 'bg-red-100'}`}>
+        <div className={`p-4 rounded-lg ${testResult.success ? 'bg-blue-100' : 'bg-red-100'}`}>
           <h3 className="font-semibold mb-2">
             {testResult.success ? '✅ Test Successful' : '❌ Test Failed'}
             {testResult.endpoint && ` - ${testResult.endpoint}`}

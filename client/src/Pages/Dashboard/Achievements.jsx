@@ -328,16 +328,16 @@ const Achievements = () => {
   const getRankIcon = (rank) => {
     if (rank === 1) return <FaTrophy className="text-yellow-500 text-xl" />;
     if (rank === 2) return <FaMedal className="text-gray-400 text-xl" />;
-    if (rank === 3) return <FaMedal className="text-green-500 text-xl" />;
+    if (rank === 3) return <FaMedal className="text-blue-500 text-xl" />;
     return <span className="text-gray-600 font-semibold">{rank}</span>;
   };
 
   const getAchievementLevelBadge = (level) => {
     const levelColors = {
       'نجم': 'bg-yellow-100 text-yellow-800 border-yellow-200',
-      'متفوق': 'bg-green-100 text-green-800 border-green-200',
+      'متفوق': 'bg-blue-100 text-blue-800 border-blue-200',
       'متقدم': 'bg-teal-100 text-teal-800 border-teal-200',
-      'مبتدئ': 'bg-green-100 text-green-800 border-green-200'
+      'مبتدئ': 'bg-blue-100 text-blue-800 border-blue-200'
     };
     
     return (
@@ -396,8 +396,8 @@ const Achievements = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
               <div className="flex items-center">
-                <div className="p-3 bg-green-100 dark:bg-green-900 rounded-lg">
-                  <FaUsers className="text-2xl text-green-600" />
+                <div className="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg">
+                  <FaUsers className="text-2xl text-blue-600" />
                 </div>
                 <div className="mr-4">
                   <p className="text-sm font-medium text-gray-600 dark:text-gray-400">إجمالي الطلاب</p>
@@ -408,8 +408,8 @@ const Achievements = () => {
 
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
               <div className="flex items-center">
-                <div className="p-3 bg-green-100 dark:bg-green-900 rounded-lg">
-                  <FaChartLine className="text-2xl text-green-600" />
+                <div className="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg">
+                  <FaChartLine className="text-2xl text-blue-600" />
                 </div>
                 <div className="mr-4">
                   <p className="text-sm font-medium text-gray-600 dark:text-gray-400">متوسط النقاط</p>
@@ -454,20 +454,20 @@ const Achievements = () => {
                 <p className="text-2xl font-bold text-yellow-600">{achievementLevelStats.نجم}</p>
                 <p className="text-sm text-yellow-700 dark:text-yellow-300">نجم</p>
               </div>
-              <div className="text-center p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
-                <FaTrophy className="text-3xl text-green-500 mx-auto mb-2" />
-                <p className="text-2xl font-bold text-green-600">{achievementLevelStats.متفوق}</p>
-                <p className="text-sm text-green-700 dark:text-green-300">متفوق</p>
+              <div className="text-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                <FaTrophy className="text-3xl text-blue-500 mx-auto mb-2" />
+                <p className="text-2xl font-bold text-blue-600">{achievementLevelStats.متفوق}</p>
+                <p className="text-sm text-blue-700 dark:text-blue-300">متفوق</p>
               </div>
               <div className="text-center p-4 bg-teal-50 dark:bg-teal-900/20 rounded-lg">
                 <FaMedal className="text-3xl text-teal-500 mx-auto mb-2" />
                 <p className="text-2xl font-bold text-teal-600">{achievementLevelStats.متقدم}</p>
                 <p className="text-sm text-teal-700 dark:text-teal-300">متقدم</p>
               </div>
-              <div className="text-center p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
-                <FaAward className="text-3xl text-green-500 mx-auto mb-2" />
-                <p className="text-2xl font-bold text-green-600">{achievementLevelStats.مبتدئ}</p>
-                <p className="text-sm text-green-700 dark:text-green-300">مبتدئ</p>
+              <div className="text-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                <FaAward className="text-3xl text-blue-500 mx-auto mb-2" />
+                <p className="text-2xl font-bold text-blue-600">{achievementLevelStats.مبتدئ}</p>
+                <p className="text-sm text-blue-700 dark:text-blue-300">مبتدئ</p>
               </div>
             </div>
           </div>
@@ -568,7 +568,7 @@ const Achievements = () => {
                           {getAchievementLevelBadge(student.achievementLevel)}
                         </td>
                         <td className="px-4 py-3">
-                          <span className="px-2 py-1 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 rounded-full text-xs font-medium">
+                          <span className="px-2 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded-full text-xs font-medium">
                             {(student.totalPoints || 0).toFixed(1)}
                           </span>
                         </td>
@@ -588,12 +588,12 @@ const Achievements = () => {
                           <div className="flex items-center space-x-2 space-x-reverse">
                             <button 
                               onClick={() => handleViewUserInfo(student)}
-                              className="p-2 text-green-600 hover:bg-green-100 dark:hover:bg-green-900 rounded-lg transition-colors"
+                              className="p-2 text-blue-600 hover:bg-blue-100 dark:hover:bg-blue-900 rounded-lg transition-colors"
                               title="عرض معلومات الطالب"
                             >
                               <FaUser />
                             </button>
-                            <button className="p-2 text-green-600 hover:bg-green-100 dark:hover:bg-green-900 rounded-lg transition-colors">
+                            <button className="p-2 text-blue-600 hover:bg-blue-100 dark:hover:bg-blue-900 rounded-lg transition-colors">
                               <FaStar />
                             </button>
                             <button className="p-2 text-purple-600 hover:bg-purple-100 dark:hover:bg-purple-900 rounded-lg transition-colors">
@@ -614,10 +614,10 @@ const Achievements = () => {
         {message.show && (
           <div className={`fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg transform transition-all duration-300 ${
             message.type === 'success' 
-              ? 'bg-green-500 text-white' 
+              ? 'bg-blue-500 text-white' 
               : message.type === 'error'
               ? 'bg-red-500 text-white'
-              : 'bg-green-500 text-white'
+              : 'bg-blue-500 text-white'
           }`}>
             <div className="flex items-center space-x-2 space-x-reverse">
               <span>{message.text}</span>
@@ -632,8 +632,8 @@ const Achievements = () => {
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-600">
                 <div className="flex items-center space-x-3 space-x-reverse">
-                  <div className="p-3 bg-green-100 dark:bg-green-900 rounded-lg">
-                    <FaUser className="text-2xl text-green-600 dark:text-green-400" />
+                  <div className="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg">
+                    <FaUser className="text-2xl text-blue-600 dark:text-blue-400" />
                   </div>
                   <div>
                     <h2 className="text-xl font-bold text-gray-900 dark:text-white">
@@ -657,7 +657,7 @@ const Achievements = () => {
                 {/* Basic Information */}
                 <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                    <FaUser className="ml-2 text-green-600" />
+                    <FaUser className="ml-2 text-blue-600" />
                     المعلومات الأساسية
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -707,7 +707,7 @@ const Achievements = () => {
                 </div>
 
                 {/* Achievement Information */}
-                <div className="bg-gradient-to-r from-purple-50 to-green-50 dark:from-purple-900/20 dark:to-green-900/20 rounded-lg p-4">
+                <div className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-lg p-4">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
                     <FaTrophy className="ml-2 text-purple-600" />
                     معلومات الإنجازات
@@ -729,17 +729,17 @@ const Achievements = () => {
                 {/* Detailed Points Breakdown */}
                 <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                    <FaChartLine className="ml-2 text-green-600" />
+                    <FaChartLine className="ml-2 text-blue-600" />
                     تفصيل النقاط
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
-                      <FaCalendarAlt className="text-2xl text-green-500 mx-auto mb-2" />
+                      <FaCalendarAlt className="text-2xl text-blue-500 mx-auto mb-2" />
                       <p className="text-xl font-bold text-gray-900 dark:text-white">{selectedUser.attendancePoints?.toFixed(1) || '0.0'}</p>
                       <p className="text-sm text-gray-600 dark:text-gray-400">نقاط الحضور</p>
                     </div>
                     <div className="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
-                      <FaAward className="text-2xl text-green-500 mx-auto mb-2" />
+                      <FaAward className="text-2xl text-blue-500 mx-auto mb-2" />
                       <p className="text-xl font-bold text-gray-900 dark:text-white">{selectedUser.gradesPoints?.toFixed(1) || '0.0'}</p>
                       <p className="text-sm text-gray-600 dark:text-gray-400">نقاط الدرجات</p>
                     </div>
@@ -771,7 +771,7 @@ const Achievements = () => {
                     <div className="flex justify-between items-center">
                       <span className="text-gray-600 dark:text-gray-400">الحالة:</span>
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                        selectedUser.isActive ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200' : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
+                        selectedUser.isActive ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200' : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
                       }`}>
                         {selectedUser.isActive ? 'نشط' : 'غير نشط'}
                       </span>

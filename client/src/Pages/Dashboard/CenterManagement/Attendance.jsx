@@ -346,7 +346,7 @@ export default function Attendance() {
       title: selectedMonthData?.isCurrent ? 'إجمالي الحضور اليوم' : `حضور ${selectedMonthData?.label || 'الشهر'}`,
       value: attendanceDashboard?.data?.overallStats?.presentCount?.toString() || '0',
       icon: FaUsers,
-      color: 'bg-green-500',
+      color: 'bg-blue-500',
       change: selectedMonthData?.isCurrent ? '+0' : 'بيانات مؤرشفة'
     },
     {
@@ -362,7 +362,7 @@ export default function Attendance() {
         ? `${Math.round((attendanceDashboard.data.overallStats.presentCount / attendanceDashboard.data.overallStats.totalRecords) * 100)}%`
         : '0%',
       icon: FaQrcode,
-      color: 'bg-green-500',
+      color: 'bg-blue-500',
       change: selectedMonthData?.isCurrent ? '+0%' : 'بيانات مؤرشفة'
     },
     {
@@ -380,7 +380,7 @@ export default function Attendance() {
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900 p-4 sm:p-6 lg:p-8" dir="rtl">
           <div className="max-w-7xl mx-auto">
             <div className="text-center py-8">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-500 mx-auto"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto"></div>
               <p className="text-gray-500 dark:text-gray-400 mt-4">جاري التحميل...</p>
             </div>
           </div>
@@ -416,7 +416,7 @@ export default function Attendance() {
                       {stat.value}
                     </p>
                     <div className="flex items-center mt-2">
-                      <span className={`text-xs font-medium ${stat.change.startsWith('+') ? 'text-green-600' :
+                      <span className={`text-xs font-medium ${stat.change.startsWith('+') ? 'text-blue-600' :
                         stat.change.startsWith('-') ? 'text-red-600' :
                           'text-gray-500 dark:text-gray-400'
                         }`}>
@@ -455,7 +455,7 @@ export default function Attendance() {
 
             {groupsLoading ? (
               <div className="text-center py-8">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-500 mx-auto"></div>
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto"></div>
                 <p className="text-gray-500 dark:text-gray-400 mt-4">جاري تحميل المجموعات...</p>
               </div>
             ) : activeGroupsToday.length > 0 ? (
@@ -480,8 +480,8 @@ export default function Attendance() {
                           </p>
                         </div>
                         <div className="flex items-center space-x-1 space-x-reverse">
-                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                          <span className="text-xs text-green-600 dark:text-green-400 font-medium">
+                          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                          <span className="text-xs text-blue-600 dark:text-blue-400 font-medium">
                             نشط
                           </span>
                         </div>
@@ -526,7 +526,7 @@ export default function Attendance() {
 
                               return (
                                 <div key={index} className="flex items-center justify-between text-xs">
-                                  <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full">
+                                  <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">
                                     {startTime} - {endTime}
                                   </span>
                                   <span className="text-gray-500 dark:text-gray-400">
@@ -543,8 +543,8 @@ export default function Attendance() {
                       <button
                         onClick={() => handleGroupSelectionFromCard(group._id)}
                         className={`w-full py-2 px-3 rounded-lg text-sm font-medium transition-colors ${selectedGroup === group._id
-                          ? 'bg-green-600 text-white'
-                          : 'bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 hover:bg-green-200 dark:hover:bg-green-800'
+                          ? 'bg-blue-600 text-white'
+                          : 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 hover:bg-blue-200 dark:hover:bg-blue-800'
                           }`}
                       >
                         {selectedGroup === group._id ? 'محدد' : 'اختيار المجموعة'}
@@ -588,7 +588,7 @@ export default function Attendance() {
                 <select
                   value={selectedGroup}
                   onChange={(e) => handleGroupChange(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                 >
                   <option value="">اختر المجموعة</option>
                   {groups.map((group) => (
@@ -607,7 +607,7 @@ export default function Attendance() {
                   type="date"
                   value={selectedDate}
                   onChange={(e) => setSelectedDate(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                 />
               </div>
             </div>
@@ -627,14 +627,14 @@ export default function Attendance() {
                   <div className="flex gap-2">
                     <button
                       onClick={() => setShowQRScanner(!showQRScanner)}
-                      className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors flex items-center space-x-2 space-x-reverse"
+                      className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2 space-x-reverse"
                     >
                       <FaQrcode />
                       <span>{showQRScanner ? 'إخفاء الماسح' : 'فتح الماسح'}</span>
                     </button>
                     <button
                       onClick={() => setShowPhoneForm(!showPhoneForm)}
-                      className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors flex items-center space-x-2 space-x-reverse"
+                      className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2 space-x-reverse"
                     >
                       <FaPhone />
                       <span>{showPhoneForm ? 'إخفاء النموذج' : 'حضور بالهاتف'}</span>
@@ -687,7 +687,7 @@ export default function Attendance() {
                         // Scroll to attendance records section
                         document.getElementById('attendance-records-section')?.scrollIntoView({ behavior: 'smooth' });
                       }}
-                      className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors flex items-center space-x-2 space-x-reverse"
+                      className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2 space-x-reverse"
                     >
                       <FaCalendarAlt />
                       <span>عرض سجلات الحضور</span>
@@ -698,7 +698,7 @@ export default function Attendance() {
                         placeholder="البحث عن طالب..."
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                        className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                       />
                     </div>
                   </div>
@@ -722,8 +722,8 @@ export default function Attendance() {
                           <tr key={studentId} className="hover:bg-gray-50 dark:hover:bg-gray-700">
                             <td className="px-4 py-3">
                               <div className="flex items-center space-x-3 space-x-reverse">
-                                <div className="w-8 h-8 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
-                                  <span className="text-green-600 dark:text-green-400 text-xs font-medium">
+                                <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
+                                  <span className="text-blue-600 dark:text-blue-400 text-xs font-medium">
                                     {student.fullName?.charAt(0) || '?'}
                                   </span>
                                 </div>
@@ -741,7 +741,7 @@ export default function Attendance() {
                             </td>
                             <td className="px-4 py-3">
                               <span className={`px-2 py-1 text-xs rounded-full ${attendanceStatus === 'present'
-                                ? 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200'
+                                ? 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200'
                                 : attendanceStatus === 'late'
                                   ? 'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200'
                                   : attendanceStatus === 'absent'
@@ -757,7 +757,7 @@ export default function Attendance() {
                               <div className="flex items-center space-x-2 space-x-reverse">
                                 <button
                                   onClick={() => handleManualAttendance(studentId, 'present')}
-                                  className="p-2 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 rounded-lg hover:bg-green-200 dark:hover:bg-green-800 transition-colors"
+                                  className="p-2 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors"
                                   title="تسجيل حضور"
                                 >
                                   <FaUserCheck className="text-sm" />
@@ -805,7 +805,7 @@ export default function Attendance() {
                   سجلات الحضور
                 </h2>
                 {filters.group && (
-                  <p className="text-sm text-green-600 dark:text-green-400 mt-1">
+                  <p className="text-sm text-blue-600 dark:text-blue-400 mt-1">
                     عرض سجلات: {groups.find(g => g._id === filters.group)?.name || 'مجموعة محددة'}
                   </p>
                 )}
@@ -828,7 +828,7 @@ export default function Attendance() {
                   type="date"
                   value={filters.date}
                   onChange={(e) => handleFilterChange('date', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                 />
               </div>
 
@@ -839,7 +839,7 @@ export default function Attendance() {
                 <select
                   value={filters.group}
                   onChange={(e) => handleFilterChange('group', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                 >
                   <option value="">جميع المجموعات</option>
                   {groups.map((group) => (
@@ -857,7 +857,7 @@ export default function Attendance() {
                 <select
                   value={filters.status}
                   onChange={(e) => handleFilterChange('status', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                 >
                   <option value="">جميع الحالات</option>
                   <option value="present">حاضر</option>
@@ -869,7 +869,7 @@ export default function Attendance() {
               <div className="flex items-end space-x-2 space-x-reverse">
                 <button
                   onClick={applyFilters}
-                  className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors flex items-center space-x-2 space-x-reverse"
+                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2 space-x-reverse"
                 >
                   <FaSearch />
                   <span>بحث</span>
@@ -909,8 +909,8 @@ export default function Attendance() {
                         <tr key={recordId} className="hover:bg-gray-50 dark:hover:bg-gray-700">
                           <td className="px-4 py-3">
                             <div className="flex items-center space-x-3 space-x-reverse">
-                              <div className="w-8 h-8 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
-                                <span className="text-green-600 dark:text-green-400 text-xs font-medium">
+                              <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
+                                <span className="text-blue-600 dark:text-blue-400 text-xs font-medium">
                                   {(record.user?.fullName || record.student?.fullName)?.charAt(0) || '?'}
                                 </span>
                               </div>
@@ -936,7 +936,7 @@ export default function Attendance() {
                           </td>
                           <td className="px-4 py-3">
                             <span className={`px-2 py-1 text-xs rounded-full ${record.status === 'present'
-                              ? 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200'
+                              ? 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200'
                               : record.status === 'late'
                                 ? 'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200'
                                 : 'bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200'
@@ -974,7 +974,7 @@ export default function Attendance() {
                   <button className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-50 dark:hover:bg-gray-700">
                     السابق
                   </button>
-                  <span className="px-3 py-1 text-sm bg-green-600 text-white rounded">1</span>
+                  <span className="px-3 py-1 text-sm bg-blue-600 text-white rounded">1</span>
                   <button className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-50 dark:hover:bg-gray-700">
                     التالي
                   </button>

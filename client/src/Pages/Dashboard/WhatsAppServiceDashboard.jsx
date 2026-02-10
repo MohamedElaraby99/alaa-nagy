@@ -291,7 +291,7 @@ export default function WhatsAppServiceDashboard() {
                         </div>
                         <button
                             onClick={() => setShowCreateModal(true)}
-                            className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium flex items-center gap-2 transition-colors"
+                            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium flex items-center gap-2 transition-colors"
                         >
                             <FaPlus />
                             إضافة خدمة جديدة
@@ -308,13 +308,13 @@ export default function WhatsAppServiceDashboard() {
                                     placeholder="البحث في الخدمات..."
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
-                                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                                 />
                             </div>
                             <select
                                 value={categoryFilter}
                                 onChange={(e) => setCategoryFilter(e.target.value)}
-                                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                             >
                                 <option value="all">جميع الفئات</option>
                                 {categories.map(category => (
@@ -326,7 +326,7 @@ export default function WhatsAppServiceDashboard() {
                             <select
                                 value={sortBy}
                                 onChange={(e) => setSortBy(e.target.value)}
-                                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                             >
                                 <option value="createdAt">الأحدث أولاً</option>
                                 <option value="name">الاسم أ-ي</option>
@@ -342,7 +342,7 @@ export default function WhatsAppServiceDashboard() {
                     {/* Services Grid */}
                     {adminLoading ? (
                         <div className="flex justify-center items-center py-12">
-                            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600"></div>
+                            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
                         </div>
                     ) : (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -358,7 +358,7 @@ export default function WhatsAppServiceDashboard() {
                                                     </h3>
                                                     <span className={`inline-block px-2 py-1 text-xs font-medium rounded-full ${
                                                         service.isActive 
-                                                            ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
+                                                            ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
                                                             : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
                                                     }`}>
                                                         {service.isActive ? 'نشط' : 'غير نشط'}
@@ -368,14 +368,14 @@ export default function WhatsAppServiceDashboard() {
                                             <div className="flex items-center gap-2">
                                                 <button
                                                     onClick={() => handleToggleStatus(service._id)}
-                                                    className="p-2 text-gray-400 hover:text-green-600 transition-colors"
+                                                    className="p-2 text-gray-400 hover:text-blue-600 transition-colors"
                                                     title={service.isActive ? 'إلغاء التفعيل' : 'تفعيل'}
                                                 >
-                                                    {service.isActive ? <FaToggleOn className="text-green-500" /> : <FaToggleOff className="text-gray-400" />}
+                                                    {service.isActive ? <FaToggleOn className="text-blue-500" /> : <FaToggleOff className="text-gray-400" />}
                                                 </button>
                                                 <button
                                                     onClick={() => openEditModal(service)}
-                                                    className="p-2 text-gray-400 hover:text-green-600 transition-colors"
+                                                    className="p-2 text-gray-400 hover:text-blue-600 transition-colors"
                                                     title="تعديل"
                                                 >
                                                     <FaEdit />
@@ -396,7 +396,7 @@ export default function WhatsAppServiceDashboard() {
 
                                         <div className="flex items-center justify-between mb-4">
                                             <div>
-                                                <span className="text-2xl font-bold text-green-600 dark:text-green-400">
+                                                <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">
             
                                                 </span>
                                             </div>
@@ -412,7 +412,7 @@ export default function WhatsAppServiceDashboard() {
                                                 </span>
                                                 <button
                                                     onClick={() => openAddNumberModal(service)}
-                                                    className="text-sm text-green-600 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300"
+                                                    className="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
                                                 >
                                                     إضافة رقم
                                                 </button>
@@ -421,7 +421,7 @@ export default function WhatsAppServiceDashboard() {
                                                 {service.whatsappNumbers.map((number, index) => (
                                                     <div key={number._id || index} className="flex items-center justify-between p-2 bg-gray-50 dark:bg-gray-700 rounded">
                                                         <div className="flex items-center gap-2">
-                                                            <FaWhatsapp className="text-green-500" />
+                                                            <FaWhatsapp className="text-blue-500" />
                                                             <div>
                                                                 <div className="text-sm font-medium text-gray-900 dark:text-white">
                                                                     {number.name}
@@ -487,7 +487,7 @@ export default function WhatsAppServiceDashboard() {
                                                 name="name"
                                                 value={createForm.name}
                                                 onChange={handleCreateFormChange}
-                                                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                                                 required
                                             />
                                         </div>
@@ -502,7 +502,7 @@ export default function WhatsAppServiceDashboard() {
                                             value={createForm.description}
                                             onChange={handleCreateFormChange}
                                             rows={3}
-                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                                             required
                                         />
                                     </div>
@@ -517,7 +517,7 @@ export default function WhatsAppServiceDashboard() {
                                                 name="icon"
                                                 value={createForm.icon}
                                                 onChange={handleCreateFormChange}
-                                                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                                             />
                                         </div>
                                     </div>
@@ -531,7 +531,7 @@ export default function WhatsAppServiceDashboard() {
                                             value={createForm.instructions}
                                             onChange={handleCreateFormChange}
                                             rows={2}
-                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                                         />
                                     </div>
 
@@ -544,7 +544,7 @@ export default function WhatsAppServiceDashboard() {
                                             name="estimatedResponseTime"
                                             value={createForm.estimatedResponseTime}
                                             onChange={handleCreateFormChange}
-                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                                         />
                                     </div>
 
@@ -556,7 +556,7 @@ export default function WhatsAppServiceDashboard() {
                                             <button
                                                 type="button"
                                                 onClick={addWhatsAppNumberField}
-                                                className="text-sm text-green-600 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300"
+                                                className="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
                                             >
                                                 + إضافة رقم
                                             </button>
@@ -572,7 +572,7 @@ export default function WhatsAppServiceDashboard() {
                                                             type="text"
                                                             value={number.number}
                                                             onChange={(e) => updateWhatsAppNumberField(index, 'number', e.target.value)}
-                                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                                                             required
                                                         />
                                                     </div>
@@ -584,7 +584,7 @@ export default function WhatsAppServiceDashboard() {
                                                             type="text"
                                                             value={number.name}
                                                             onChange={(e) => updateWhatsAppNumberField(index, 'name', e.target.value)}
-                                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                                                             required
                                                         />
                                                     </div>
@@ -597,7 +597,7 @@ export default function WhatsAppServiceDashboard() {
                                                                 type="text"
                                                                 value={number.workingHours}
                                                                 onChange={(e) => updateWhatsAppNumberField(index, 'workingHours', e.target.value)}
-                                                                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                                                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                                                             />
                                                         </div>
                                                         {createForm.whatsappNumbers.length > 1 && (
@@ -626,7 +626,7 @@ export default function WhatsAppServiceDashboard() {
                                         <button
                                             type="submit"
                                             disabled={createLoading}
-                                            className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2"
+                                            className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2"
                                         >
                                             {createLoading ? (
                                                 <>
@@ -675,7 +675,7 @@ export default function WhatsAppServiceDashboard() {
                                                 name="name"
                                                 value={editForm.name}
                                                 onChange={handleEditFormChange}
-                                                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                                                 required
                                             />
                                         </div>
@@ -687,7 +687,7 @@ export default function WhatsAppServiceDashboard() {
                                                 name="category"
                                                 value={editForm.category}
                                                 onChange={handleEditFormChange}
-                                                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                                                 required
                                             >
                                                 {categories.map(category => (
@@ -708,7 +708,7 @@ export default function WhatsAppServiceDashboard() {
                                             value={editForm.description}
                                             onChange={handleEditFormChange}
                                             rows={3}
-                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                                             required
                                         />
                                     </div>
@@ -722,7 +722,7 @@ export default function WhatsAppServiceDashboard() {
                                                 name="currency"
                                                 value={editForm.currency}
                                                 onChange={handleEditFormChange}
-                                                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                                             >
                                                 <option value="EGP">EGP</option>
                                                 <option value="USD">USD</option>
@@ -738,7 +738,7 @@ export default function WhatsAppServiceDashboard() {
                                                 name="icon"
                                                 value={editForm.icon}
                                                 onChange={handleEditFormChange}
-                                                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                                             />
                                         </div>
                                     </div>
@@ -752,7 +752,7 @@ export default function WhatsAppServiceDashboard() {
                                             value={editForm.instructions}
                                             onChange={handleEditFormChange}
                                             rows={2}
-                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                                         />
                                     </div>
 
@@ -765,7 +765,7 @@ export default function WhatsAppServiceDashboard() {
                                             name="estimatedResponseTime"
                                             value={editForm.estimatedResponseTime}
                                             onChange={handleEditFormChange}
-                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                                         />
                                     </div>
 
@@ -780,7 +780,7 @@ export default function WhatsAppServiceDashboard() {
                                         <button
                                             type="submit"
                                             disabled={updateLoading}
-                                            className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2"
+                                            className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2"
                                         >
                                             {updateLoading ? (
                                                 <>
@@ -828,7 +828,7 @@ export default function WhatsAppServiceDashboard() {
                                             name="number"
                                             value={addNumberForm.number}
                                             onChange={handleAddNumberFormChange}
-                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                                             required
                                         />
                                     </div>
@@ -841,7 +841,7 @@ export default function WhatsAppServiceDashboard() {
                                             name="name"
                                             value={addNumberForm.name}
                                             onChange={handleAddNumberFormChange}
-                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                                             required
                                         />
                                     </div>
@@ -854,7 +854,7 @@ export default function WhatsAppServiceDashboard() {
                                             name="workingHours"
                                             value={addNumberForm.workingHours}
                                             onChange={handleAddNumberFormChange}
-                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                                         />
                                     </div>
 
@@ -868,7 +868,7 @@ export default function WhatsAppServiceDashboard() {
                                         </button>
                                         <button
                                             type="submit"
-                                            className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors flex items-center gap-2"
+                                            className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
                                         >
                                             <FaPlus />
                                             Add Number

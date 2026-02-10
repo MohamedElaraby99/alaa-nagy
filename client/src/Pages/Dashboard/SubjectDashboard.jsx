@@ -203,7 +203,7 @@ export default function SubjectDashboard() {
             </div>
             <button
               onClick={() => setShowCreateModal(true)}
-              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg transition-colors duration-200"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-200"
             >
               <FaPlus />
                               إضافة مادة دراسية
@@ -220,7 +220,7 @@ export default function SubjectDashboard() {
                   placeholder="البحث في المواد الدراسية..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  className="w-full pr-10 pl-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full pr-10 pl-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 />
               </div>
 
@@ -233,7 +233,7 @@ export default function SubjectDashboard() {
           {/* Subjects Grid */}
           {loading ? (
             <div className="text-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
               <p className="mt-4 text-gray-600 dark:text-gray-300">جاري تحميل المواد الدراسية...</p>
             </div>
           ) : (
@@ -281,7 +281,7 @@ export default function SubjectDashboard() {
                       name="title"
                       value={formData.title}
                       onChange={handleInputChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right ${
                         errors.title ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
                       }`}
                     placeholder="عنوان المادة الدراسية"
@@ -300,7 +300,7 @@ export default function SubjectDashboard() {
                     value={formData.description}
                     onChange={handleInputChange}
                     rows="3"
-                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right ${
                       errors.description ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
                     }`}
                     placeholder="وصف المادة الدراسية"
@@ -319,7 +319,7 @@ export default function SubjectDashboard() {
                       name="instructor"
                       value={formData.instructor}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
                         errors.instructor ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
                       }`}
                     >
@@ -343,7 +343,7 @@ export default function SubjectDashboard() {
                     name="image"
                     onChange={handleInputChange}
                     accept="image/*"
-                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
                       errors.image ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
                     }`}
                   />
@@ -351,7 +351,7 @@ export default function SubjectDashboard() {
                     <p className="text-red-500 text-sm mt-1">{errors.image}</p>
                   )}
                   {formData.image && (
-                    <p className="text-green-600 text-sm mt-1">تم اختيار الملف: {formData.image.name}</p>
+                    <p className="text-blue-600 text-sm mt-1">تم اختيار الملف: {formData.image.name}</p>
                   )}
                 </div>
 
@@ -361,7 +361,7 @@ export default function SubjectDashboard() {
                     name="featured"
                     checked={formData.featured}
                     onChange={handleInputChange}
-                    className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                    className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                   />
                   <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
                     مميز
@@ -381,7 +381,7 @@ export default function SubjectDashboard() {
                   </button>
                   <button
                     type="submit"
-                    className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+                    className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
                   >
                     <FaSave />
                     إنشاء مادة دراسية
@@ -423,7 +423,7 @@ export default function SubjectDashboard() {
                       name="title"
                       value={formData.title}
                       onChange={handleInputChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right ${
                         errors.title ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
                       }`}
                     placeholder="عنوان المادة الدراسية"
@@ -442,7 +442,7 @@ export default function SubjectDashboard() {
                     value={formData.description}
                     onChange={handleInputChange}
                     rows="3"
-                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-right ${
                       errors.description ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
                     }`}
                     placeholder="وصف المادة الدراسية"
@@ -461,7 +461,7 @@ export default function SubjectDashboard() {
                       name="instructor"
                       value={formData.instructor}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
                         errors.instructor ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
                       }`}
                     >
@@ -533,7 +533,7 @@ export default function SubjectDashboard() {
                     name="image"
                     onChange={handleInputChange}
                     accept="image/*"
-                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
                       errors.image ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
                     }`}
                   />
@@ -541,7 +541,7 @@ export default function SubjectDashboard() {
                     <p className="text-red-500 text-sm mt-1">{errors.image}</p>
                   )}
                   {formData.image && (
-                    <p className="text-green-600 text-sm mt-1">تم اختيار الملف: {formData.image.name}</p>
+                    <p className="text-blue-600 text-sm mt-1">تم اختيار الملف: {formData.image.name}</p>
                   )}
                   <p className="text-gray-500 dark:text-gray-400 text-xs mt-1">
                     اترك الحقل فارغاً للاحتفاظ بالصورة الحالية
@@ -562,7 +562,7 @@ export default function SubjectDashboard() {
                   </button>
                   <button
                     type="submit"
-                    className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+                    className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
                   >
                     <FaSave />
                     تحديث المادة الدراسية

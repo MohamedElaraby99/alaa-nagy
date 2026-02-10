@@ -198,13 +198,13 @@ const EssayExamModal = ({ examId, onClose, onSuccess }) => {
               <p>مدة الامتحان: {currentExam?.timeLimit || 60} دقيقة</p>
               <p>عدد الأسئلة: {currentExam?.questions?.length || 0}</p>
               {currentExam?.allowLateSubmission && (
-                <p className="text-green-600">السماح بالتسليم المتأخر مع خصم {currentExam?.lateSubmissionPenalty || 10}%</p>
+                <p className="text-blue-600">السماح بالتسليم المتأخر مع خصم {currentExam?.lateSubmissionPenalty || 10}%</p>
               )}
             </div>
             {currentExam?.questions && currentExam.questions.length > 0 ? (
               <button
                 onClick={startExam}
-                className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 بدء الامتحان
               </button>
@@ -288,8 +288,8 @@ const EssayExamModal = ({ examId, onClose, onSuccess }) => {
                           الحد الأقصى: {question.maxFileSize || 10} ميجابايت
                         </div>
                                               {answers[index]?.fileAnswer && (
-                        <div className="mt-2 p-2 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded">
-                          <p className="text-sm text-green-700 dark:text-green-300 text-right">
+                        <div className="mt-2 p-2 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded">
+                          <p className="text-sm text-blue-700 dark:text-blue-300 text-right">
                             تم رفع الملف: {answers[index]?.fileAnswer?.fileName || 'ملف'}
                           </p>
                         </div>
@@ -311,7 +311,7 @@ const EssayExamModal = ({ examId, onClose, onSuccess }) => {
                 <button
                   onClick={handleSubmit}
                   disabled={submitting || timeLeft === 0}
-                  className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                  className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                 >
                   <FaSave />
                   {submitting ? 'جاري التسليم...' : 'تسليم الامتحان'}

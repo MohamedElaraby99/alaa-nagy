@@ -365,18 +365,18 @@ export default function Navbar() {
               <>
                 {/* Special Navigation for Guests */}
                 <div className="space-y-1 px-2 pb-3">
-                  <p className="px-4 pb-2 text-xs font-bold text-green-600 dark:text-green-400 uppercase">تصفح المحتوى</p>
+                  <p className="px-4 pb-2 text-xs font-bold text-blue-600 dark:text-blue-400 uppercase">تصفح المحتوى</p>
 
                   {/* الكورسات */}
                   <Link
                     to="/courses"
                     className={`flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-all duration-300 ${location.pathname === '/courses'
-                      ? "text-green-600 dark:text-green-400 bg-gradient-to-r from-green-100 to-amber-100 dark:from-green-900/30 dark:to-amber-900/30"
-                      : "text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                      ? "text-blue-600 dark:text-blue-400 bg-gradient-to-r from-blue-100 to-amber-100 dark:from-blue-900/30 dark:to-amber-900/30"
+                      : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800"
                       }`}
                   >
                     <div className={`p-2 rounded-lg ${location.pathname === '/courses'
-                      ? "bg-green-200 dark:bg-green-800/50"
+                      ? "bg-blue-200 dark:bg-blue-800/50"
                       : "bg-gray-200 dark:bg-gray-700"
                       }`}>
                       <FaGraduationCap className="w-4 h-4" />
@@ -388,12 +388,12 @@ export default function Navbar() {
                   <Link
                     to="/blogs"
                     className={`flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-all duration-300 ${location.pathname === '/blogs'
-                      ? "text-green-600 dark:text-green-400 bg-gradient-to-r from-green-100 to-amber-100 dark:from-green-900/30 dark:to-amber-900/30"
-                      : "text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                      ? "text-blue-600 dark:text-blue-400 bg-gradient-to-r from-blue-100 to-amber-100 dark:from-blue-900/30 dark:to-amber-900/30"
+                      : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800"
                       }`}
                   >
                     <div className={`p-2 rounded-lg ${location.pathname === '/blogs'
-                      ? "bg-green-200 dark:bg-green-800/50"
+                      ? "bg-blue-200 dark:bg-blue-800/50"
                       : "bg-gray-200 dark:bg-gray-700"
                       }`}>
                       <FaBlog className="w-4 h-4" />
@@ -405,12 +405,12 @@ export default function Navbar() {
                   <Link
                     to="/qa"
                     className={`flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-all duration-300 ${location.pathname === '/qa'
-                      ? "text-green-600 dark:text-green-400 bg-gradient-to-r from-green-100 to-amber-100 dark:from-green-900/30 dark:to-amber-900/30"
-                      : "text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                      ? "text-blue-600 dark:text-blue-400 bg-gradient-to-r from-blue-100 to-amber-100 dark:from-blue-900/30 dark:to-amber-900/30"
+                      : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800"
                       }`}
                   >
                     <div className={`p-2 rounded-lg ${location.pathname === '/qa'
-                      ? "bg-green-200 dark:bg-green-800/50"
+                      ? "bg-blue-200 dark:bg-blue-800/50"
                       : "bg-gray-200 dark:bg-gray-700"
                       }`}>
                       <FaQuestionCircle className="w-4 h-4" />
@@ -423,14 +423,14 @@ export default function Navbar() {
                 <div className="space-y-3 px-4 pt-4 border-t border-gray-200/50 dark:border-gray-700/50">
                   <Link
                     to="/login"
-                    className="flex items-center justify-center gap-2 w-full px-4 py-3 border-2 border-green-500 text-green-600 dark:text-green-400 hover:bg-green-500 hover:text-white rounded-xl font-semibold transition-all duration-300"
+                    className="flex items-center justify-center gap-2 w-full px-4 py-3 border-2 border-blue-500 text-blue-600 dark:text-blue-400 hover:bg-blue-500 hover:text-white rounded-xl font-semibold transition-all duration-300"
                   >
                     <FaUser className="w-4 h-4" />
                     تسجيل الدخول
                   </Link>
                   <Link
                     to="/signup"
-                    className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl font-semibold transition-all duration-300 shadow-lg"
+                    className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-gradient-to-r from-blue-500 to-sky-600 text-white rounded-xl font-semibold transition-all duration-300 shadow-lg"
                   >
                     <FaPlus className="w-4 h-4" />
                     إنشاء حساب جديد

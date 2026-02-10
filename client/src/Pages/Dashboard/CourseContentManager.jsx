@@ -1315,7 +1315,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
           <div className="flex items-center gap-2">
             <button
               onClick={refreshLessonData}
-              className="text-green-600 hover:text-green-800 text-sm px-3 py-1 rounded border border-green-600 hover:border-green-800"
+              className="text-blue-600 hover:text-blue-800 text-sm px-3 py-1 rounded border border-blue-600 hover:border-blue-800"
               title="تحديث البيانات"
             >
               🔄 تحديث
@@ -1324,12 +1324,12 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
           </div>
         </div>
         <div className="mb-4 flex gap-2 border-b border-gray-200 dark:border-gray-700 overflow-x-auto">
-          <button className={`px-3 py-2 rounded-t whitespace-nowrap ${tab === 'videos' ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 font-bold' : 'text-gray-600 dark:text-gray-300'}`} onClick={() => setTab('videos')}>فيديوهات</button>
-          <button className={`px-3 py-2 rounded-t whitespace-nowrap ${tab === 'pdfs' ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 font-bold' : 'text-gray-600 dark:text-gray-300'}`} onClick={() => setTab('pdfs')}>PDF</button>
-          <button className={`px-3 py-2 rounded-t whitespace-nowrap ${tab === 'exams' ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 font-bold' : 'text-gray-600 dark:text-gray-300'}`} onClick={() => setTab('exams')}>امتحانات</button>
-          <button className={`px-3 py-2 rounded-t whitespace-nowrap ${tab === 'essay-exams' ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 font-bold' : 'text-gray-600 dark:text-gray-300'}`} onClick={() => setTab('essay-exams')}>امتحانات مقالية</button>
-          <button className={`px-3 py-2 rounded-t whitespace-nowrap ${tab === 'trainings' ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 font-bold' : 'text-gray-600 dark:text-gray-300'}`} onClick={() => setTab('trainings')}>تدريبات</button>
-          <button className={`px-3 py-2 rounded-t whitespace-nowrap ${tab === 'settings' ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 font-bold' : 'text-gray-600 dark:text-gray-300'}`} onClick={() => setTab('settings')}>⚙️ الإعدادات</button>
+          <button className={`px-3 py-2 rounded-t whitespace-nowrap ${tab === 'videos' ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 font-bold' : 'text-gray-600 dark:text-gray-300'}`} onClick={() => setTab('videos')}>فيديوهات</button>
+          <button className={`px-3 py-2 rounded-t whitespace-nowrap ${tab === 'pdfs' ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 font-bold' : 'text-gray-600 dark:text-gray-300'}`} onClick={() => setTab('pdfs')}>PDF</button>
+          <button className={`px-3 py-2 rounded-t whitespace-nowrap ${tab === 'exams' ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 font-bold' : 'text-gray-600 dark:text-gray-300'}`} onClick={() => setTab('exams')}>امتحانات</button>
+          <button className={`px-3 py-2 rounded-t whitespace-nowrap ${tab === 'essay-exams' ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 font-bold' : 'text-gray-600 dark:text-gray-300'}`} onClick={() => setTab('essay-exams')}>امتحانات مقالية</button>
+          <button className={`px-3 py-2 rounded-t whitespace-nowrap ${tab === 'trainings' ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 font-bold' : 'text-gray-600 dark:text-gray-300'}`} onClick={() => setTab('trainings')}>تدريبات</button>
+          <button className={`px-3 py-2 rounded-t whitespace-nowrap ${tab === 'settings' ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 font-bold' : 'text-gray-600 dark:text-gray-300'}`} onClick={() => setTab('settings')}>⚙️ الإعدادات</button>
         </div>
         {tab === 'videos' && (
           <div className="space-y-4">
@@ -1337,7 +1337,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
               <div className="font-semibold text-gray-900 dark:text-white text-right">إضافة فيديو (رابط يوتيوب، عنوان، وصف اختياري)</div>
               <button
                 onClick={() => toggleSection('videos')}
-                className="text-green-600 hover:text-green-800 flex items-center gap-1"
+                className="text-blue-600 hover:text-blue-800 flex items-center gap-1"
               >
                 {openSections.videos ? 'إخفاء' : 'إظهار'}
                 <span>{openSections.videos ? '▼' : '▶'}</span>
@@ -1357,11 +1357,11 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                   <div className="flex justify-end">
                     {editVideoIndex !== null ? (
                       <div className="flex gap-2">
-                        <button type="button" className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" onClick={handleSaveEditVideo}>حفظ التعديل</button>
+                        <button type="button" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={handleSaveEditVideo}>حفظ التعديل</button>
                         <button type="button" className="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500" onClick={handleCancelEditVideo}>إلغاء</button>
                       </div>
                     ) : (
-                      <button type="button" className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700" onClick={handleAddVideo} disabled={!newVideo.url.trim()}>
+                      <button type="button" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700" onClick={handleAddVideo} disabled={!newVideo.url.trim()}>
                         إضافة الفيديو
                       </button>
                     )}
@@ -1379,7 +1379,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                             <div className="flex-1 text-right">
                               <p className="font-medium text-gray-900 dark:text-white">{video.title || 'بدون عنوان'}</p>
                               {video.description && <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{video.description}</p>}
-                              <p className="text-xs text-green-600 dark:text-green-400 mt-1 break-all">{video.url}</p>
+                              <p className="text-xs text-blue-600 dark:text-blue-400 mt-1 break-all">{video.url}</p>
                               {video.publishDate && (
                                 <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                                   تاريخ النشر: {formatDateTime(video.publishDate)}
@@ -1387,7 +1387,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                               )}
                             </div>
                             <div className="flex gap-2 mr-3">
-                              <button type="button" className="text-green-500 hover:text-green-700 text-sm" onClick={() => handleEditVideo(idx)}>تعديل</button>
+                              <button type="button" className="text-blue-500 hover:text-blue-700 text-sm" onClick={() => handleEditVideo(idx)}>تعديل</button>
                               <button type="button" className="text-red-500 hover:text-red-700 text-sm" onClick={() => handleRemoveVideo(idx)}>حذف</button>
                             </div>
                           </div>
@@ -1399,7 +1399,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
 
                 {/* Save Videos Button */}
                 <div className="flex justify-end mt-6">
-                  <button type="button" className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 disabled:opacity-50" onClick={handleSaveVideos} disabled={saving}>
+                  <button type="button" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 disabled:opacity-50" onClick={handleSaveVideos} disabled={saving}>
                     {saving ? 'جاري الحفظ...' : 'حفظ الفيديوهات'}
                   </button>
                 </div>
@@ -1413,7 +1413,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
               <div className="font-semibold text-gray-900 dark:text-white text-right">إضافة ملف PDF (رفع ملف، عنوان، اسم الملف)</div>
               <button
                 onClick={() => toggleSection('pdfs')}
-                className="text-green-600 hover:text-green-800 flex items-center gap-1"
+                className="text-blue-600 hover:text-blue-800 flex items-center gap-1"
               >
                 {openSections.pdfs ? 'إخفاء' : 'إظهار'}
                 <span>{openSections.pdfs ? '▼' : '▶'}</span>
@@ -1427,7 +1427,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="md:col-span-2">
                       <input type="file" accept=".pdf" onChange={handlePdfFileChange} disabled={uploading} className="w-full p-2 border rounded text-right" />
-                      {uploading && <span className="text-green-600 text-xs text-right block mt-1">جاري رفع الملف...</span>}
+                      {uploading && <span className="text-blue-600 text-xs text-right block mt-1">جاري رفع الملف...</span>}
                     </div>
                     <input type="text" className="p-2 border rounded text-right" placeholder="عنوان الملف (اختياري)" value={newPdf.title} onChange={e => setNewPdf(p => ({ ...p, title: e.target.value }))} />
                     <input type="text" className="p-2 border rounded text-right" placeholder="اسم الملف (اختياري)" value={newPdf.fileName} onChange={e => setNewPdf(p => ({ ...p, fileName: e.target.value }))} />
@@ -1436,11 +1436,11 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                   <div className="flex justify-end">
                     {editPdfIndex !== null ? (
                       <div className="flex gap-2">
-                        <button type="button" className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" onClick={handleSaveEditPdf}>حفظ التعديل</button>
+                        <button type="button" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={handleSaveEditPdf}>حفظ التعديل</button>
                         <button type="button" className="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500" onClick={handleCancelEditPdf}>إلغاء</button>
                       </div>
                     ) : (
-                      <button type="button" className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700" onClick={handleAddPdf} disabled={!newPdf.url.trim()}>
+                      <button type="button" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700" onClick={handleAddPdf} disabled={!newPdf.url.trim()}>
                         إضافة ملف PDF
                       </button>
                     )}
@@ -1457,7 +1457,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                           <div className="flex items-start justify-between">
                             <div className="flex-1 text-right">
                               <p className="font-medium text-gray-900 dark:text-white">{pdf.title || 'بدون عنوان'}</p>
-                              <p className="text-xs text-green-600 dark:text-green-400 mt-1 break-all">{pdf.fileName || pdf.url}</p>
+                              <p className="text-xs text-blue-600 dark:text-blue-400 mt-1 break-all">{pdf.fileName || pdf.url}</p>
                               {pdf.publishDate && (
                                 <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                                   تاريخ النشر: {formatDateTime(pdf.publishDate)}
@@ -1465,7 +1465,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                               )}
                             </div>
                             <div className="flex gap-2 mr-3">
-                              <button type="button" className="text-green-500 hover:text-green-700 text-sm" onClick={() => handleEditPdf(idx)}>تعديل</button>
+                              <button type="button" className="text-blue-500 hover:text-blue-700 text-sm" onClick={() => handleEditPdf(idx)}>تعديل</button>
                               <button type="button" className="text-red-500 hover:text-red-700 text-sm" onClick={() => handleRemovePdf(idx)}>حذف</button>
                             </div>
                           </div>
@@ -1477,7 +1477,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
 
                 {/* Save PDFs Button */}
                 <div className="flex justify-end mt-6">
-                  <button type="button" className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 disabled:opacity-50" onClick={handleSavePdfs} disabled={saving}>
+                  <button type="button" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 disabled:opacity-50" onClick={handleSavePdfs} disabled={saving}>
                     {saving ? 'جاري الحفظ...' : 'حفظ ملفات PDF'}
                   </button>
                 </div>
@@ -1491,7 +1491,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
               <div className="font-semibold text-gray-900 dark:text-white text-right mb-4">إضافة امتحان جديد</div>
               <button
                 onClick={() => toggleSection('exams')}
-                className="text-green-600 hover:text-green-800 flex items-center gap-1"
+                className="text-blue-600 hover:text-blue-800 flex items-center gap-1"
               >
                 {openSections.exams ? 'إخفاء' : 'إظهار'}
                 <span>{openSections.exams ? '▼' : '▶'}</span>
@@ -1522,7 +1522,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                   {/* Question Image */}
                   <div className="flex items-center gap-2">
                     <input type="file" accept="image/*" onChange={handleExamQuestionImageChange} disabled={uploading} />
-                    {uploading && <span className="text-green-600 text-xs text-right">جاري رفع الصورة...</span>}
+                    {uploading && <span className="text-blue-600 text-xs text-right">جاري رفع الصورة...</span>}
                     {newQuestion.image && (
                       <div className="flex items-center gap-2">
                         <img src={generateImageUrl(newQuestion.image)} alt="Question" className="w-16 h-16 object-cover rounded" />
@@ -1578,11 +1578,11 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
 
                   {editExamQuestionIndex !== null ? (
                     <div className="flex gap-2 justify-end">
-                      <button type="button" className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" onClick={handleSaveEditExamQuestion}>حفظ التعديل</button>
+                      <button type="button" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={handleSaveEditExamQuestion}>حفظ التعديل</button>
                       <button type="button" className="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500" onClick={handleCancelEditExamQuestion}>إلغاء</button>
                     </div>
                   ) : (
-                    <button type="button" className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" onClick={handleAddQuestion} disabled={!newQuestion.question.trim() || newQuestion.options.slice(0, newQuestion.numberOfOptions).some(opt => !opt.trim())}>
+                    <button type="button" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={handleAddQuestion} disabled={!newQuestion.question.trim() || newQuestion.options.slice(0, newQuestion.numberOfOptions).some(opt => !opt.trim())}>
                       إضافة السؤال
                     </button>
                   )}
@@ -1598,22 +1598,22 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                           <div className="flex items-start justify-between">
                             <div className="flex-1 text-right">
                               <p className="font-medium text-gray-900 dark:text-white">
-                                <span className="text-green-600 font-bold">السؤال {getArabicOrdinalNumber(idx + 1)}:</span> {question.question}
+                                <span className="text-blue-600 font-bold">السؤال {getArabicOrdinalNumber(idx + 1)}:</span> {question.question}
                               </p>
                               {question.image && <img src={generateImageUrl(question.image)} alt="Question" className="w-20 h-20 object-cover rounded mt-2" />}
                               <div className="mt-2 space-y-1">
                                 {question.options.slice(0, question.numberOfOptions || 4).map((option, optIdx) => (
-                                  <div key={optIdx} className={`text-sm ${optIdx === question.correctAnswer ? 'text-green-600 font-bold' : 'text-gray-600 dark:text-gray-300'}`}>
+                                  <div key={optIdx} className={`text-sm ${optIdx === question.correctAnswer ? 'text-blue-600 font-bold' : 'text-gray-600 dark:text-gray-300'}`}>
                                     {optIdx + 1}. {option} {optIdx === question.correctAnswer && '(إجابة صحيحة)'}
                                   </div>
                                 ))}
-                                <div className="text-xs text-green-600 mt-1">
+                                <div className="text-xs text-blue-600 mt-1">
                                   عدد الخيارات: {question.numberOfOptions || 4}
                                 </div>
                               </div>
                             </div>
                             <div className="flex gap-2 mr-3">
-                              <button type="button" className="text-green-500 hover:text-green-700 text-sm" onClick={() => handleEditExamQuestion(idx)}>تعديل</button>
+                              <button type="button" className="text-blue-500 hover:text-blue-700 text-sm" onClick={() => handleEditExamQuestion(idx)}>تعديل</button>
                               <button type="button" className="text-red-500 hover:text-red-700 text-sm" onClick={() => handleRemoveQuestion(idx)}>حذف</button>
                             </div>
                           </div>
@@ -1627,11 +1627,11 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                 <div className="flex justify-end gap-2">
                   {editExamIndex !== null ? (
                     <>
-                      <button type="button" className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" onClick={handleSaveEditExam}>حفظ التعديل</button>
+                      <button type="button" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={handleSaveEditExam}>حفظ التعديل</button>
                       <button type="button" className="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500" onClick={handleCancelEditExam}>إلغاء</button>
                     </>
                   ) : (
-                    <button type="button" className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700" onClick={handleAddExam} disabled={!newExam.title.trim() || newExam.questions.length === 0}>
+                    <button type="button" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700" onClick={handleAddExam} disabled={!newExam.title.trim() || newExam.questions.length === 0}>
                       إضافة الامتحان
                     </button>
                   )}
@@ -1668,14 +1668,14 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                               </div>
                               <button
                                 onClick={() => toggleExamExpanded(idx)}
-                                className="text-green-600 hover:text-green-800 text-sm mt-2 flex items-center gap-1"
+                                className="text-blue-600 hover:text-blue-800 text-sm mt-2 flex items-center gap-1"
                               >
                                 {expandedExams.has(idx) ? 'إخفاء الأسئلة' : 'عرض الأسئلة'}
                                 <span>{expandedExams.has(idx) ? '▼' : '▶'}</span>
                               </button>
                             </div>
                             <div className="flex gap-2 mr-3">
-                              <button type="button" className="text-green-500 hover:text-green-700 text-sm" onClick={() => handleEditExam(idx)}>تعديل</button>
+                              <button type="button" className="text-blue-500 hover:text-blue-700 text-sm" onClick={() => handleEditExam(idx)}>تعديل</button>
                               <button type="button" className="text-red-500 hover:text-red-700 text-sm" onClick={() => handleRemoveExam(idx)}>حذف</button>
                             </div>
                           </div>
@@ -1689,7 +1689,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                                   <div key={qIdx} className="bg-white dark:bg-gray-600 rounded p-3">
                                     <div className="text-right">
                                       <p className="font-medium text-gray-900 dark:text-white mb-2">
-                                        <span className="text-green-600 font-bold">السؤال {getArabicOrdinalNumber(qIdx + 1)}:</span> {question.question}
+                                        <span className="text-blue-600 font-bold">السؤال {getArabicOrdinalNumber(qIdx + 1)}:</span> {question.question}
                                       </p>
                                       {question.image && (
                                         <div className="mb-2">
@@ -1701,11 +1701,11 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                                       )}
                                       <div className="space-y-1">
                                         {question.options.slice(0, question.numberOfOptions || 4).map((option, optIdx) => (
-                                          <div key={optIdx} className={`text-sm ${optIdx === question.correctAnswer ? 'text-green-600 font-bold' : 'text-gray-600 dark:text-gray-300'}`}>
+                                          <div key={optIdx} className={`text-sm ${optIdx === question.correctAnswer ? 'text-blue-600 font-bold' : 'text-gray-600 dark:text-gray-300'}`}>
                                             {optIdx + 1}. {option} {optIdx === question.correctAnswer && '(إجابة صحيحة)'}
                                           </div>
                                         ))}
-                                        <div className="text-xs text-green-600 mt-1">
+                                        <div className="text-xs text-blue-600 mt-1">
                                           عدد الخيارات: {question.numberOfOptions || 4}
                                         </div>
                                       </div>
@@ -1723,7 +1723,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
 
                 {/* Save Exams Button */}
                 <div className="flex justify-end mt-6">
-                  <button type="button" className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 disabled:opacity-50" onClick={handleSaveExams} disabled={saving}>
+                  <button type="button" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 disabled:opacity-50" onClick={handleSaveExams} disabled={saving}>
                     {saving ? 'جاري الحفظ...' : 'حفظ الامتحانات'}
                   </button>
                 </div>
@@ -1737,7 +1737,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
               <div className="font-semibold text-gray-900 dark:text-white text-right mb-4">إضافة امتحان مقالي جديد</div>
               <button
                 onClick={() => toggleSection('essay-exams')}
-                className="text-green-600 hover:text-green-800 flex items-center gap-1"
+                className="text-blue-600 hover:text-blue-800 flex items-center gap-1"
               >
                 {openSections['essay-exams'] ? 'إخفاء' : 'إظهار'}
                 <span>{openSections['essay-exams'] ? '▼' : '▶'}</span>
@@ -1818,7 +1818,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                   {/* Question Image */}
                   <div className="flex items-center gap-2">
                     <input type="file" accept="image/*" onChange={handleEssayQuestionImageChange} disabled={uploading} />
-                    {uploading && <span className="text-green-600 text-xs text-right">جاري رفع الصورة...</span>}
+                    {uploading && <span className="text-blue-600 text-xs text-right">جاري رفع الصورة...</span>}
                     {newEssayQuestion.image && (
                       <div className="flex items-center gap-2">
                         <img src={generateImageUrl(newEssayQuestion.image)} alt="Question" className="w-16 h-16 object-cover rounded" />
@@ -1827,7 +1827,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                     )}
                   </div>
 
-                  <button type="button" className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" onClick={handleAddEssayQuestion} disabled={!newEssayQuestion.question.trim()}>
+                  <button type="button" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={handleAddEssayQuestion} disabled={!newEssayQuestion.question.trim()}>
                     إضافة السؤال المقالي
                   </button>
                 </div>
@@ -1842,7 +1842,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                           <div className="flex items-start justify-between">
                             <div className="flex-1 text-right">
                               <p className="font-medium text-gray-900 dark:text-white">
-                                <span className="text-green-600 font-bold">السؤال {getArabicOrdinalNumber(idx + 1)}:</span> {question.question}
+                                <span className="text-blue-600 font-bold">السؤال {getArabicOrdinalNumber(idx + 1)}:</span> {question.question}
                               </p>
                               {question.description && <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{question.description}</p>}
                               {question.image && <img src={generateImageUrl(question.image)} alt="Question" className="w-20 h-20 object-cover rounded mt-2" />}
@@ -1871,7 +1871,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                 <div className="flex justify-end">
                   {editEssayExamIndex !== null ? (
                     <div className="flex gap-2">
-                      <button type="button" className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 disabled:opacity-50" onClick={handleSaveEditEssayExam} disabled={saving}>
+                      <button type="button" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 disabled:opacity-50" onClick={handleSaveEditEssayExam} disabled={saving}>
                         {saving ? 'جاري الحفظ...' : 'حفظ التعديل'}
                       </button>
                       <button type="button" className="bg-gray-400 text-white px-6 py-2 rounded hover:bg-gray-500" onClick={handleCancelEditEssayExam} disabled={saving}>
@@ -1879,7 +1879,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                       </button>
                     </div>
                   ) : (
-                    <button type="button" className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700" onClick={handleAddEssayExam} disabled={!newEssayExam.title.trim() || newEssayExam.questions.length === 0 || saving}>
+                    <button type="button" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700" onClick={handleAddEssayExam} disabled={!newEssayExam.title.trim() || newEssayExam.questions.length === 0 || saving}>
                       {saving ? 'جاري الإنشاء...' : 'إنشاء الامتحان المقالي'}
                     </button>
                   )}
@@ -1907,14 +1907,14 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                               </div>
                               <button
                                 onClick={() => toggleEssayExamExpanded(idx)}
-                                className="text-green-600 hover:text-green-800 text-sm mt-2 flex items-center gap-1"
+                                className="text-blue-600 hover:text-blue-800 text-sm mt-2 flex items-center gap-1"
                               >
                                 {expandedEssayExams.has(idx) ? 'إخفاء الأسئلة' : 'عرض الأسئلة'}
                                 <span>{expandedEssayExams.has(idx) ? '▼' : '▶'}</span>
                               </button>
                             </div>
                             <div className="flex gap-2 mr-3">
-                              <button type="button" className="text-green-500 hover:text-green-700 text-sm" onClick={() => handleEditEssayExam(idx)}>تعديل</button>
+                              <button type="button" className="text-blue-500 hover:text-blue-700 text-sm" onClick={() => handleEditEssayExam(idx)}>تعديل</button>
                               <button type="button" className="text-red-500 hover:text-red-700 text-sm" onClick={() => handleRemoveEssayExam(exam._id)}>حذف</button>
                             </div>
                           </div>
@@ -1928,7 +1928,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                                   <div key={qIdx} className="bg-white dark:bg-gray-600 rounded p-3">
                                     <div className="text-right">
                                       <p className="font-medium text-gray-900 dark:text-white mb-2">
-                                        <span className="text-green-600 font-bold">السؤال {getArabicOrdinalNumber(qIdx + 1)}:</span> {question.question}
+                                        <span className="text-blue-600 font-bold">السؤال {getArabicOrdinalNumber(qIdx + 1)}:</span> {question.question}
                                       </p>
                                       {question.description && <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">{question.description}</p>}
                                       {question.image && <img src={generateImageUrl(question.image)} alt="Question" className="w-20 h-20 object-cover rounded mb-2" />}
@@ -1963,7 +1963,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
               <div className="font-semibold text-gray-900 dark:text-white text-right mb-4">إضافة تدريب جديد</div>
               <button
                 onClick={() => toggleSection('trainings')}
-                className="text-green-600 hover:text-green-800 flex items-center gap-1"
+                className="text-blue-600 hover:text-blue-800 flex items-center gap-1"
               >
                 {openSections.trainings ? 'إخفاء' : 'إظهار'}
                 <span>{openSections.trainings ? '▼' : '▶'}</span>
@@ -1993,7 +1993,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                   {/* Question Image */}
                   <div className="flex items-center gap-2">
                     <input type="file" accept="image/*" onChange={handleTrainingQuestionImageChange} disabled={uploading} />
-                    {uploading && <span className="text-green-600 text-xs text-right">جاري رفع الصورة...</span>}
+                    {uploading && <span className="text-blue-600 text-xs text-right">جاري رفع الصورة...</span>}
                     {newTrainingQuestion.image && (
                       <div className="flex items-center gap-2">
                         <img src={generateImageUrl(newTrainingQuestion.image)} alt="Question" className="w-16 h-16 object-cover rounded" />
@@ -2049,11 +2049,11 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
 
                   {editTrainingQuestionIndex !== null ? (
                     <div className="flex gap-2 justify-end">
-                      <button type="button" className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" onClick={handleSaveEditTrainingQuestion}>حفظ التعديل</button>
+                      <button type="button" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={handleSaveEditTrainingQuestion}>حفظ التعديل</button>
                       <button type="button" className="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500" onClick={handleCancelEditTrainingQuestion}>إلغاء</button>
                     </div>
                   ) : (
-                    <button type="button" className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" onClick={handleAddTrainingQuestion} disabled={!newTrainingQuestion.question.trim() || newTrainingQuestion.options.slice(0, newTrainingQuestion.numberOfOptions).some(opt => !opt.trim())}>
+                    <button type="button" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={handleAddTrainingQuestion} disabled={!newTrainingQuestion.question.trim() || newTrainingQuestion.options.slice(0, newTrainingQuestion.numberOfOptions).some(opt => !opt.trim())}>
                       إضافة السؤال
                     </button>
                   )}
@@ -2069,22 +2069,22 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                           <div className="flex items-start justify-between">
                             <div className="flex-1 text-right">
                               <p className="font-medium text-gray-900 dark:text-white">
-                                <span className="text-green-600 font-bold">السؤال {getArabicOrdinalNumber(idx + 1)}:</span> {question.question}
+                                <span className="text-blue-600 font-bold">السؤال {getArabicOrdinalNumber(idx + 1)}:</span> {question.question}
                               </p>
                               {question.image && <img src={generateImageUrl(question.image)} alt="Question" className="w-20 h-20 object-cover rounded mt-2" />}
                               <div className="mt-2 space-y-1">
                                 {question.options.slice(0, question.numberOfOptions || 4).map((option, optIdx) => (
-                                  <div key={optIdx} className={`text-sm ${optIdx === question.correctAnswer ? 'text-green-600 font-bold' : 'text-gray-600 dark:text-gray-300'}`}>
+                                  <div key={optIdx} className={`text-sm ${optIdx === question.correctAnswer ? 'text-blue-600 font-bold' : 'text-gray-600 dark:text-gray-300'}`}>
                                     {optIdx + 1}. {option} {optIdx === question.correctAnswer && '(إجابة صحيحة)'}
                                   </div>
                                 ))}
-                                <div className="text-xs text-green-600 mt-1">
+                                <div className="text-xs text-blue-600 mt-1">
                                   عدد الخيارات: {question.numberOfOptions || 4}
                                 </div>
                               </div>
                             </div>
                             <div className="flex gap-2 mr-3">
-                              <button type="button" className="text-green-500 hover:text-green-700 text-sm" onClick={() => handleEditTrainingQuestion(idx)}>تعديل</button>
+                              <button type="button" className="text-blue-500 hover:text-blue-700 text-sm" onClick={() => handleEditTrainingQuestion(idx)}>تعديل</button>
                               <button type="button" className="text-red-500 hover:text-red-700 text-sm" onClick={() => handleRemoveTrainingQuestion(idx)}>حذف</button>
                             </div>
                           </div>
@@ -2098,11 +2098,11 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                 <div className="flex justify-end gap-2">
                   {editTrainingIndex !== null ? (
                     <>
-                      <button type="button" className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" onClick={handleSaveEditTraining}>حفظ التعديل</button>
+                      <button type="button" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={handleSaveEditTraining}>حفظ التعديل</button>
                       <button type="button" className="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500" onClick={handleCancelEditTraining}>إلغاء</button>
                     </>
                   ) : (
-                    <button type="button" className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700" onClick={handleAddTraining} disabled={!newTraining.title.trim() || newTraining.questions.length === 0}>
+                    <button type="button" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700" onClick={handleAddTraining} disabled={!newTraining.title.trim() || newTraining.questions.length === 0}>
                       إضافة التدريب
                     </button>
                   )}
@@ -2127,14 +2127,14 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                               </div>
                               <button
                                 onClick={() => toggleTrainingExpanded(idx)}
-                                className="text-green-600 hover:text-green-800 text-sm mt-2 flex items-center gap-1"
+                                className="text-blue-600 hover:text-blue-800 text-sm mt-2 flex items-center gap-1"
                               >
                                 {expandedTrainings.has(idx) ? 'إخفاء الأسئلة' : 'عرض الأسئلة'}
                                 <span>{expandedTrainings.has(idx) ? '▼' : '▶'}</span>
                               </button>
                             </div>
                             <div className="flex gap-2 mr-3">
-                              <button type="button" className="text-green-500 hover:text-green-700 text-sm" onClick={() => handleEditTraining(idx)}>تعديل</button>
+                              <button type="button" className="text-blue-500 hover:text-blue-700 text-sm" onClick={() => handleEditTraining(idx)}>تعديل</button>
                               <button type="button" className="text-red-500 hover:text-red-700 text-sm" onClick={() => handleRemoveTraining(idx)}>حذف</button>
                             </div>
                           </div>
@@ -2148,7 +2148,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                                   <div key={qIdx} className="bg-white dark:bg-gray-600 rounded p-3">
                                     <div className="text-right">
                                       <p className="font-medium text-gray-900 dark:text-white mb-2">
-                                        <span className="text-green-600 font-bold">السؤال {getArabicOrdinalNumber(qIdx + 1)}:</span> {question.question}
+                                        <span className="text-blue-600 font-bold">السؤال {getArabicOrdinalNumber(qIdx + 1)}:</span> {question.question}
                                       </p>
                                       {question.image && (
                                         <div className="mb-2">
@@ -2160,11 +2160,11 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                                       )}
                                       <div className="space-y-1">
                                         {question.options.slice(0, question.numberOfOptions || 4).map((option, optIdx) => (
-                                          <div key={optIdx} className={`text-sm ${optIdx === question.correctAnswer ? 'text-green-600 font-bold' : 'text-gray-600 dark:text-gray-300'}`}>
+                                          <div key={optIdx} className={`text-sm ${optIdx === question.correctAnswer ? 'text-blue-600 font-bold' : 'text-gray-600 dark:text-gray-300'}`}>
                                             {optIdx + 1}. {option} {optIdx === question.correctAnswer && '(إجابة صحيحة)'}
                                           </div>
                                         ))}
-                                        <div className="text-xs text-green-600 mt-1">
+                                        <div className="text-xs text-blue-600 mt-1">
                                           عدد الخيارات: {question.numberOfOptions || 4}
                                         </div>
                                       </div>
@@ -2182,7 +2182,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
 
                 {/* Save Trainings Button */}
                 <div className="flex justify-end mt-6">
-                  <button type="button" className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 disabled:opacity-50" onClick={handleSaveTrainings} disabled={saving}>
+                  <button type="button" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 disabled:opacity-50" onClick={handleSaveTrainings} disabled={saving}>
                     {saving ? 'جاري الحفظ...' : 'حفظ التدريبات'}
                   </button>
                 </div>
@@ -2195,7 +2195,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
             <h3 className="font-semibold text-gray-900 dark:text-white text-right text-lg">🔒 امتحان المدخل</h3>
 
             {/* Enable Entry Exam Toggle */}
-            <div className="bg-gradient-to-r from-green-50 to-amber-50 dark:from-green-900/20 dark:to-amber-900/20 p-4 rounded-lg border border-green-200 dark:border-green-700">
+            <div className="bg-gradient-to-r from-blue-50 to-amber-50 dark:from-blue-900/20 dark:to-amber-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-700">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3 flex-1">
                   <span className="text-3xl">{entryExam.enabled ? '🔒' : '🔓'}</span>
@@ -2218,7 +2218,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                     onChange={(e) => setEntryExam(prev => ({ ...prev, enabled: e.target.checked }))}
                     className="sr-only peer"
                   />
-                  <div className="w-14 h-7 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 dark:peer-focus:ring-green-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-green-600"></div>
+                  <div className="w-14 h-7 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                 </label>
               </div>
             </div>
@@ -2265,7 +2265,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                 </div>
 
                 {/* Add Question Form */}
-                <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-700 space-y-4">
+                <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-700 space-y-4">
                   <h4 className="font-medium text-gray-900 dark:text-white text-right">إضافة سؤال جديد</h4>
                   <div>
                     <label className="block text-sm font-medium mb-1 text-right">نص السؤال</label>
@@ -2298,7 +2298,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                           name="entryExamCorrectAnswer"
                           checked={newEntryExamQuestion.correctAnswer === i}
                           onChange={() => setNewEntryExamQuestion(prev => ({ ...prev, correctAnswer: i }))}
-                          className="accent-green-600"
+                          className="accent-blue-600"
                         />
                         <input
                           type="text"
@@ -2312,7 +2312,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                           placeholder={`الخيار ${i + 1}`}
                         />
                         {newEntryExamQuestion.correctAnswer === i && (
-                          <span className="text-green-600 text-sm">✓ صحيح</span>
+                          <span className="text-blue-600 text-sm">✓ صحيح</span>
                         )}
                       </div>
                     ))}
@@ -2417,7 +2417,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                         });
                       }}
                       disabled={!newEntryExamQuestion.question.trim() || newEntryExamQuestion.options.slice(0, newEntryExamQuestion.numberOfOptions).some(opt => !opt.trim())}
-                      className={`${editEntryExamQuestionIndex !== null ? 'bg-blue-600 hover:bg-blue-700' : 'bg-green-600 hover:bg-green-700'} text-white px-4 py-2 rounded disabled:opacity-50`}
+                      className={`${editEntryExamQuestionIndex !== null ? 'bg-blue-600 hover:bg-blue-700' : 'bg-blue-600 hover:bg-blue-700'} text-white px-4 py-2 rounded disabled:opacity-50`}
                     >
                       {editEntryExamQuestionIndex !== null ? '💾 تحديث السؤال' : '➕ إضافة السؤال'}
                     </button>
@@ -2432,18 +2432,18 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
                     </h4>
                     <div className="space-y-3">
                       {entryExam.questions.map((q, idx) => (
-                        <div key={idx} className={`p-3 rounded-lg ${editEntryExamQuestionIndex === idx ? 'bg-green-100 dark:bg-green-900/30 border-2 border-green-400' : 'bg-gray-50 dark:bg-gray-600'}`}>
+                        <div key={idx} className={`p-3 rounded-lg ${editEntryExamQuestionIndex === idx ? 'bg-blue-100 dark:bg-blue-900/30 border-2 border-blue-400' : 'bg-gray-50 dark:bg-gray-600'}`}>
                           <div className="flex items-start justify-between">
                             <div className="flex-1 text-right">
                               <p className="font-medium text-gray-900 dark:text-white">
-                                <span className="text-green-600">س{idx + 1}:</span> {q.question}
+                                <span className="text-blue-600">س{idx + 1}:</span> {q.question}
                               </p>
                               {q.image && (
                                 <img src={generateImageUrl(q.image)} alt="Question" className="w-20 h-20 object-cover rounded mt-2" />
                               )}
                               <div className="mt-2 space-y-1">
                                 {q.options.slice(0, q.numberOfOptions || 4).map((opt, optIdx) => (
-                                  <p key={optIdx} className={`text-sm ${optIdx === q.correctAnswer ? 'text-green-600 font-bold' : 'text-gray-600 dark:text-gray-300'}`}>
+                                  <p key={optIdx} className={`text-sm ${optIdx === q.correctAnswer ? 'text-blue-600 font-bold' : 'text-gray-600 dark:text-gray-300'}`}>
                                     {String.fromCharCode(65 + optIdx)}. {opt} {optIdx === q.correctAnswer && '✓'}
                                   </p>
                                 ))}
@@ -2514,7 +2514,7 @@ const LessonContentModal = ({ courseId, unitId, lessonId, onClose }) => {
             <div className="flex justify-end mt-6">
               <button
                 type="button"
-                className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 disabled:opacity-50"
+                className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
                 onClick={async () => {
                   if (entryExam.enabled && entryExam.questions.length === 0) {
                     toast.error('يجب إضافة سؤال واحد على الأقل');
@@ -2579,7 +2579,7 @@ const CourseContentManager = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-green-50 via-indigo-50 to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex flex-col md:flex-row" dir="rtl">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex flex-col md:flex-row" dir="rtl">
         {/* Sidebar: Course List */}
         <div className="w-full md:w-1/3 lg:w-1/4 bg-white dark:bg-gray-900 border-b md:border-b-0 md:border-r border-gray-200 dark:border-gray-800 p-3 md:p-4 flex flex-col">
           <div className="mb-4 flex flex-col gap-2">
@@ -2627,13 +2627,13 @@ const CourseContentManager = () => {
               filteredCourses.map(course => (
                 <div
                   key={course._id}
-                  className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all border ${selectedCourse && selectedCourse._id === course._id ? 'bg-green-100 dark:bg-green-800/30 border-green-400' : 'bg-gray-50 dark:bg-gray-800 border-transparent hover:bg-green-50 dark:hover:bg-green-900/20'}`}
+                  className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all border ${selectedCourse && selectedCourse._id === course._id ? 'bg-blue-100 dark:bg-blue-800/30 border-blue-400' : 'bg-gray-50 dark:bg-gray-800 border-transparent hover:bg-blue-50 dark:hover:bg-blue-900/20'}`}
                   onClick={() => {
                     setSelectedCourse(course);
                     setExpandedUnit(null);
                   }}
                 >
-                  <FaBook className="text-green-500 text-lg" />
+                  <FaBook className="text-blue-500 text-lg" />
                   <div className="flex-1 min-w-0 text-right">
                     <div className="font-bold text-gray-900 dark:text-white truncate text-sm md:text-base">{course.title}</div>
                     <div className="text-xs text-gray-500 dark:text-gray-400 truncate">{course.stage?.name}</div>
@@ -2645,7 +2645,7 @@ const CourseContentManager = () => {
         </div>
         {/* Main Content: Units & Lessons */}
         <div className="flex-1 p-3 md:p-6">
-          <h1 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-right text-green-700 dark:text-green-300 flex items-center gap-2">
+          <h1 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-right text-blue-700 dark:text-blue-300 flex items-center gap-2">
             <FaLayerGroup />
             إدارة محتوى الدورات
           </h1>
@@ -2659,9 +2659,9 @@ const CourseContentManager = () => {
 
               {/* درس */}
               {selectedCourse.directLessons?.length > 0 && (
-                <div className="bg-green-50 dark:bg-green-900/20 rounded-xl shadow p-3 md:p-4">
-                  <div className="font-semibold text-green-700 dark:text-green-300 mb-2 flex items-center gap-2 text-right">
-                    <FaBookOpen className="text-green-500" />
+                <div className="bg-blue-50 dark:bg-blue-900/20 rounded-xl shadow p-3 md:p-4">
+                  <div className="font-semibold text-blue-700 dark:text-blue-300 mb-2 flex items-center gap-2 text-right">
+                    <FaBookOpen className="text-blue-500" />
                     مقدمة
                   </div>
                   {selectedCourse.directLessons.map(lesson => (
@@ -2671,7 +2671,7 @@ const CourseContentManager = () => {
                         <span className="mr-2 text-xs text-gray-500 dark:text-gray-400">{lesson.price ? `سعر الدرس: ${lesson.price}` : 'بدون سعر'}</span>
                       </div>
                       <button
-                        className="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded-md text-xs flex items-center gap-1 transition-colors"
+                        className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-xs flex items-center gap-1 transition-colors"
                         onClick={(e) => {
                           e.stopPropagation();
 
@@ -2693,9 +2693,9 @@ const CourseContentManager = () => {
                     onClick={() => setExpandedUnit(expandedUnit === unit._id ? null : unit._id)}
                   >
                     <div className="flex items-center gap-2 text-right">
-                      <FaBookOpen className="text-green-500" />
+                      <FaBookOpen className="text-blue-500" />
                       <span className="font-semibold text-gray-900 dark:text-white text-sm md:text-base">{unit.title}</span>
-                      <span className="text-xs bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-0.5 rounded-full">{unit.price ? `سعر الوحدة: ${unit.price}` : 'بدون سعر'}</span>
+                      <span className="text-xs bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-0.5 rounded-full">{unit.price ? `سعر الوحدة: ${unit.price}` : 'بدون سعر'}</span>
                     </div>
                     <FaChevronDown className={`transition-transform ${expandedUnit === unit._id ? 'rotate-180' : ''}`} />
                   </div>
@@ -2711,7 +2711,7 @@ const CourseContentManager = () => {
                               <span className="mr-2 text-xs text-gray-500 dark:text-gray-400">{lesson.price ? `سعر الدرس: ${lesson.price}` : 'بدون سعر'}</span>
                             </div>
                             <button
-                              className="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded-md text-xs flex items-center gap-1 transition-colors"
+                              className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-xs flex items-center gap-1 transition-colors"
                               onClick={(e) => {
                                 e.stopPropagation();
 

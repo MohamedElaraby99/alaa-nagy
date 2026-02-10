@@ -202,7 +202,7 @@ export default function AttendanceDashboard() {
           <div className="flex gap-3 mt-4 md:mt-0">
             <button
               onClick={() => setShowQRScanner(true)}
-              className="flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors"
             >
               <FaQrcode size={16} />
               مسح رمز الحضور
@@ -210,7 +210,7 @@ export default function AttendanceDashboard() {
             
             <button
               onClick={exportAttendanceData}
-              className="flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors"
             >
               <FaDownload size={16} />
               تصدير البيانات
@@ -229,7 +229,7 @@ export default function AttendanceDashboard() {
                     {dashboard.data.overallStats?.totalRecords || 0}
                   </p>
                 </div>
-                <FaUsers className="text-green-500" size={24} />
+                <FaUsers className="text-blue-500" size={24} />
               </div>
             </div>
 
@@ -237,11 +237,11 @@ export default function AttendanceDashboard() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-gray-600 dark:text-gray-400">حاضر</p>
-                  <p className="text-2xl font-bold text-green-600">
+                  <p className="text-2xl font-bold text-blue-600">
                     {dashboard.data.overallStats?.presentCount || 0}
                   </p>
                 </div>
-                <FaUserCheck className="text-green-500" size={24} />
+                <FaUserCheck className="text-blue-500" size={24} />
               </div>
             </div>
 
@@ -274,7 +274,7 @@ export default function AttendanceDashboard() {
         {/* Filters */}
         <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg mb-6">
           <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4 flex items-center gap-2">
-            <FaFilter className="text-green-500" />
+            <FaFilter className="text-blue-500" />
             فلاتر البحث
           </h3>
           
@@ -287,7 +287,7 @@ export default function AttendanceDashboard() {
                 type="date"
                 value={filters.startDate}
                 onChange={(e) => handleFilterChange('startDate', e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               />
             </div>
 
@@ -299,7 +299,7 @@ export default function AttendanceDashboard() {
                 type="date"
                 value={filters.endDate}
                 onChange={(e) => handleFilterChange('endDate', e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               />
             </div>
 
@@ -310,7 +310,7 @@ export default function AttendanceDashboard() {
               <select
                 value={filters.attendanceType}
                 onChange={(e) => handleFilterChange('attendanceType', e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               >
                 <option value="">جميع الأنواع</option>
                 <option value="course">دورة</option>
@@ -326,7 +326,7 @@ export default function AttendanceDashboard() {
               <select
                 value={filters.status}
                 onChange={(e) => handleFilterChange('status', e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               >
                 <option value="">جميع الحالات</option>
                 <option value="present">حاضر</option>
@@ -384,8 +384,8 @@ export default function AttendanceDashboard() {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center gap-2">
-                        {attendance.attendanceType === 'course' && <FaBook className="text-green-500" />}
-                        {attendance.attendanceType === 'live_meeting' && <FaVideo className="text-green-500" />}
+                        {attendance.attendanceType === 'course' && <FaBook className="text-blue-500" />}
+                        {attendance.attendanceType === 'live_meeting' && <FaVideo className="text-blue-500" />}
                         {attendance.attendanceType === 'general' && <FaUsers className="text-gray-500" />}
                         <span className="text-sm text-gray-900 dark:text-white">
                           {attendance.attendanceType === 'course' && 'دورة'}
@@ -397,7 +397,7 @@ export default function AttendanceDashboard() {
                     <td className="px-6 py-4 whitespace-nowrap">
                       <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
                         attendance.status === 'present' 
-                          ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
+                          ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
                           : attendance.status === 'late'
                           ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200'
                           : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
@@ -423,7 +423,7 @@ export default function AttendanceDashboard() {
                       <div className="flex gap-2">
                         <button
                           onClick={() => handleEditAttendance(attendance)}
-                          className="text-green-600 hover:text-green-900 dark:text-green-400 dark:hover:text-green-300"
+                          className="text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300"
                         >
                           <FaEdit size={16} />
                         </button>
@@ -499,7 +499,7 @@ export default function AttendanceDashboard() {
                   <select
                     value={editData.status}
                     onChange={(e) => setEditData(prev => ({ ...prev, status: e.target.value }))}
-                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   >
                     <option value="present">حاضر</option>
                     <option value="late">متأخر</option>
@@ -515,7 +515,7 @@ export default function AttendanceDashboard() {
                     value={editData.notes}
                     onChange={(e) => setEditData(prev => ({ ...prev, notes: e.target.value }))}
                     rows={3}
-                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   />
                 </div>
               </div>
@@ -524,7 +524,7 @@ export default function AttendanceDashboard() {
                 <button
                   onClick={handleUpdateAttendance}
                   disabled={updateLoading}
-                  className="flex-1 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors disabled:opacity-50"
+                  className="flex-1 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors disabled:opacity-50"
                 >
                   {updateLoading ? 'جاري التحديث...' : 'تحديث'}
                 </button>

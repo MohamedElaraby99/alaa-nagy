@@ -17,13 +17,13 @@ const WatchButton = ({
     
     switch (variant) {
       case "primary":
-        return `${baseStyles} bg-green-600 hover:bg-green-700 text-white`;
+        return `${baseStyles} bg-blue-600 hover:bg-blue-700 text-white`;
       case "secondary":
-        return `${baseStyles} bg-green-600 hover:bg-green-700 text-white`;
+        return `${baseStyles} bg-blue-600 hover:bg-blue-700 text-white`;
       case "outline":
-        return `${baseStyles} border border-green-600 text-green-600 hover:bg-green-50 dark:hover:bg-green-900/20`;
+        return `${baseStyles} border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20`;
       default:
-        return `${baseStyles} bg-green-600 hover:bg-green-700 text-white`;
+        return `${baseStyles} bg-blue-600 hover:bg-blue-700 text-white`;
     }
   };
 

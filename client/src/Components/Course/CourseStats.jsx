@@ -26,25 +26,25 @@ const CourseStats = ({ stats, loading }) => {
       title: "إجمالي الدورات",
       value: stats?.totalCourses || 0,
       icon: FaBook,
-      color: "from-green-500 to-green-600",
-      bgColor: "bg-green-50 dark:bg-green-900/20",
-      textColor: "text-green-600 dark:text-green-400"
+      color: "from-blue-500 to-blue-600",
+      bgColor: "bg-blue-50 dark:bg-blue-900/20",
+      textColor: "text-blue-600 dark:text-blue-400"
     },
     {
       title: "الكورسات المنشورة",
       value: stats?.publishedCourses || 0,
       icon: FaPlay,
-      color: "from-green-500 to-green-600",
-      bgColor: "bg-green-50 dark:bg-green-900/20",
-      textColor: "text-green-600 dark:text-green-400"
+      color: "from-blue-500 to-blue-600",
+      bgColor: "bg-blue-50 dark:bg-blue-900/20",
+      textColor: "text-blue-600 dark:text-blue-400"
     },
     {
       title: "إجمالي الطلاب",
       value: stats?.totalStudents || 0,
       icon: FaUsers,
-      color: "from-green-500 to-green-600",
-      bgColor: "bg-green-50 dark:bg-green-900/20",
-      textColor: "text-green-600 dark:text-green-400"
+      color: "from-blue-500 to-blue-600",
+      bgColor: "bg-blue-50 dark:bg-blue-900/20",
+      textColor: "text-blue-600 dark:text-blue-400"
     }
   ];
 

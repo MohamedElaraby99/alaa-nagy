@@ -239,9 +239,9 @@ const LiveMeetingDashboard = () => {
 
   const getStatusColor = (status) => {
     switch (status) {
-      case 'scheduled': return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
+      case 'scheduled': return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
       case 'live': return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200';
-      case 'completed': return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
+      case 'completed': return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
       case 'cancelled': return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200';
       default: return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200';
     }
@@ -317,15 +317,15 @@ const LiveMeetingDashboard = () => {
               {/* Data Loading Status */}
               <div className="mt-2 text-sm text-gray-500 dark:text-gray-400">
                 {!instructors || !subjects || !stages ? (
-                  <span className="text-green-600">🔄 جاري تحميل البيانات الأساسية...</span>
+                  <span className="text-blue-600">🔄 جاري تحميل البيانات الأساسية...</span>
                 ) : (
-                  <span className="text-green-600">✅ البيانات جاهزة</span>
+                  <span className="text-blue-600">✅ البيانات جاهزة</span>
                 )}
               </div>
             </div>
             <button
               onClick={() => setShowCreateModal(true)}
-              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg transition-colors duration-200"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-200"
             >
               <FaPlus />
               إنشاء جلسة مباشر جديد
@@ -336,8 +336,8 @@ const LiveMeetingDashboard = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
               <div className="flex items-center">
-                <div className="p-3 rounded-full bg-green-100 dark:bg-green-900">
-                  <FaVideo className="text-2xl text-green-600 dark:text-green-400" />
+                <div className="p-3 rounded-full bg-blue-100 dark:bg-blue-900">
+                  <FaVideo className="text-2xl text-blue-600 dark:text-blue-400" />
                 </div>
                 <div className="mr-4">
                   <p className="text-sm text-gray-600 dark:text-gray-400">إجمالي الجلسات</p>
@@ -348,8 +348,8 @@ const LiveMeetingDashboard = () => {
 
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
               <div className="flex items-center">
-                <div className="p-3 rounded-full bg-green-100 dark:bg-green-900">
-                  <FaClock className="text-2xl text-green-600 dark:text-green-400" />
+                <div className="p-3 rounded-full bg-blue-100 dark:bg-blue-900">
+                  <FaClock className="text-2xl text-blue-600 dark:text-blue-400" />
                 </div>
                 <div className="mr-4">
                   <p className="text-sm text-gray-600 dark:text-gray-400">القادمة</p>
@@ -372,8 +372,8 @@ const LiveMeetingDashboard = () => {
 
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
               <div className="flex items-center">
-                <div className="p-3 rounded-full bg-green-100 dark:bg-green-900">
-                  <FaUsers className="text-2xl text-green-600 dark:text-green-400" />
+                <div className="p-3 rounded-full bg-blue-100 dark:bg-blue-900">
+                  <FaUsers className="text-2xl text-blue-600 dark:text-blue-400" />
                 </div>
                 <div className="mr-4">
                   <p className="text-sm text-gray-600 dark:text-gray-400">إجمالي المشاركين</p>
@@ -393,14 +393,14 @@ const LiveMeetingDashboard = () => {
                   placeholder="البحث في الجلسات..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                 />
               </div>
 
               <select
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value)}
-                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               >
                 <option value="">جميع الحالات</option>
                 <option value="scheduled">مجدولة</option>
@@ -412,7 +412,7 @@ const LiveMeetingDashboard = () => {
               <select
                 value={stageFilter}
                 onChange={(e) => setStageFilter(e.target.value)}
-                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               >
                 <option value="">جميع المراحل</option>
                 {stages.map((stage) => (
@@ -423,7 +423,7 @@ const LiveMeetingDashboard = () => {
               <select
                 value={subjectFilter}
                 onChange={(e) => setSubjectFilter(e.target.value)}
-                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               >
                 <option value="">جميع المواد</option>
                 {subjects.map((subject) => (
@@ -440,7 +440,7 @@ const LiveMeetingDashboard = () => {
           {/* Meetings Table */}
           {loading ? (
             <div className="text-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
               <p className="mt-4 text-gray-600 dark:text-gray-300">جاري تحميل الجلسات المباشرة...</p>
             </div>
           ) : (
@@ -510,21 +510,21 @@ const LiveMeetingDashboard = () => {
                           <div className="flex items-center gap-2">
                             <button
                               onClick={() => openEditModal(meeting)}
-                              className="text-green-600 hover:text-green-900 dark:text-green-400 dark:hover:text-green-300"
+                              className="text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300"
                               title="تعديل"
                             >
                               <FaEdit />
                             </button>
                             <button
                               onClick={() => openAttendeesModal(meeting)}
-                              className="text-green-600 hover:text-green-900 dark:text-green-400 dark:hover:text-green-300"
+                              className="text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300"
                               title="إدارة المشاركين"
                             >
                               <FaUserPlus />
                             </button>
                             <button
                               onClick={() => window.open(meeting.googleMeetLink, '_blank')}
-                              className="text-green-600 hover:text-green-900 dark:text-green-400 dark:hover:text-green-300"
+                              className="text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300"
                               title="فتح الاجتماع"
                             >
                               <FaExternalLinkAlt />
@@ -578,7 +578,7 @@ const LiveMeetingDashboard = () => {
                             key={page}
                             onClick={() => setCurrentPage(page)}
                             className={`relative inline-flex items-center px-4 py-2 border text-sm font-medium ${page === currentPage
-                              ? 'z-10 bg-green-50 border-green-500 text-green-600'
+                              ? 'z-10 bg-blue-50 border-blue-500 text-blue-600'
                               : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'
                               }`}
                           >
@@ -610,7 +610,7 @@ const LiveMeetingDashboard = () => {
                       required
                       value={formData.title}
                       onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     />
                   </div>
 
@@ -624,7 +624,7 @@ const LiveMeetingDashboard = () => {
                       value={formData.googleMeetLink}
                       onChange={(e) => setFormData({ ...formData, googleMeetLink: e.target.value })}
                       placeholder="https://meet.google.com/xxx-xxxx-xxx"
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     />
                   </div>
                 </div>
@@ -637,7 +637,7 @@ const LiveMeetingDashboard = () => {
                     required
                     value={formData.description}
                     onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     rows="3"
                   />
                 </div>
@@ -652,7 +652,7 @@ const LiveMeetingDashboard = () => {
                       required
                       value={formData.scheduledDate}
                       onChange={(e) => setFormData({ ...formData, scheduledDate: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     />
                   </div>
 
@@ -667,7 +667,7 @@ const LiveMeetingDashboard = () => {
                       max="480"
                       value={formData.duration}
                       onChange={(e) => setFormData({ ...formData, duration: parseInt(e.target.value) })}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     />
                   </div>
 
@@ -681,7 +681,7 @@ const LiveMeetingDashboard = () => {
                       max="500"
                       value={formData.maxAttendees}
                       onChange={(e) => setFormData({ ...formData, maxAttendees: parseInt(e.target.value) })}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     />
                   </div>
                 </div>
@@ -695,7 +695,7 @@ const LiveMeetingDashboard = () => {
                       required
                       value={formData.instructor}
                       onChange={(e) => setFormData({ ...formData, instructor: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     >
                       <option value="">اختر المدرب</option>
                       {instructors && instructors.length > 0 ? (
@@ -716,7 +716,7 @@ const LiveMeetingDashboard = () => {
                       required
                       value={formData.stage}
                       onChange={(e) => setFormData({ ...formData, stage: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     >
                       <option value="">اختر المرحلة</option>
                       {stages.map((stage) => (
@@ -733,7 +733,7 @@ const LiveMeetingDashboard = () => {
                       required
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     >
                       <option value="">اختر المادة</option>
                       {subjects && subjects.length > 0 ? (
@@ -757,7 +757,7 @@ const LiveMeetingDashboard = () => {
                       value={formData.tags}
                       onChange={(e) => setFormData({ ...formData, tags: e.target.value })}
                       placeholder="علامة1، علامة2، علامة3"
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     />
                   </div>
 
@@ -766,7 +766,7 @@ const LiveMeetingDashboard = () => {
                       type="checkbox"
                       checked={formData.isRecorded}
                       onChange={(e) => setFormData({ ...formData, isRecorded: e.target.checked })}
-                      className="h-4 w-4 text-green-600 border-gray-300 rounded focus:ring-green-500"
+                      className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                     />
                     <label className="mr-2 text-sm text-gray-700 dark:text-gray-300">
                       تسجيل الاجتماع
@@ -784,7 +784,7 @@ const LiveMeetingDashboard = () => {
                   </button>
                   <button
                     type="submit"
-                    className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                    className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     إنشاء الاجتماع
                   </button>
@@ -810,7 +810,7 @@ const LiveMeetingDashboard = () => {
                       required
                       value={formData.title}
                       onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     />
                   </div>
 
@@ -823,7 +823,7 @@ const LiveMeetingDashboard = () => {
                       required
                       value={formData.googleMeetLink}
                       onChange={(e) => setFormData({ ...formData, googleMeetLink: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     />
                   </div>
                 </div>
@@ -836,7 +836,7 @@ const LiveMeetingDashboard = () => {
                     required
                     value={formData.description}
                     onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     rows="3"
                   />
                 </div>
@@ -851,7 +851,7 @@ const LiveMeetingDashboard = () => {
                       required
                       value={formData.scheduledDate}
                       onChange={(e) => setFormData({ ...formData, scheduledDate: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     />
                   </div>
 
@@ -866,7 +866,7 @@ const LiveMeetingDashboard = () => {
                       max="480"
                       value={formData.duration}
                       onChange={(e) => setFormData({ ...formData, duration: parseInt(e.target.value) })}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     />
                   </div>
 
@@ -880,7 +880,7 @@ const LiveMeetingDashboard = () => {
                       max="500"
                       value={formData.maxAttendees}
                       onChange={(e) => setFormData({ ...formData, maxAttendees: parseInt(e.target.value) })}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     />
                   </div>
                 </div>
@@ -894,7 +894,7 @@ const LiveMeetingDashboard = () => {
                       required
                       value={formData.instructor}
                       onChange={(e) => setFormData({ ...formData, instructor: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     >
                       <option value="">اختر المدرب</option>
                       {instructors.map((instructor) => (
@@ -911,7 +911,7 @@ const LiveMeetingDashboard = () => {
                       required
                       value={formData.stage}
                       onChange={(e) => setFormData({ ...formData, stage: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     >
                       <option value="">اختر المرحلة</option>
                       {stages.map((stage) => (
@@ -928,7 +928,7 @@ const LiveMeetingDashboard = () => {
                       required
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     >
                       <option value="">اختر المادة</option>
                       {subjects.map((subject) => (
@@ -948,7 +948,7 @@ const LiveMeetingDashboard = () => {
                       value={formData.tags}
                       onChange={(e) => setFormData({ ...formData, tags: e.target.value })}
                       placeholder="علامة1، علامة2، علامة3"
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     />
                   </div>
 
@@ -957,7 +957,7 @@ const LiveMeetingDashboard = () => {
                       type="checkbox"
                       checked={formData.isRecorded}
                       onChange={(e) => setFormData({ ...formData, isRecorded: e.target.checked })}
-                      className="h-4 w-4 text-green-600 border-gray-300 rounded focus:ring-green-500"
+                      className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                     />
                     <label className="mr-2 text-sm text-gray-700 dark:text-gray-300">
                       تسجيل الاجتماع
@@ -975,7 +975,7 @@ const LiveMeetingDashboard = () => {
                   </button>
                   <button
                     type="submit"
-                    className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                    className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     تحديث الاجتماع
                   </button>
@@ -1013,7 +1013,7 @@ const LiveMeetingDashboard = () => {
                           </div>
                           <div className="flex items-center gap-2">
                             {attendee.hasJoined && (
-                              <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+                              <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">
                                 انضم
                               </span>
                             )}
@@ -1049,7 +1049,7 @@ const LiveMeetingDashboard = () => {
                       placeholder="البحث بالاسم أو الإيميل..."
                       value={attendeeSearch}
                       onChange={(e) => setAttendeeSearch(e.target.value)}
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                      className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                     />
                   </div>
 
@@ -1057,7 +1057,7 @@ const LiveMeetingDashboard = () => {
                   <select
                     value={attendeeStageFilter}
                     onChange={(e) => setAttendeeStageFilter(e.target.value)}
-                    className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   >
                     <option value="">جميع المراحل</option>
                     {stages.map((stage) => (
@@ -1072,7 +1072,7 @@ const LiveMeetingDashboard = () => {
                       id="studentsOnly"
                       checked={showStudentsOnly}
                       onChange={(e) => setShowStudentsOnly(e.target.checked)}
-                      className="h-4 w-4 text-green-600 border-gray-300 rounded focus:ring-green-500"
+                      className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                     />
                     <label htmlFor="studentsOnly" className="mr-2 text-sm text-gray-700 dark:text-gray-300">
                       الطلاب فقط
@@ -1109,7 +1109,7 @@ const LiveMeetingDashboard = () => {
                             });
                           }
                         }}
-                        className="text-sm bg-green-100 hover:bg-green-200 dark:bg-green-900/20 dark:hover:bg-green-900/30 text-green-700 dark:text-green-400 px-3 py-1 rounded-full transition-colors"
+                        className="text-sm bg-blue-100 hover:bg-blue-200 dark:bg-blue-900/20 dark:hover:bg-blue-900/30 text-blue-700 dark:text-blue-400 px-3 py-1 rounded-full transition-colors"
                       >
                         {getFilteredUsers().every(user => attendeesFormData.selectedUsers.includes(user.id || user._id)) ? 'إلغاء الكل' : 'اختر الكل'}
                       </button>
@@ -1139,7 +1139,7 @@ const LiveMeetingDashboard = () => {
                                 });
                               }
                             }}
-                            className="h-4 w-4 text-green-600 border-gray-300 rounded focus:ring-green-500"
+                            className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                           />
                           <div className="mr-3 flex-1">
                             <div className="flex items-center justify-between">
@@ -1158,7 +1158,7 @@ const LiveMeetingDashboard = () => {
                               </div>
                               <div className="text-right">
                                 {user.stage && (
-                                  <div className="text-xs bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-400 px-2 py-1 rounded-full">
+                                  <div className="text-xs bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-400 px-2 py-1 rounded-full">
                                     {user.stage.name || user.stage || 'مرحلة غير محددة'}
                                   </div>
                                 )}
@@ -1191,7 +1191,7 @@ const LiveMeetingDashboard = () => {
                 <button
                   onClick={handleAddAttendees}
                   disabled={attendeesFormData.selectedUsers.length === 0}
-                  className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   إضافة المشاركين المحددين ({attendeesFormData.selectedUsers.length})
                 </button>

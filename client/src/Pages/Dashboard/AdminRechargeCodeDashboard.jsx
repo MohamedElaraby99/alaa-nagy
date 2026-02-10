@@ -199,7 +199,7 @@ export default function AdminRechargeCodeDashboard() {
     const getStatusColor = (isUsed) => {
         return isUsed 
             ? 'text-red-600 bg-red-50 dark:bg-red-900/20' 
-            : 'text-green-600 bg-green-50 dark:bg-green-900/20';
+            : 'text-blue-600 bg-blue-50 dark:bg-blue-900/20';
     };
 
     const getStatusIcon = (isUsed) => {
@@ -208,11 +208,11 @@ export default function AdminRechargeCodeDashboard() {
 
     return (
         <Layout>
-            <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-8" dir="rtl">
+            <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-8" dir="rtl">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Header */}
                     <div className="text-center mb-8">
-                        <div className="mx-auto h-16 w-16 bg-gradient-to-r from-green-600 to-green-600 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                        <div className="mx-auto h-16 w-16 bg-gradient-to-r from-blue-600 to-blue-600 rounded-full flex items-center justify-center mb-4 shadow-lg">
                             <FaCreditCard className="h-8 w-8 text-white" />
                         </div>
                         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
@@ -227,8 +227,8 @@ export default function AdminRechargeCodeDashboard() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-100 dark:border-gray-700">
                             <div className="flex items-center">
-                                <div className="p-3 rounded-full bg-green-100 dark:bg-green-900/20">
-                                    <FaCreditCard className="h-6 w-6 text-green-600" />
+                                <div className="p-3 rounded-full bg-blue-100 dark:bg-blue-900/20">
+                                    <FaCreditCard className="h-6 w-6 text-blue-600" />
                                 </div>
                                 <div className="mr-4">
                                     <p className="text-sm font-medium text-gray-600 dark:text-gray-400">إجمالي الرموز</p>
@@ -239,8 +239,8 @@ export default function AdminRechargeCodeDashboard() {
 
                         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-100 dark:border-gray-700">
                             <div className="flex items-center">
-                                <div className="p-3 rounded-full bg-green-100 dark:bg-green-900/20">
-                                    <FaMoneyBillWave className="h-6 w-6 text-green-600" />
+                                <div className="p-3 rounded-full bg-blue-100 dark:bg-blue-900/20">
+                                    <FaMoneyBillWave className="h-6 w-6 text-blue-600" />
                                 </div>
                                 <div className="mr-4">
                                     <p className="text-sm font-medium text-gray-600 dark:text-gray-400">القيمة الإجمالية</p>
@@ -251,8 +251,8 @@ export default function AdminRechargeCodeDashboard() {
 
                         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-100 dark:border-gray-700">
                             <div className="flex items-center">
-                                <div className="p-3 rounded-full bg-green-100 dark:bg-green-900/20">
-                                    <FaCheckCircle className="h-6 w-6 text-green-600" />
+                                <div className="p-3 rounded-full bg-blue-100 dark:bg-blue-900/20">
+                                    <FaCheckCircle className="h-6 w-6 text-blue-600" />
                                 </div>
                                 <div className="mr-4">
                                     <p className="text-sm font-medium text-gray-600 dark:text-gray-400">الرموز المستخدمة</p>
@@ -263,8 +263,8 @@ export default function AdminRechargeCodeDashboard() {
 
                         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-100 dark:border-gray-700">
                             <div className="flex items-center">
-                                <div className="p-3 rounded-full bg-green-100 dark:bg-green-900/20">
-                                    <FaExclamationTriangle className="h-6 w-6 text-green-600" />
+                                <div className="p-3 rounded-full bg-blue-100 dark:bg-blue-900/20">
+                                    <FaExclamationTriangle className="h-6 w-6 text-blue-600" />
                                 </div>
                                 <div className="mr-4">
                                     <p className="text-sm font-medium text-gray-600 dark:text-gray-400">الرموز غير المستخدمة</p>
@@ -281,7 +281,7 @@ export default function AdminRechargeCodeDashboard() {
                                 onClick={() => setActiveTab("generate")}
                                 className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                                     activeTab === "generate"
-                                        ? "bg-green-600 text-white"
+                                        ? "bg-blue-600 text-white"
                                         : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
                                 }`}
                             >
@@ -292,7 +292,7 @@ export default function AdminRechargeCodeDashboard() {
                                 onClick={() => setActiveTab("manage")}
                                 className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                                     activeTab === "manage"
-                                        ? "bg-green-600 text-white"
+                                        ? "bg-blue-600 text-white"
                                         : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
                                 }`}
                             >
@@ -330,7 +330,7 @@ export default function AdminRechargeCodeDashboard() {
                                             name="amount"
                                             value={generateForm.amount}
                                             onChange={handleGenerateFormChange}
-                                            className="block w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+                                            className="block w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                                             placeholder="أدخل المبلغ بالجنيه المصري"
                                             min="1"
                                             step="0.01"
@@ -348,7 +348,7 @@ export default function AdminRechargeCodeDashboard() {
                                             name="quantity"
                                             value={generateForm.quantity}
                                             onChange={handleGenerateFormChange}
-                                            className="block w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+                                            className="block w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                                             placeholder="عدد الرموز المراد إنشاؤها"
                                             min="1"
                                             max="100"
@@ -360,7 +360,7 @@ export default function AdminRechargeCodeDashboard() {
                                     <button
                                         type="submit"
                                         disabled={generateLoading}
-                                        className="w-full flex justify-center items-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-green-600 to-green-600 hover:from-green-700 hover:to-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105 shadow-lg"
+                                        className="w-full flex justify-center items-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105 shadow-lg"
                                     >
                                         {generateLoading ? (
                                             <div className="flex items-center">
@@ -385,7 +385,7 @@ export default function AdminRechargeCodeDashboard() {
                                             </h4>
                                             <button
                                                 onClick={handleCopyAllCodes}
-                                                className="flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg text-sm transition-colors"
+                                                className="flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm transition-colors"
                                             >
                                                 <FaCopy className="mr-2" />
                                                 نسخ الكل
@@ -404,7 +404,7 @@ export default function AdminRechargeCodeDashboard() {
                                                     </div>
                                                     <button
                                                         onClick={() => handleCopyCode(code.code)}
-                                                        className="p-2 text-gray-500 hover:text-green-600 transition-colors"
+                                                        className="p-2 text-gray-500 hover:text-blue-600 transition-colors"
                                                         title="نسخ الرمز"
                                                     >
                                                         <FaCopy />
@@ -434,7 +434,7 @@ export default function AdminRechargeCodeDashboard() {
                                                 name="status"
                                                 value={filters.status}
                                                 onChange={handleFilterChange}
-                                                className="block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500"
+                                                className="block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                                             >
                                                 <option value="">جميع الحالات</option>
                                                 <option value="unused">غير مستخدم</option>
@@ -450,14 +450,14 @@ export default function AdminRechargeCodeDashboard() {
                                                 name="amount"
                                                 value={filters.amount}
                                                 onChange={handleFilterChange}
-                                                className="block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
+                                                className="block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                                 placeholder="تصفية حسب المبلغ"
                                             />
                                         </div>
                                         <div className="flex items-end">
                                             <button
                                                 onClick={handleApplyFilters}
-                                                className="w-full px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg text-sm transition-colors"
+                                                className="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm transition-colors"
                                             >
                                                 <FaFilter className="inline mr-2" />
                                                 تطبيق المرشحات
@@ -469,7 +469,7 @@ export default function AdminRechargeCodeDashboard() {
                                 {/* Codes List */}
                                 {loading ? (
                                     <div className="flex justify-center items-center py-8">
-                                        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-500"></div>
+                                        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
                                     </div>
                                 ) : codes.length === 0 ? (
                                     <div className="text-center py-8">
@@ -515,7 +515,7 @@ export default function AdminRechargeCodeDashboard() {
                                                 <div className="flex items-center space-x-2">
                                                     <button
                                                         onClick={() => handleCopyCode(code.code)}
-                                                        className="p-2 text-gray-500 hover:text-green-600 transition-colors"
+                                                        className="p-2 text-gray-500 hover:text-blue-600 transition-colors"
                                                         title="نسخ الرمز"
                                                     >
                                                         <FaCopy />
@@ -550,7 +550,7 @@ export default function AdminRechargeCodeDashboard() {
                                                     }))}
                                                     className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                                                         pagination.currentPage === i + 1
-                                                            ? "bg-green-600 text-white"
+                                                            ? "bg-blue-600 text-white"
                                                             : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
                                                     }`}
                                                 >

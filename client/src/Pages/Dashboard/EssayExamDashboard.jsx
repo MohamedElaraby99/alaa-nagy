@@ -211,7 +211,7 @@ const EssayExamDashboard = () => {
   const getStatusColor = (status) => {
     switch (status) {
       case 'submitted': return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200';
-      case 'graded': return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
+      case 'graded': return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
       case 'late': return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200';
       default: return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200';
     }
@@ -228,7 +228,7 @@ const EssayExamDashboard = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-green-50 via-indigo-50 to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-6" dir="rtl">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-6" dir="rtl">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-right">
             لوحة تحكم الامتحانات المقالية
@@ -310,7 +310,7 @@ const EssayExamDashboard = () => {
                     </thead>
                     <tbody className="bg-white dark:bg-gray-700 divide-y divide-gray-200 dark:divide-gray-600">
                       {availableExams.map(exam => (
-                        <tr key={exam._id} className={selectedExam?._id === exam._id ? 'bg-green-50 dark:bg-green-900/20' : ''}>
+                        <tr key={exam._id} className={selectedExam?._id === exam._id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}>
                           <td className="px-3 py-2 text-sm text-gray-900 dark:text-white">{exam.title}</td>
                           <td className="px-3 py-2 text-sm text-gray-700 dark:text-gray-200">{exam.questions?.length || 0}</td>
                           <td className="px-3 py-2 text-xs text-gray-500">{exam.openDate ? new Date(exam.openDate).toLocaleString('ar-EG') : '-'}</td>
@@ -318,7 +318,7 @@ const EssayExamDashboard = () => {
                           <td className="px-3 py-2">
                             <button
                               onClick={() => setSelectedExam(exam)}
-                              className="px-3 py-1.5 bg-green-600 text-white rounded hover:bg-green-700 text-xs"
+                              className="px-3 py-1.5 bg-blue-600 text-white rounded hover:bg-blue-700 text-xs"
                             >
                               اختيار
                             </button>
@@ -457,7 +457,7 @@ const EssayExamDashboard = () => {
                                         <div className="flex items-center gap-2">
                                           <button
                                             onClick={() => downloadFile(userSubmission.fileAnswer.url, userSubmission.fileAnswer.fileName)}
-                                            className="flex items-center gap-2 px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                                            className="flex items-center gap-2 px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                                           >
                                             <FaDownload />
                                             تحميل {userSubmission.fileAnswer.fileName}
@@ -471,7 +471,7 @@ const EssayExamDashboard = () => {
                                       <div className="text-right">
                                         {userSubmission.grade != null ? (
                                           <div>
-                                            <span className="font-medium text-green-600 dark:text-green-400">
+                                            <span className="font-medium text-blue-600 dark:text-blue-400">
                                               الدرجة: {userSubmission.grade}/{question.maxGrade}
                                             </span>
                                             {userSubmission.feedback && (
@@ -481,7 +481,7 @@ const EssayExamDashboard = () => {
                                             )}
                                           </div>
                                         ) : (
-                                          <span className="text-green-600 dark:text-green-400">
+                                          <span className="text-blue-600 dark:text-blue-400">
                                             لم يتم التصحيح بعد
                                           </span>
                                         )}
@@ -490,7 +490,7 @@ const EssayExamDashboard = () => {
                                       {userSubmission.grade == null && (
                                         <button
                                           onClick={() => openGradingModal(submission, qIndex)}
-                                          className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                                          className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                                         >
                                           <FaCheck />
                                           تصحيح
@@ -565,7 +565,7 @@ const EssayExamDashboard = () => {
                   </button>
                   <button
                     onClick={handleGradeSubmission}
-                    className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                    className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     حفظ التصحيح
                   </button>

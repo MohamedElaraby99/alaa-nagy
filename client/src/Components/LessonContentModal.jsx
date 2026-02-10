@@ -174,10 +174,10 @@ const LessonContentModal = ({ isOpen, onClose, lesson }) => {
 
   const getContentIcon = (type) => {
     switch (type) {
-      case 'video': return <FaVideo className="text-green-500" />;
+      case 'video': return <FaVideo className="text-blue-500" />;
       case 'pdf': return <FaFilePdf className="text-red-500" />;
-      case 'exam': return <FaClipboardList className="text-green-500" />;
-      case 'training': return <FaDumbbell className="text-green-500" />;
+      case 'exam': return <FaClipboardList className="text-blue-500" />;
+      case 'training': return <FaDumbbell className="text-blue-500" />;
       default: return null;
     }
   };
@@ -361,7 +361,7 @@ const LessonContentModal = ({ isOpen, onClose, lesson }) => {
     switch (type) {
       case 'video':
         return (
-          <div className="bg-gradient-to-br from-green-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 p-4 sm:p-6 rounded-xl border border-green-200 dark:border-gray-700">
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 p-4 sm:p-6 rounded-xl border border-blue-200 dark:border-gray-700">
          
             <div className="mb-4 text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base">{data.description}</div>
             {data.url ? (
@@ -457,14 +457,14 @@ const LessonContentModal = ({ isOpen, onClose, lesson }) => {
         
       case 'exam':
         return (
-          <div className="bg-gradient-to-br from-green-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 p-4 sm:p-6 rounded-xl border border-green-200 dark:border-gray-700">
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 p-4 sm:p-6 rounded-xl border border-blue-200 dark:border-gray-700">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-green-100 dark:bg-green-900 rounded-lg">
-                <FaClipboardList className="text-green-600 dark:text-green-400 text-lg sm:text-xl" />
+              <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
+                <FaClipboardList className="text-blue-600 dark:text-blue-400 text-lg sm:text-xl" />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="font-semibold text-lg sm:text-xl text-gray-800 dark:text-gray-200 break-words">{data.title}</div>
-                <div className="text-sm text-green-600 dark:text-green-400 font-medium">امتحان تفاعلي</div>
+                <div className="text-sm text-blue-600 dark:text-blue-400 font-medium">امتحان تفاعلي</div>
               </div>
             </div>
             <div className="mb-4 text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base">{data.description}</div>
@@ -476,7 +476,7 @@ const LessonContentModal = ({ isOpen, onClose, lesson }) => {
                 </div>
                 <button 
                   onClick={() => handleStartExam(data)}
-                  className="bg-green-600 hover:bg-green-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all duration-200 hover:shadow-lg font-medium text-sm sm:text-base w-full sm:w-auto"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all duration-200 hover:shadow-lg font-medium text-sm sm:text-base w-full sm:w-auto"
                 >
                   بدء الامتحان
                 </button>
@@ -487,14 +487,14 @@ const LessonContentModal = ({ isOpen, onClose, lesson }) => {
         
       case 'training':
         return (
-          <div className="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-gray-800 dark:to-gray-900 p-4 sm:p-6 rounded-xl border border-green-200 dark:border-gray-700">
+          <div className="bg-gradient-to-br from-blue-50 to-sky-100 dark:from-gray-800 dark:to-gray-900 p-4 sm:p-6 rounded-xl border border-blue-200 dark:border-gray-700">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-green-100 dark:bg-green-900 rounded-lg">
-                <FaDumbbell className="text-green-600 dark:text-green-400 text-lg sm:text-xl" />
+              <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
+                <FaDumbbell className="text-blue-600 dark:text-blue-400 text-lg sm:text-xl" />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="font-semibold text-lg sm:text-xl text-gray-800 dark:text-gray-200 break-words">{data.title}</div>
-                <div className="text-sm text-green-600 dark:text-green-400 font-medium">تدريب</div>
+                <div className="text-sm text-blue-600 dark:text-blue-400 font-medium">تدريب</div>
               </div>
             </div>
             <div className="mb-4 text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base">{data.description}</div>
@@ -504,7 +504,7 @@ const LessonContentModal = ({ isOpen, onClose, lesson }) => {
                   <div className="text-base sm:text-lg font-medium mb-2">جاهز للتدريب؟</div>
                   <div className="text-xs sm:text-sm text-gray-500">تدرب على المفاهيم التي تعلمتها</div>
                 </div>
-                <button className="bg-green-600 hover:bg-green-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all duration-200 hover:shadow-lg font-medium text-sm sm:text-base w-full sm:w-auto">
+                <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all duration-200 hover:shadow-lg font-medium text-sm sm:text-base w-full sm:w-auto">
                   بدء التدريب
                 </button>
               </div>
@@ -523,11 +523,11 @@ const LessonContentModal = ({ isOpen, onClose, lesson }) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm p-2 sm:p-4">
       <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-full max-w-5xl max-h-[95vh] overflow-hidden relative">
         {/* Header */}
-        <div className="bg-gradient-to-r from-green-600 to-green-600 text-white p-4 sm:p-6 rounded-t-2xl">
+        <div className="bg-gradient-to-r from-blue-600 to-blue-600 text-white p-4 sm:p-6 rounded-t-2xl">
           <div className="flex items-start justify-between gap-3">
             <div className="flex-1 min-w-0">
               <h2 className="text-lg sm:text-xl md:text-2xl font-bold leading-tight break-words">{lesson.title}</h2>
-              <p className="text-green-100 mt-1 text-sm sm:text-base leading-relaxed break-words">{lesson.description}</p>
+              <p className="text-blue-100 mt-1 text-sm sm:text-base leading-relaxed break-words">{lesson.description}</p>
             </div>
             <button
               className="text-white hover:text-red-200 text-xl sm:text-2xl transition-colors duration-200 flex-shrink-0 p-1"
@@ -543,10 +543,10 @@ const LessonContentModal = ({ isOpen, onClose, lesson }) => {
             {/* Navigation Tabs */}
             <div className="flex items-center justify-center mb-6 bg-gray-50 dark:bg-gray-800 rounded-xl p-2 overflow-x-auto">
               {[
-                { key: 'video', label: 'الفيديوهات', icon: <FaVideo className="text-green-500" /> },
+                { key: 'video', label: 'الفيديوهات', icon: <FaVideo className="text-blue-500" /> },
                 { key: 'pdf', label: 'الملفات', icon: <FaFilePdf className="text-red-500" /> },
-                { key: 'exam', label: 'الامتحانات', icon: <FaClipboardList className="text-green-500" /> },
-                { key: 'training', label: 'التدريبات', icon: <FaDumbbell className="text-green-500" /> }
+                { key: 'exam', label: 'الامتحانات', icon: <FaClipboardList className="text-blue-500" /> },
+                { key: 'training', label: 'التدريبات', icon: <FaDumbbell className="text-blue-500" /> }
               ].map((tab) => (
                 <button
                   key={tab.key}
@@ -555,7 +555,7 @@ const LessonContentModal = ({ isOpen, onClose, lesson }) => {
                   }}
                   className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 rounded-lg transition-all duration-200 mx-1 flex-shrink-0 ${
                     selectedTab === tab.key
-                      ? 'bg-white dark:bg-gray-700 text-green-600 dark:text-green-400 shadow-md'
+                      ? 'bg-white dark:bg-gray-700 text-blue-600 dark:text-blue-400 shadow-md'
                       : 'text-gray-600 dark:text-gray-300 hover:bg-white dark:hover:bg-gray-700'
                   }`}
                 >
@@ -597,7 +597,7 @@ const LessonContentModal = ({ isOpen, onClose, lesson }) => {
                     }}
                     className={`w-3 h-3 rounded-full transition-all duration-200 ${
                       index === getCurrentIndex()
-                        ? 'bg-green-600 scale-125' 
+                        ? 'bg-blue-600 scale-125' 
                         : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
                     }`}
                   />

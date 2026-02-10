@@ -139,9 +139,9 @@ export default function DeviceManagementDashboard() {
 
     const getDeviceIcon = (platform, deviceType) => {
         if (platform === "Mobile" || deviceType === "Mobile") {
-            return <FaMobile className="text-green-500" />;
+            return <FaMobile className="text-blue-500" />;
         } else if (platform === "Tablet" || deviceType === "Tablet") {
-            return <FaTabletAlt className="text-green-500" />;
+            return <FaTabletAlt className="text-blue-500" />;
         } else {
             return <FaDesktop className="text-gray-500" />;
         }
@@ -150,13 +150,13 @@ export default function DeviceManagementDashboard() {
     const getBrowserIcon = (browser) => {
         switch (browser?.toLowerCase()) {
             case "chrome":
-                return <FaChrome className="text-green-500" />;
+                return <FaChrome className="text-blue-500" />;
             case "firefox":
-                return <FaFirefoxBrowser className="text-green-500" />;
+                return <FaFirefoxBrowser className="text-blue-500" />;
             case "edge":
-                return <FaEdge className="text-green-600" />;
+                return <FaEdge className="text-blue-600" />;
             case "safari":
-                return <FaSafari className="text-green-400" />;
+                return <FaSafari className="text-blue-400" />;
             default:
                 return <FaGlobe className="text-gray-500" />;
         }
@@ -214,7 +214,7 @@ export default function DeviceManagementDashboard() {
                                     onClick={() => setActiveTab("overview")}
                                     className={`py-2 px-1 border-b-2 font-medium text-sm ${
                                         activeTab === "overview"
-                                            ? "border-green-500 text-green-600 dark:text-green-400"
+                                            ? "border-blue-500 text-blue-600 dark:text-blue-400"
                                             : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
                                     }`}
                                 >
@@ -225,7 +225,7 @@ export default function DeviceManagementDashboard() {
                                     onClick={() => setActiveTab("users")}
                                     className={`py-2 px-1 border-b-2 font-medium text-sm ${
                                         activeTab === "users"
-                                            ? "border-green-500 text-green-600 dark:text-green-400"
+                                            ? "border-blue-500 text-blue-600 dark:text-blue-400"
                                             : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
                                     }`}
                                 >
@@ -240,11 +240,11 @@ export default function DeviceManagementDashboard() {
                     {activeTab === "overview" && (
                         <div className="space-y-6">
                                                          {/* Debug Information */}
-                             <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-lg p-4">
-                                 <h3 className="text-lg font-medium text-green-800 dark:text-green-200 mb-2">
+                             <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-4">
+                                 <h3 className="text-lg font-medium text-blue-800 dark:text-blue-200 mb-2">
                                      معلومات التصحيح
                                  </h3>
-                                 <div className="text-sm text-green-700 dark:text-green-300 space-y-1">
+                                 <div className="text-sm text-blue-700 dark:text-blue-300 space-y-1">
                                      <p>• إجمالي المستخدمين: {usersDevices.length}</p>
                                      <p>• إجمالي الأجهزة: {deviceStats.totalDevices}</p>
                                      <p>• الأجهزة النشطة: {deviceStats.activeDevices}</p>
@@ -259,17 +259,17 @@ export default function DeviceManagementDashboard() {
                              </div>
 
                              {/* Device Limit Change History */}
-                             <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-lg p-4">
-                                 <h3 className="text-lg font-medium text-green-800 dark:text-green-200 mb-2">
+                             <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-4">
+                                 <h3 className="text-lg font-medium text-blue-800 dark:text-blue-200 mb-2">
                                      معلومات تحديث الحد
                                  </h3>
-                                 <div className="text-sm text-green-700 dark:text-green-300 space-y-1">
+                                 <div className="text-sm text-blue-700 dark:text-blue-300 space-y-1">
                                      <p>• الحد الحالي: {deviceStats.maxDevicesPerUser} أجهزة لكل مستخدم</p>
                                      <p>• عند تقليل الحد: سيتم إعادة تعيين أجهزة المستخدمين الذين يتجاوزون الحد الجديد</p>
                                      <p>• عند زيادة الحد: لن يتم إعادة تعيين أي أجهزة</p>
                                      {deviceStats.lastLimitChange && (
-                                         <div className="mt-3 p-3 bg-green-100 dark:bg-green-800 rounded-lg">
-                                             <p className="font-medium text-green-800 dark:text-green-200 mb-2">
+                                         <div className="mt-3 p-3 bg-blue-100 dark:bg-blue-800 rounded-lg">
+                                             <p className="font-medium text-blue-800 dark:text-blue-200 mb-2">
                                                  آخر تحديث للحد:
                                              </p>
                                              <p>• من {deviceStats.lastLimitChange.previousLimit} إلى {deviceStats.lastLimitChange.newLimit} أجهزة</p>
@@ -279,7 +279,7 @@ export default function DeviceManagementDashboard() {
                                              )}
                                          </div>
                                      )}
-                                     <p className="text-xs text-green-600 dark:text-green-400 mt-2">
+                                     <p className="text-xs text-blue-600 dark:text-blue-400 mt-2">
                                          💡 نصيحة: استخدم هذه الميزة بحذر عند تقليل الحد لتجنب إزعاج المستخدمين
                                      </p>
                                      <div className="mt-3 p-3 bg-purple-100 dark:bg-purple-800 rounded-lg">
@@ -302,7 +302,7 @@ export default function DeviceManagementDashboard() {
                                                 {deviceStats.totalDevices}
                                             </p>
                                         </div>
-                                        <FaServer className="h-8 w-8 text-green-500" />
+                                        <FaServer className="h-8 w-8 text-blue-500" />
                                     </div>
                                 </div>
 
@@ -312,11 +312,11 @@ export default function DeviceManagementDashboard() {
                                             <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
                                                 الأجهزة النشطة
                                             </p>
-                                            <p className="text-2xl font-bold text-green-600 dark:text-green-400">
+                                            <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
                                                 {deviceStats.activeDevices}
                                             </p>
                                         </div>
-                                        <FaCheckCircle className="h-8 w-8 text-green-500" />
+                                        <FaCheckCircle className="h-8 w-8 text-blue-500" />
                                     </div>
                                 </div>
 
@@ -402,7 +402,7 @@ export default function DeviceManagementDashboard() {
                             {/* Device Limit Editor */}
                             <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
                                 <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-4 flex items-center">
-                                    <FaEdit className="mr-2 text-green-500" />
+                                    <FaEdit className="mr-2 text-blue-500" />
                                     حد الأجهزة لكل مستخدم
                                 </h3>
                                 
@@ -413,7 +413,7 @@ export default function DeviceManagementDashboard() {
                                                 type="number"
                                                 value={newDeviceLimit}
                                                 onChange={(e) => setNewDeviceLimit(parseInt(e.target.value) || 1)}
-                                                className="w-24 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white focus:ring-2 focus:ring-green-500"
+                                                className="w-24 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
                                                 min="1"
                                                 max="10"
                                             />
@@ -454,7 +454,7 @@ export default function DeviceManagementDashboard() {
                                                      }
                                                  }}
                                                  disabled={actionLoading}
-                                                 className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
+                                                 className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
                                              >
                                                  <FaSave className="w-4 h-4" />
                                                  <span>حفظ</span>
@@ -474,7 +474,7 @@ export default function DeviceManagementDashboard() {
                                 ) : (
                                     <div className="space-y-4">
                                         <div className="flex items-center space-x-4">
-                                            <span className="text-2xl font-bold text-green-600 dark:text-green-400">
+                                            <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">
                                                 {deviceStats.maxDevicesPerUser}
                                             </span>
                                             <span className="text-gray-600 dark:text-gray-400">
@@ -483,7 +483,7 @@ export default function DeviceManagementDashboard() {
                                         </div>
                                         <button
                                             onClick={() => setIsEditingLimit(true)}
-                                            className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium flex items-center space-x-2"
+                                            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium flex items-center space-x-2"
                                         >
                                             <FaEdit className="w-4 h-4" />
                                             <span>تعديل الحد</span>
@@ -494,8 +494,8 @@ export default function DeviceManagementDashboard() {
                                                                  <div className="text-sm text-gray-500 dark:text-gray-400 mt-4 space-y-2">
                                      <p>يمكنك تغيير عدد الأجهزة المسموح بها لكل مستخدم. الحد الأقصى هو 10 أجهزة.</p>
                                      {newDeviceLimit < deviceStats.maxDevicesPerUser && (
-                                         <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-lg p-3">
-                                             <p className="text-green-800 dark:text-green-200 font-medium">
+                                         <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-3">
+                                             <p className="text-blue-800 dark:text-blue-200 font-medium">
                                                  ⚠️ تحذير: عند تقليل الحد من {deviceStats.maxDevicesPerUser} إلى {newDeviceLimit}، سيتم إعادة تعيين جميع أجهزة المستخدمين الذين لديهم أكثر من {newDeviceLimit} أجهزة نشطة.
                                              </p>
                                          </div>
@@ -506,7 +506,7 @@ export default function DeviceManagementDashboard() {
                             {/* Test Section */}
                             <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
                                 <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-4 flex items-center">
-                                    <FaServer className="mr-2 text-green-500" />
+                                    <FaServer className="mr-2 text-blue-500" />
                                     اختبار النظام
                                 </h3>
                                 <div className="space-y-4">
@@ -520,7 +520,7 @@ export default function DeviceManagementDashboard() {
                                                 dispatch(getAllUsersDevices(filters));
                                             }}
                                             disabled={loading}
-                                            className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
+                                            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
                                         >
                                             <FaRedo className="w-4 h-4" />
                                             <span>تحديث البيانات</span>
@@ -564,7 +564,7 @@ export default function DeviceManagementDashboard() {
                                                 value={filters.search}
                                                 onChange={handleFilterChange}
                                                 placeholder="ابحث بالاسم أو البريد الإلكتروني..."
-                                                className="w-full pr-10 pl-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-green-500"
+                                                className="w-full pr-10 pl-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
                                             />
                                         </div>
                                     </div>
@@ -579,7 +579,7 @@ export default function DeviceManagementDashboard() {
                                                 name="deviceStatus"
                                                 value={filters.deviceStatus}
                                                 onChange={handleFilterChange}
-                                                className="w-full pr-10 pl-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-green-500"
+                                                className="w-full pr-10 pl-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
                                             >
                                                 <option value="all">جميع المستخدمين</option>
                                                 <option value="overLimit">تجاوز الحد المسموح</option>
@@ -592,7 +592,7 @@ export default function DeviceManagementDashboard() {
                                         <button
                                             onClick={() => dispatch(getAllUsersDevices(filters))}
                                             disabled={loading}
-                                            className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                                            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed"
                                         >
                                             {loading ? "جاري التحديث..." : "تحديث النتائج"}
                                         </button>
@@ -610,7 +610,7 @@ export default function DeviceManagementDashboard() {
 
                                 {loading ? (
                                     <div className="p-8 text-center">
-                                        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-500 mx-auto"></div>
+                                        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto"></div>
                                         <p className="mt-2 text-gray-600 dark:text-gray-400">جاري التحميل...</p>
                                     </div>
                                 ) : usersDevices.length === 0 ? (
@@ -664,7 +664,7 @@ export default function DeviceManagementDashboard() {
                                                                      ? "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200"
                                                                      : user.activeDevices > deviceStats.maxDevicesPerUser
                                                                          ? "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200"
-                                                                         : "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
+                                                                         : "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
                                                              }`}>
                                                                  {user.activeDevices}
                                                                  {user.isUnlimited && <span className="ml-1">∞</span>}
@@ -686,7 +686,7 @@ export default function DeviceManagementDashboard() {
                                                                      تجاوز الحد
                                                                  </span>
                                                              ) : (
-                                                                 <span className="inline-flex px-2 py-1 text-xs font-medium rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                                                                 <span className="inline-flex px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
                                                                      طبيعي
                                                                  </span>
                                                              )}
@@ -695,7 +695,7 @@ export default function DeviceManagementDashboard() {
                                                             <div className="flex items-center space-x-2 space-x-reverse">
                                                                 <button
                                                                     onClick={() => handleViewUserDevices(user)}
-                                                                    className="text-green-600 hover:text-green-900 dark:text-green-400 dark:hover:text-green-300"
+                                                                    className="text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300"
                                                                     title="عرض الأجهزة"
                                                                 >
                                                                     <FaEye />
@@ -703,7 +703,7 @@ export default function DeviceManagementDashboard() {
                                                                 <button
                                                                     onClick={() => handleResetUserDevices(user._id, user.fullName)}
                                                                     disabled={actionLoading}
-                                                                    className="text-green-600 hover:text-green-900 dark:text-green-400 dark:hover:text-green-300 disabled:opacity-50"
+                                                                    className="text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300 disabled:opacity-50"
                                                                     title="إعادة تعيين الأجهزة"
                                                                 >
                                                                     <FaRedo />
@@ -791,13 +791,13 @@ export default function DeviceManagementDashboard() {
                                                         </div>
                                                                                                                  <span className={`px-2 py-1 text-xs rounded-full ${
                                                              device.isActive
-                                                                 ? "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
+                                                                 ? "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
                                                                  : "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200"
                                                          }`}>
                                                              {device.isActive ? "نشط" : "غير نشط"}
                                                          </span>
                                                          {!device.isActive && device.deactivationReason && (
-                                                             <span className="text-xs text-green-600 dark:text-green-400 mr-2">
+                                                             <span className="text-xs text-blue-600 dark:text-blue-400 mr-2">
                                                                  ({device.deactivationReason})
                                                              </span>
                                                          )}

@@ -46,15 +46,15 @@ const ExamHistory = () => {
   };
 
   const getScoreColor = (score) => {
-    if (score >= 90) return 'text-green-600';
-    if (score >= 80) return 'text-green-600';
-    if (score >= 70) return 'text-green-600';
+    if (score >= 90) return 'text-blue-600';
+    if (score >= 80) return 'text-blue-600';
+    if (score >= 70) return 'text-blue-600';
     return 'text-red-600';
   };
 
   const getExamTypeIcon = (examType) => {
     return examType === 'training' ? (
-      <FaClipboardCheck className="text-green-500" />
+      <FaClipboardCheck className="text-blue-500" />
     ) : (
       <FaGraduationCap className="text-red-500" />
     );
@@ -72,7 +72,7 @@ const ExamHistory = () => {
   if (!user) {
     return (
       <Layout>
-        <div className="min-h-screen bg-gradient-to-br from-green-50 via-indigo-50 to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
           <div className="text-center">
             <FaUser className="text-6xl text-gray-400 mx-auto mb-4" />
             <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">يرجى تسجيل الدخول</h1>
@@ -85,12 +85,12 @@ const ExamHistory = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-green-50 via-indigo-50 to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900" dir="rtl">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900" dir="rtl">
         <div className="container mx-auto px-4 py-8">
           {/* Header */}
           <div className="mb-8">
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-3">
-              <FaHistory className="text-green-500" />
+              <FaHistory className="text-blue-500" />
               سجل الامتحانات
             </h1>
             <p className="text-gray-600 dark:text-gray-400">
@@ -102,7 +102,7 @@ const ExamHistory = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
             <div className="bg-white dark:bg-gray-800 rounded-lg p-4 sm:p-6 shadow-lg">
               <div className="flex items-center gap-2 sm:gap-3">
-                <FaClipboardCheck className="text-lg sm:text-2xl text-green-500" />
+                <FaClipboardCheck className="text-lg sm:text-2xl text-blue-500" />
                 <div>
                   <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">امتحانات التدريب</p>
                   <p className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
@@ -126,7 +126,7 @@ const ExamHistory = () => {
 
             <div className="bg-white dark:bg-gray-800 rounded-lg p-4 sm:p-6 shadow-lg">
               <div className="flex items-center gap-2 sm:gap-3">
-                <FaCheckCircle className="text-lg sm:text-2xl text-green-500" />
+                <FaCheckCircle className="text-lg sm:text-2xl text-blue-500" />
                 <div>
                   <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">النجاح</p>
                   <p className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
@@ -138,7 +138,7 @@ const ExamHistory = () => {
 
             <div className="bg-white dark:bg-gray-800 rounded-lg p-4 sm:p-6 shadow-lg">
               <div className="flex items-center gap-2 sm:gap-3">
-                <FaStar className="text-lg sm:text-2xl text-green-500" />
+                <FaStar className="text-lg sm:text-2xl text-blue-500" />
                 <div>
                   <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">متوسط الدرجات</p>
                   <p className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
@@ -161,7 +161,7 @@ const ExamHistory = () => {
 
             {loading ? (
               <div className="p-8 text-center">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-500 mx-auto mb-4"></div>
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
                 <p className="text-gray-600 dark:text-gray-400">جاري تحميل سجل الامتحانات...</p>
               </div>
             ) : error ? (
@@ -221,7 +221,7 @@ const ExamHistory = () => {
 
                         <button
                           onClick={() => handleViewResult(result)}
-                          className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 sm:py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-xs sm:text-sm"
+                          className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 sm:py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors text-xs sm:text-sm"
                         >
                           <FaEye className="text-xs sm:text-sm" />
                           <span className="hidden sm:inline">عرض التفاصيل</span>
@@ -232,7 +232,7 @@ const ExamHistory = () => {
 
                     <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                       <div className="flex items-center gap-2">
-                        <FaCheckCircle className="text-green-500" />
+                        <FaCheckCircle className="text-blue-500" />
                         <span className="text-gray-700 dark:text-gray-300">صحيح: {result.correctAnswers}/{result.totalQuestions}</span>
                       </div>
                       <div className="flex items-center gap-2">
@@ -240,11 +240,11 @@ const ExamHistory = () => {
                         <span className="text-gray-700 dark:text-gray-300">خطأ: {result.wrongAnswers}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <FaStar className="text-green-500" />
+                        <FaStar className="text-blue-500" />
                         <span className="text-gray-700 dark:text-gray-300">درجة النجاح: {result.passingScore}%</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <FaClock className="text-green-500" />
+                        <FaClock className="text-blue-500" />
                         <span className="text-gray-700 dark:text-gray-300">المدة: {result.timeLimit} دقيقة</span>
                       </div>
                     </div>
@@ -341,7 +341,7 @@ const ExamHistory = () => {
                   </div>
 
                   <div className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                    <div className={`text-2xl font-bold ${selectedResult.passed ? 'text-green-600' : 'text-red-600'}`}>
+                    <div className={`text-2xl font-bold ${selectedResult.passed ? 'text-blue-600' : 'text-red-600'}`}>
                       {selectedResult.passed ? 'ناجح' : 'راسب'}
                     </div>
                     <div className="text-sm text-gray-600 dark:text-gray-400">النتيجة</div>

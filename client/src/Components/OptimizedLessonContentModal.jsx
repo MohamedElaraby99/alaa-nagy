@@ -58,11 +58,11 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
 
   const getContentIcon = (type) => {
     switch (type) {
-      case 'video': return <FaVideo className="text-green-500" />;
+      case 'video': return <FaVideo className="text-blue-500" />;
       case 'pdf': return <FaFilePdf className="text-red-500" />;
-      case 'exam': return <FaClipboardList className="text-green-500" />;
+      case 'exam': return <FaClipboardList className="text-blue-500" />;
       case 'essayExam': return <FaClipboardList className="text-purple-500" />;
-      case 'training': return <FaDumbbell className="text-green-500" />;
+      case 'training': return <FaDumbbell className="text-blue-500" />;
       default: return null;
     }
   };
@@ -252,7 +252,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
     // If user has already completed the entry exam
     if (lesson.contentUnlocked && lesson.entryExam.userResult?.hasTaken) {
       return (
-        <div className="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-gray-800 dark:to-gray-900 p-6 sm:p-8 rounded-xl border-2 border-green-300 dark:border-green-700 text-center">
+        <div className="bg-gradient-to-br from-blue-50 to-sky-100 dark:from-gray-800 dark:to-gray-900 p-6 sm:p-8 rounded-xl border-2 border-blue-300 dark:border-blue-700 text-center">
           <div className="text-6xl mb-4">✅</div>
           <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-3">
             تم اجتياز امتحان المدخل بنجاح!
@@ -260,7 +260,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
           <p className="text-gray-600 dark:text-gray-400 mb-4">
             النتيجة: {lesson.entryExam.userResult.score} / {lesson.entryExam.userResult.totalQuestions}
           </p>
-          <p className="text-green-600 dark:text-green-400 font-medium">
+          <p className="text-blue-600 dark:text-blue-400 font-medium">
             المحتوى الآن مفتوح لك - تصفح الفيديوهات والملفات
           </p>
         </div>
@@ -270,23 +270,23 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
     // If entry exam result just submitted
     if (entryExamResult) {
       return (
-        <div className="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-gray-800 dark:to-gray-900 p-6 sm:p-8 rounded-xl border-2 border-green-300 dark:border-green-700 text-center">
+        <div className="bg-gradient-to-br from-blue-50 to-sky-100 dark:from-gray-800 dark:to-gray-900 p-6 sm:p-8 rounded-xl border-2 border-blue-300 dark:border-blue-700 text-center">
           <div className="text-6xl mb-4">🎉</div>
           <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-3">
             تم إتمام امتحان المدخل!
           </h3>
           <div className="bg-white dark:bg-gray-700 rounded-lg p-4 mb-4 inline-block">
-            <p className="text-2xl font-bold text-green-600 dark:text-green-400">
+            <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
               {entryExamResult.score} / {entryExamResult.totalQuestions}
             </p>
             <p className="text-sm text-gray-500">({entryExamResult.percentage}%)</p>
           </div>
-          <p className="text-green-600 dark:text-green-400 font-medium mb-4">
+          <p className="text-blue-600 dark:text-blue-400 font-medium mb-4">
             🔓 المحتوى الآن مفتوح لك!
           </p>
           <button
             onClick={() => setSelectedTab('video')}
-            className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200"
           >
             اذهب للفيديوهات
           </button>
@@ -299,7 +299,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
     // Show start screen if exam hasn't started
     if (!entryExamStarted) {
       return (
-        <div className="bg-gradient-to-br from-green-50 to-amber-100 dark:from-gray-800 dark:to-gray-900 p-6 sm:p-8 rounded-xl border-2 border-green-300 dark:border-green-700 text-center">
+        <div className="bg-gradient-to-br from-blue-50 to-amber-100 dark:from-gray-800 dark:to-gray-900 p-6 sm:p-8 rounded-xl border-2 border-blue-300 dark:border-blue-700 text-center">
           <div className="text-6xl mb-4">🔓</div>
           <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-3">
             {entryExam.title || 'امتحان المدخل'}
@@ -311,13 +311,13 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
           <div className="bg-white dark:bg-gray-700 rounded-lg p-4 mb-6 inline-block">
             <div className="grid grid-cols-2 gap-6 text-center">
               <div>
-                <div className="text-3xl font-bold text-green-600 dark:text-green-400">
+                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">
                   {entryExam.questionsCount || entryExam.questions?.length}
                 </div>
                 <div className="text-sm text-gray-500">عدد الأسئلة</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-green-600 dark:text-green-400">
+                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">
                   {entryExam.timeLimit || 15}
                 </div>
                 <div className="text-sm text-gray-500">دقيقة</div>
@@ -339,7 +339,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
               setEntryExamStarted(true);
               setEntryExamStartTime(new Date());
             }}
-            className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200 hover:shadow-lg"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200 hover:shadow-lg"
           >
             🚀 ابدأ الامتحان
           </button>
@@ -351,7 +351,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
     return (
       <div className="space-y-6">
         {/* Exam Header */}
-        <div className="bg-gradient-to-r from-green-100 to-amber-100 dark:from-green-900/30 dark:to-amber-900/30 p-4 rounded-xl">
+        <div className="bg-gradient-to-r from-blue-100 to-amber-100 dark:from-blue-900/30 dark:to-amber-900/30 p-4 rounded-xl">
           <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">
             🔓 {entryExam.title || 'امتحان المدخل'}
           </h3>
@@ -366,7 +366,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
           {entryExam.questions?.map((question, qIndex) => (
             <div key={qIndex} className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
               <div className="flex items-start gap-3 mb-4">
-                <span className="bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 px-3 py-1 rounded-full text-sm font-bold">
+                <span className="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-full text-sm font-bold">
                   {qIndex + 1}
                 </span>
                 <p className="font-medium text-gray-800 dark:text-gray-200 flex-1">{question.question}</p>
@@ -382,8 +382,8 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
                     key={oIndex}
                     onClick={() => handleEntryExamAnswerSelect(qIndex, oIndex)}
                     className={`w-full text-right p-3 rounded-lg border-2 transition-all duration-200 ${entryExamAnswers[qIndex] === oIndex
-                      ? 'border-green-500 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300'
-                      : 'border-gray-200 dark:border-gray-600 hover:border-green-300 dark:hover:border-green-700'
+                      ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300'
+                      : 'border-gray-200 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-700'
                       }`}
                   >
                     <span className="font-medium ml-2">{String.fromCharCode(65 + oIndex)}.</span>
@@ -404,7 +404,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
             onClick={handleSubmitEntryExam}
             disabled={entryExamSubmitting || Object.keys(entryExamAnswers).length < (entryExam.questions?.length || 0)}
             className={`px-8 py-3 rounded-lg font-bold text-lg transition-all duration-200 ${Object.keys(entryExamAnswers).length >= (entryExam.questions?.length || 0)
-              ? 'bg-green-600 hover:bg-green-700 text-white shadow-lg hover:shadow-xl'
+              ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl'
               : 'bg-gray-300 text-gray-500 cursor-not-allowed'
               }`}
           >
@@ -419,7 +419,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
     // Check if content is locked (entry exam required)
     if (lesson.hasEntryExam && !lesson.contentUnlocked) {
       return (
-        <div className="bg-gradient-to-br from-green-50 to-amber-100 dark:from-gray-800 dark:to-gray-900 p-6 sm:p-8 rounded-xl border-2 border-green-300 dark:border-green-700 text-center">
+        <div className="bg-gradient-to-br from-blue-50 to-amber-100 dark:from-gray-800 dark:to-gray-900 p-6 sm:p-8 rounded-xl border-2 border-blue-300 dark:border-blue-700 text-center">
           <div className="text-6xl mb-4">🔒</div>
           <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-3">
             المحتوى مقفول
@@ -428,13 +428,13 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
             يجب عليك حل امتحان المدخل أولاً لفتح الفيديوهات
           </p>
           {lesson.lockedVideosCount > 0 && (
-            <p className="text-sm text-green-600 dark:text-green-400">
+            <p className="text-sm text-blue-600 dark:text-blue-400">
               يوجد {lesson.lockedVideosCount} فيديو في انتظارك بعد حل امتحان المدخل
             </p>
           )}
           <button
             onClick={() => setSelectedTab('entryExam')}
-            className="mt-4 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg"
+            className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg"
           >
             🔓 اذهب لامتحان المدخل
           </button>
@@ -445,10 +445,10 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
     return (
       <div className="space-y-4">
         {lesson.videos?.map((video, index) => (
-          <div key={video._id} className="bg-gradient-to-br from-green-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 p-4 sm:p-6 rounded-xl border border-green-200 dark:border-gray-700">
+          <div key={video._id} className="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 p-4 sm:p-6 rounded-xl border border-blue-200 dark:border-gray-700">
             <div className="mb-4 text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base">{video.description}</div>
             {video.publishDate && (
-              <div className="mb-3 flex items-center gap-2 text-green-600 dark:text-green-400 text-sm">
+              <div className="mb-3 flex items-center gap-2 text-blue-600 dark:text-blue-400 text-sm">
                 <FaClock />
                 <span>تاريخ النشر: {new Date(video.publishDate).toLocaleDateString('ar')} {new Date(video.publishDate).toLocaleTimeString('ar', { hour: '2-digit', minute: '2-digit' })}</span>
               </div>
@@ -547,7 +547,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
                 <div className="font-semibold text-lg sm:text-xl text-gray-800 dark:text-gray-200 break-words">{pdf.title || pdf.fileName}</div>
                 <div className="text-sm text-red-600 dark:text-red-400 font-medium">ملف PDF</div>
                 {pdf.publishDate && (
-                  <div className="mt-1 flex items-center gap-2 text-green-600 dark:text-green-400 text-xs">
+                  <div className="mt-1 flex items-center gap-2 text-blue-600 dark:text-blue-400 text-xs">
                     <FaClock />
                     <span>تاريخ النشر: {new Date(pdf.publishDate).toLocaleDateString('ar')} {new Date(pdf.publishDate).toLocaleTimeString('ar', { hour: '2-digit', minute: '2-digit' })}</span>
                   </div>
@@ -591,7 +591,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
     // Check if content is locked (entry exam required)
     if (lesson.hasEntryExam && !lesson.contentUnlocked) {
       return (
-        <div className="bg-gradient-to-br from-green-50 to-amber-100 dark:from-gray-800 dark:to-gray-900 p-6 sm:p-8 rounded-xl border-2 border-green-300 dark:border-green-700 text-center">
+        <div className="bg-gradient-to-br from-blue-50 to-amber-100 dark:from-gray-800 dark:to-gray-900 p-6 sm:p-8 rounded-xl border-2 border-blue-300 dark:border-blue-700 text-center">
           <div className="text-6xl mb-4">🔒</div>
           <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-3">
             الامتحانات مقفولة
@@ -600,13 +600,13 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
             يجب عليك حل امتحان المدخل أولاً لفتح الامتحانات
           </p>
           {lesson.lockedExamsCount > 0 && (
-            <p className="text-sm text-green-600 dark:text-green-400">
+            <p className="text-sm text-blue-600 dark:text-blue-400">
               يوجد {lesson.lockedExamsCount} امتحان في انتظارك بعد حل امتحان المدخل
             </p>
           )}
           <button
             onClick={() => setSelectedTab('entryExam')}
-            className="mt-4 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg"
+            className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg"
           >
             🔓 اذهب لامتحان المدخل
           </button>
@@ -617,19 +617,19 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
     return (
       <div className="space-y-4">
         {lesson.exams?.map((exam, index) => (
-          <div key={exam._id} className="bg-gradient-to-br from-green-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 p-4 sm:p-6 rounded-xl border border-green-200 dark:border-gray-700">
+          <div key={exam._id} className="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 p-4 sm:p-6 rounded-xl border border-blue-200 dark:border-gray-700">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-green-100 dark:bg-green-900 rounded-lg">
-                <FaClipboardList className="text-green-600 dark:text-green-400 text-lg sm:text-xl" />
+              <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
+                <FaClipboardList className="text-blue-600 dark:text-blue-400 text-lg sm:text-xl" />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="font-semibold text-lg sm:text-xl text-gray-800 dark:text-gray-200 break-words">{exam.title}</div>
-                <div className="text-sm text-green-600 dark:text-green-400 font-medium">امتحان </div>
+                <div className="text-sm text-blue-600 dark:text-blue-400 font-medium">امتحان </div>
               </div>
               {exam.userResult?.hasTaken && (
                 <div className="text-right">
                   <div className="text-sm text-gray-500">النتيجة السابقة</div>
-                  <div className="text-lg font-bold text-green-600">{exam.userResult.percentage}%</div>
+                  <div className="text-lg font-bold text-blue-600">{exam.userResult.percentage}%</div>
                 </div>
               )}
             </div>
@@ -650,9 +650,9 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
 
               {/* Date Information */}
               {(exam.openDate || exam.closeDate) && (
-                <div className="mb-4 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
-                  <div className="text-sm font-medium text-green-800 dark:text-green-300 mb-2">معلومات التواريخ:</div>
-                  <div className="space-y-1 text-xs text-green-700 dark:text-green-400">
+                <div className="mb-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                  <div className="text-sm font-medium text-blue-800 dark:text-blue-300 mb-2">معلومات التواريخ:</div>
+                  <div className="space-y-1 text-xs text-blue-700 dark:text-blue-400">
                     {exam.openDate && (
                       <div>يفتح في: {new Date(exam.openDate).toLocaleDateString('ar')} {new Date(exam.openDate).toLocaleTimeString('ar', { hour: '2-digit', minute: '2-digit' })}</div>
                     )}
@@ -666,7 +666,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
               <div className="text-center">
                 {exam.userResult?.hasTaken ? (
                   <div className="space-y-3">
-                    <div className="flex items-center justify-center gap-2 text-green-600">
+                    <div className="flex items-center justify-center gap-2 text-blue-600">
                       <FaCheckCircle />
                       <span>تم إنجاز الامتحان</span>
                     </div>
@@ -679,7 +679,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
                   </div>
                 ) : exam.examStatus === 'not_open' ? (
                   <div className="space-y-3">
-                    <div className="flex items-center justify-center gap-2 text-green-600">
+                    <div className="flex items-center justify-center gap-2 text-blue-600">
                       <FaClock />
                       <span>الامتحان غير متاح بعد</span>
                     </div>
@@ -718,7 +718,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
                       }
                       handleStartExam(exam, 'exam');
                     }}
-                    className="bg-green-600 hover:bg-green-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all duration-200 hover:shadow-lg font-medium text-sm sm:text-base w-full sm:w-auto"
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all duration-200 hover:shadow-lg font-medium text-sm sm:text-base w-full sm:w-auto"
                     disabled={isAccessExpired}
                   >
                     بدء الامتحان
@@ -736,7 +736,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
     // Check if content is locked (entry exam required)
     if (lesson.hasEntryExam && !lesson.contentUnlocked) {
       return (
-        <div className="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-gray-800 dark:to-gray-900 p-6 sm:p-8 rounded-xl border-2 border-green-300 dark:border-green-700 text-center">
+        <div className="bg-gradient-to-br from-blue-50 to-sky-100 dark:from-gray-800 dark:to-gray-900 p-6 sm:p-8 rounded-xl border-2 border-blue-300 dark:border-blue-700 text-center">
           <div className="text-6xl mb-4">🔒</div>
           <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-3">
             التدريبات مقفولة
@@ -745,13 +745,13 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
             يجب عليك حل امتحان المدخل أولاً لفتح التدريبات
           </p>
           {lesson.lockedTrainingsCount > 0 && (
-            <p className="text-sm text-green-600 dark:text-green-400">
+            <p className="text-sm text-blue-600 dark:text-blue-400">
               يوجد {lesson.lockedTrainingsCount} تدريب في انتظارك بعد حل امتحان المدخل
             </p>
           )}
           <button
             onClick={() => setSelectedTab('entryExam')}
-            className="mt-4 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg"
+            className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg"
           >
             🔓 اذهب لامتحان المدخل
           </button>
@@ -762,19 +762,19 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
     return (
       <div className="space-y-4">
         {lesson.trainings?.map((training, index) => (
-          <div key={training._id} className="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-gray-800 dark:to-gray-900 p-4 sm:p-6 rounded-xl border border-green-200 dark:border-gray-700">
+          <div key={training._id} className="bg-gradient-to-br from-blue-50 to-sky-100 dark:from-gray-800 dark:to-gray-900 p-4 sm:p-6 rounded-xl border border-blue-200 dark:border-gray-700">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-green-100 dark:bg-green-900 rounded-lg">
-                <FaDumbbell className="text-green-600 dark:text-green-400 text-lg sm:text-xl" />
+              <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
+                <FaDumbbell className="text-blue-600 dark:text-blue-400 text-lg sm:text-xl" />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="font-semibold text-lg sm:text-xl text-gray-800 dark:text-gray-200 break-words">{training.title}</div>
-                <div className="text-sm text-green-600 dark:text-green-400 font-medium">تدريب </div>
+                <div className="text-sm text-blue-600 dark:text-blue-400 font-medium">تدريب </div>
               </div>
               {training.attemptCount > 0 && (
                 <div className="text-right">
                   <div className="text-sm text-gray-500">عدد المحاولات</div>
-                  <div className="text-lg font-bold text-green-600">{training.attemptCount}</div>
+                  <div className="text-lg font-bold text-blue-600">{training.attemptCount}</div>
                 </div>
               )}
             </div>
@@ -795,9 +795,9 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
 
               {/* Date Information */}
               {(training.openDate || training.closeDate) && (
-                <div className="mb-4 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
-                  <div className="text-sm font-medium text-green-800 dark:text-green-300 mb-2">معلومات التواريخ:</div>
-                  <div className="space-y-1 text-xs text-green-700 dark:text-green-400">
+                <div className="mb-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                  <div className="text-sm font-medium text-blue-800 dark:text-blue-300 mb-2">معلومات التواريخ:</div>
+                  <div className="space-y-1 text-xs text-blue-700 dark:text-blue-400">
                     {training.openDate && (
                       <div>يفتح في: {new Date(training.openDate).toLocaleDateString('ar')} {new Date(training.openDate).toLocaleTimeString('ar', { hour: '2-digit', minute: '2-digit' })}</div>
                     )}
@@ -806,9 +806,9 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
               )}
 
               {training.userResults.length > 0 && (
-                <div className="mb-4 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
-                  <div className="text-sm font-medium text-green-800 dark:text-green-300 mb-2">أفضل نتيجة:</div>
-                  <div className="text-lg font-bold text-green-600">
+                <div className="mb-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                  <div className="text-sm font-medium text-blue-800 dark:text-blue-300 mb-2">أفضل نتيجة:</div>
+                  <div className="text-lg font-bold text-blue-600">
                     {Math.max(...training.userResults.map(r => r.percentage))}%
                   </div>
                 </div>
@@ -817,7 +817,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
               <div className="text-center">
                 {training.trainingStatus === 'not_open' ? (
                   <div className="space-y-3">
-                    <div className="flex items-center justify-center gap-2 text-green-600">
+                    <div className="flex items-center justify-center gap-2 text-blue-600">
                       <FaClock />
                       <span>التدريب غير متاح بعد</span>
                     </div>
@@ -840,7 +840,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
                       }
                       handleStartExam(training, 'training');
                     }}
-                    className="bg-green-600 hover:bg-green-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all duration-200 hover:shadow-lg font-medium text-sm sm:text-base w-full sm:w-auto"
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all duration-200 hover:shadow-lg font-medium text-sm sm:text-base w-full sm:w-auto"
                     disabled={isAccessExpired}
                   >
                     {training.attemptCount > 0 ? 'إعادة التدريب' : 'بدء التدريب'}
@@ -898,8 +898,8 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
                 if (!hasSubmitted) return null;
                 return (
                   <div className="text-right">
-                    <div className={`text-sm ${fullyGraded ? 'text-green-600' : 'text-gray-500'}`}>{fullyGraded ? 'تم التصحيح' : 'تم التقديم'}</div>
-                    <div className="text-lg font-bold text-green-600">✓</div>
+                    <div className={`text-sm ${fullyGraded ? 'text-blue-600' : 'text-gray-500'}`}>{fullyGraded ? 'تم التصحيح' : 'تم التقديم'}</div>
+                    <div className="text-lg font-bold text-blue-600">✓</div>
                   </div>
                 );
               })()}
@@ -946,7 +946,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
                   if (hasSubmitted) {
                     return (
                       <div className="space-y-3">
-                        <div className="flex items-center justify-center gap-2 text-green-600">
+                        <div className="flex items-center justify-center gap-2 text-blue-600">
                           <FaCheckCircle />
                           <span>{fullyGraded ? 'تم تصحيح الامتحان' : 'تم تقديم الامتحان'}</span>
                         </div>
@@ -999,7 +999,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
                   if (exam.openDate && new Date(exam.openDate) > new Date()) {
                     return (
                       <div className="space-y-3">
-                        <div className="flex items-center justify-center gap-2 text-green-600">
+                        <div className="flex items-center justify-center gap-2 text-blue-600">
                           <FaClock />
                           <span>الامتحان غير متاح بعد</span>
                         </div>
@@ -1073,7 +1073,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm">
         <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl p-8 text-center">
-          <FaSpinner className="animate-spin text-4xl text-green-600 mx-auto mb-4" />
+          <FaSpinner className="animate-spin text-4xl text-blue-600 mx-auto mb-4" />
           <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">جاري تحميل محتوى الدرس...</h3>
         </div>
       </div>
@@ -1110,7 +1110,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
           <p className="text-gray-600 dark:text-gray-300 mb-4">{error}</p>
           <div className="flex flex-col gap-2">
             <div className="flex gap-2">
-              <button onClick={handleRetry} className="flex-1 bg-green-600 text-white px-4 py-2 rounded-lg">
+              <button onClick={handleRetry} className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg">
                 {isAuthError ? 'تسجيل الدخول' : 'إعادة المحاولة'}
               </button>
               <button onClick={onClose} className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-lg">إغلاق</button>
@@ -1127,13 +1127,13 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm p-2 sm:p-4">
       <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-full max-w-5xl max-h-[95vh] overflow-hidden relative">
         {/* Header */}
-        <div className="bg-gradient-to-r from-green-600 to-green-600 text-white p-4 sm:p-6 rounded-t-2xl">
+        <div className="bg-gradient-to-r from-blue-600 to-blue-600 text-white p-4 sm:p-6 rounded-t-2xl">
           <div className="flex items-start justify-between gap-3">
             <div className="flex-1 min-w-0">
               <h2 className="text-lg sm:text-xl md:text-2xl font-bold leading-tight break-words">{lesson.title}</h2>
-              <p className="text-green-100 mt-1 text-sm sm:text-base leading-relaxed break-words">{lesson.description}</p>
+              <p className="text-blue-100 mt-1 text-sm sm:text-base leading-relaxed break-words">{lesson.description}</p>
               {courseInfo && (
-                <p className="text-green-200 mt-1 text-xs sm:text-sm">{courseInfo.title}</p>
+                <p className="text-blue-200 mt-1 text-xs sm:text-sm">{courseInfo.title}</p>
               )}
 
               {/* Show remaining days if user has code-based access */}
@@ -1158,13 +1158,13 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
 
         {/* Entry Exam Lock Warning Banner */}
         {lesson.hasEntryExam && !lesson.contentUnlocked && (
-          <div className="bg-gradient-to-r from-green-100 to-amber-100 dark:from-green-900/30 dark:to-amber-900/30 border-b border-green-200 dark:border-green-700 px-4 py-4">
+          <div className="bg-gradient-to-r from-blue-100 to-amber-100 dark:from-blue-900/30 dark:to-amber-900/30 border-b border-blue-200 dark:border-blue-700 px-4 py-4">
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3 text-green-800 dark:text-green-200">
+              <div className="flex items-center gap-3 text-blue-800 dark:text-blue-200">
                 <span className="text-3xl">🔒</span>
                 <div>
                   <p className="font-bold text-lg">امتحان المدخل مطلوب</p>
-                  <p className="text-sm text-green-700 dark:text-green-300">
+                  <p className="text-sm text-blue-700 dark:text-blue-300">
                     يجب عليك حل امتحان المدخل أولاً لفتح الفيديوهات والملفات
                     {lesson.lockedVideosCount > 0 && ` (${lesson.lockedVideosCount} فيديو`}
                     {lesson.lockedPdfsCount > 0 && ` و ${lesson.lockedPdfsCount} ملف`}
@@ -1174,7 +1174,7 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
               </div>
               <button
                 onClick={() => setSelectedTab('entryExam')}
-                className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200"
               >
                 🔓 ابدأ الامتحان
               </button>
@@ -1187,29 +1187,29 @@ const OptimizedLessonContentModal = ({ isOpen, onClose, courseId, lessonId, unit
           <div className="flex items-center justify-center mb-6 bg-gray-50 dark:bg-gray-800 rounded-xl p-2 overflow-x-auto">
             {[
               // Entry exam tab (only show if entry exam exists)
-              ...(lesson.hasEntryExam ? [{ key: 'entryExam', label: lesson.contentUnlocked ? '✅ امتحان المدخل' : '🔓 امتحان المدخل', icon: <FaClipboardList className="text-green-600" />, count: 1, locked: false, highlight: !lesson.contentUnlocked }] : []),
-              { key: 'video', label: 'الفيديوهات', icon: <FaVideo className="text-green-500" />, count: (lesson.videos?.length || 0) + (lesson.lockedVideosCount || 0), locked: lesson.hasEntryExam && !lesson.contentUnlocked },
+              ...(lesson.hasEntryExam ? [{ key: 'entryExam', label: lesson.contentUnlocked ? '✅ امتحان المدخل' : '🔓 امتحان المدخل', icon: <FaClipboardList className="text-blue-600" />, count: 1, locked: false, highlight: !lesson.contentUnlocked }] : []),
+              { key: 'video', label: 'الفيديوهات', icon: <FaVideo className="text-blue-500" />, count: (lesson.videos?.length || 0) + (lesson.lockedVideosCount || 0), locked: lesson.hasEntryExam && !lesson.contentUnlocked },
               { key: 'pdf', label: 'الملفات', icon: <FaFilePdf className="text-red-500" />, count: (lesson.pdfs?.length || 0) + (lesson.lockedPdfsCount || 0), locked: lesson.hasEntryExam && !lesson.contentUnlocked },
-              { key: 'exam', label: 'الامتحانات', icon: <FaClipboardList className="text-green-500" />, count: (lesson.exams?.length || 0) + (lesson.lockedExamsCount || 0), locked: lesson.hasEntryExam && !lesson.contentUnlocked },
+              { key: 'exam', label: 'الامتحانات', icon: <FaClipboardList className="text-blue-500" />, count: (lesson.exams?.length || 0) + (lesson.lockedExamsCount || 0), locked: lesson.hasEntryExam && !lesson.contentUnlocked },
               { key: 'essayExam', label: 'الامتحانات المقالية', icon: <FaClipboardList className="text-purple-500" />, count: lesson.essayExams?.length || 0, locked: lesson.hasEntryExam && !lesson.contentUnlocked },
-              { key: 'training', label: 'التدريبات', icon: <FaDumbbell className="text-green-500" />, count: (lesson.trainings?.length || 0) + (lesson.lockedTrainingsCount || 0), locked: lesson.hasEntryExam && !lesson.contentUnlocked }
+              { key: 'training', label: 'التدريبات', icon: <FaDumbbell className="text-blue-500" />, count: (lesson.trainings?.length || 0) + (lesson.lockedTrainingsCount || 0), locked: lesson.hasEntryExam && !lesson.contentUnlocked }
             ].filter(tab => tab.count > 0).map((tab) => (
               <button
                 key={tab.key}
                 onClick={() => setSelectedTab(tab.key)}
                 className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 rounded-lg transition-all duration-200 mx-1 flex-shrink-0 ${selectedTab === tab.key
                   ? tab.highlight
-                    ? 'bg-green-500 text-white shadow-md'
-                    : 'bg-white dark:bg-gray-700 text-green-600 dark:text-green-400 shadow-md'
+                    ? 'bg-blue-500 text-white shadow-md'
+                    : 'bg-white dark:bg-gray-700 text-blue-600 dark:text-blue-400 shadow-md'
                   : tab.highlight
-                    ? 'bg-green-100 dark:bg-green-800 text-green-700 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-700'
+                    ? 'bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-700'
                     : 'text-gray-600 dark:text-gray-300 hover:bg-white dark:hover:bg-gray-700'
                   }`}
               >
                 {tab.icon}
                 <span className="font-medium text-xs sm:text-sm">{tab.label}</span>
                 {tab.count > 1 && (
-                  <span className={`text-xs px-1 sm:px-2 py-1 rounded-full ${tab.locked ? 'bg-green-200 dark:bg-green-800 text-green-800 dark:text-green-200' : 'bg-gray-200 dark:bg-gray-600'}`}>
+                  <span className={`text-xs px-1 sm:px-2 py-1 rounded-full ${tab.locked ? 'bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200' : 'bg-gray-200 dark:bg-gray-600'}`}>
                     {tab.locked && '🔒 '}{tab.count}
                   </span>
                 )}

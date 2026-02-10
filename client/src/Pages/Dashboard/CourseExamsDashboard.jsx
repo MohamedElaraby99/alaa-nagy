@@ -270,9 +270,9 @@ const CourseExamsDashboard = () => {
 
     // Get score color
     const getScoreColor = (score) => {
-        if (score >= 80) return 'text-green-500';
+        if (score >= 80) return 'text-blue-500';
         if (score >= 60) return 'text-yellow-500';
-        if (score >= 40) return 'text-green-500';
+        if (score >= 40) return 'text-blue-500';
         return 'text-red-500';
     };
 
@@ -283,7 +283,7 @@ const CourseExamsDashboard = () => {
                 <React.Fragment key={index}>
                     <button
                         onClick={() => handleBreadcrumbClick(item)}
-                        className={`hover:text-green-500 dark:hover:text-blue-400 transition-colors ${index === breadcrumb.length - 1 ? 'text-green-500 dark:text-blue-400 font-semibold' : 'text-gray-500 dark:text-gray-400'
+                        className={`hover:text-blue-500 dark:hover:text-blue-400 transition-colors ${index === breadcrumb.length - 1 ? 'text-blue-500 dark:text-blue-400 font-semibold' : 'text-gray-500 dark:text-gray-400'
                             }`}
                     >
                         {item.label}
@@ -306,7 +306,7 @@ const CourseExamsDashboard = () => {
                     placeholder="بحث..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-4 pr-12 py-3 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-green-500 dark:focus:border-blue-500 focus:ring-2 focus:ring-green-500/20 dark:focus:ring-blue-500/20 transition-colors"
+                    className="w-full pl-4 pr-12 py-3 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 dark:focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 dark:focus:ring-blue-500/20 transition-colors"
                 />
             </div>
 
@@ -314,7 +314,7 @@ const CourseExamsDashboard = () => {
                 <select
                     value={examTypeFilter}
                     onChange={(e) => setExamTypeFilter(e.target.value)}
-                    className="px-4 py-3 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:outline-none focus:border-green-500 dark:focus:border-blue-500 transition-colors appearance-none cursor-pointer min-w-[150px]"
+                    className="px-4 py-3 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500 dark:focus:border-blue-500 transition-colors appearance-none cursor-pointer min-w-[150px]"
                 >
                     <option value="all" className="bg-white dark:bg-gray-800">الكل</option>
                     <option value="exam" className="bg-white dark:bg-gray-800">الامتحانات</option>
@@ -329,7 +329,7 @@ const CourseExamsDashboard = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {loading ? (
                 <div className="col-span-full flex justify-center items-center py-20">
-                    <div className="animate-spin rounded-full h-12 w-12 border-4 border-green-500 dark:border-blue-500 border-t-transparent"></div>
+                    <div className="animate-spin rounded-full h-12 w-12 border-4 border-blue-500 dark:border-blue-500 border-t-transparent"></div>
                 </div>
             ) : filteredCourses.length === 0 ? (
                 <div className="col-span-full text-center py-20 text-gray-500 dark:text-gray-400">
@@ -347,10 +347,10 @@ const CourseExamsDashboard = () => {
                         <div
                             key={course._id}
                             onClick={() => handleSelectCourse(course)}
-                            className="group relative bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 cursor-pointer hover:border-green-500/50 dark:hover:border-blue-500/50 hover:shadow-xl hover:shadow-green-500/10 dark:hover:shadow-blue-500/10 transition-all duration-300 shadow-sm"
+                            className="group relative bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 cursor-pointer hover:border-blue-500/50 dark:hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10 dark:hover:shadow-blue-500/10 transition-all duration-300 shadow-sm"
                         >
                             {/* Course image */}
-                            <div className="w-full h-32 rounded-xl overflow-hidden mb-4 bg-gradient-to-br from-green-500/20 to-green-600/20 dark:from-blue-500/20 dark:to-purple-500/20">
+                            <div className="w-full h-32 rounded-xl overflow-hidden mb-4 bg-gradient-to-br from-blue-500/20 to-blue-600/20 dark:from-blue-500/20 dark:to-purple-500/20">
                                 {course.image?.secure_url ? (
                                     <img
                                         src={course.image.secure_url}
@@ -359,7 +359,7 @@ const CourseExamsDashboard = () => {
                                     />
                                 ) : (
                                     <div className="w-full h-full flex items-center justify-center">
-                                        <FaBook className="text-4xl text-green-400/50 dark:text-blue-400/50" />
+                                        <FaBook className="text-4xl text-blue-400/50 dark:text-blue-400/50" />
                                     </div>
                                 )}
                             </div>
@@ -382,7 +382,7 @@ const CourseExamsDashboard = () => {
 
                             {/* Arrow indicator */}
                             <div className="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <FaChevronRight className="text-green-500 dark:text-blue-400" />
+                                <FaChevronRight className="text-blue-500 dark:text-blue-400" />
                             </div>
                         </div>
                     );
@@ -408,12 +408,12 @@ const CourseExamsDashboard = () => {
                         <div
                             key={lesson._id || index}
                             onClick={() => handleSelectLesson(lesson)}
-                            className="group bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-200 dark:border-gray-700 cursor-pointer hover:border-green-500/50 dark:hover:border-blue-500/50 hover:shadow-lg hover:shadow-green-500/10 dark:hover:shadow-blue-500/10 transition-all duration-300 shadow-sm"
+                            className="group bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-200 dark:border-gray-700 cursor-pointer hover:border-blue-500/50 dark:hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 dark:hover:shadow-blue-500/10 transition-all duration-300 shadow-sm"
                         >
                             <div className="flex items-center justify-between">
                                 <div className="flex-1">
                                     <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-green-600 dark:from-blue-500 dark:to-purple-600 flex items-center justify-center text-white font-bold">
+                                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-500 dark:to-purple-600 flex items-center justify-center text-white font-bold">
                                             {index + 1}
                                         </div>
                                         <div>
@@ -425,11 +425,11 @@ const CourseExamsDashboard = () => {
                                     </div>
 
                                     <div className="flex items-center gap-4 mt-4 text-sm text-gray-500 dark:text-gray-400">
-                                        <span className="flex items-center gap-1 px-3 py-1 rounded-full bg-green-500/10 dark:bg-blue-500/20 text-green-600 dark:text-blue-400">
+                                        <span className="flex items-center gap-1 px-3 py-1 rounded-full bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400">
                                             <FaClipboardCheck />
                                             <span>{lessonExams.filter(e => e.type === 'exam').length} امتحان</span>
                                         </span>
-                                        <span className="flex items-center gap-1 px-3 py-1 rounded-full bg-green-500/10 dark:bg-green-500/20 text-green-600 dark:text-green-400">
+                                        <span className="flex items-center gap-1 px-3 py-1 rounded-full bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400">
                                             <FaDumbbell />
                                             <span>{lessonExams.filter(e => e.type === 'training').length} تدريب</span>
                                         </span>
@@ -440,7 +440,7 @@ const CourseExamsDashboard = () => {
                                     </div>
                                 </div>
 
-                                <FaChevronRight className="text-gray-400 dark:text-gray-500 group-hover:text-green-500 dark:group-hover:text-blue-400 transition-colors" />
+                                <FaChevronRight className="text-gray-400 dark:text-gray-500 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors" />
                             </div>
                         </div>
                     );
@@ -462,13 +462,13 @@ const CourseExamsDashboard = () => {
                     <div
                         key={exam._id || index}
                         onClick={() => handleSelectExam(exam)}
-                        className="group bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-200 dark:border-gray-700 cursor-pointer hover:border-green-500/50 dark:hover:border-blue-500/50 hover:shadow-lg hover:shadow-green-500/10 dark:hover:shadow-blue-500/10 transition-all duration-300 shadow-sm"
+                        className="group bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-200 dark:border-gray-700 cursor-pointer hover:border-blue-500/50 dark:hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 dark:hover:shadow-blue-500/10 transition-all duration-300 shadow-sm"
                     >
                         <div className="flex items-center justify-between">
                             <div className="flex-1">
                                 <div className="flex items-center gap-3">
-                                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${exam.type === 'exam' ? 'bg-gradient-to-br from-green-500 to-green-600 dark:from-blue-500 dark:to-blue-600' :
-                                        exam.type === 'training' ? 'bg-gradient-to-br from-green-500 to-green-600' :
+                                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${exam.type === 'exam' ? 'bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-500 dark:to-blue-600' :
+                                        exam.type === 'training' ? 'bg-gradient-to-br from-blue-500 to-blue-600' :
                                             'bg-gradient-to-br from-purple-500 to-purple-600'
                                         }`}>
                                         {exam.type === 'exam' ? <FaClipboardCheck className="text-white text-xl" /> :
@@ -477,8 +477,8 @@ const CourseExamsDashboard = () => {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-gray-900 dark:text-white text-lg">{exam.title || exam.displayType}</h3>
-                                        <span className={`text-xs px-2 py-0.5 rounded-full ${exam.type === 'exam' ? 'bg-green-500/10 text-green-600 dark:bg-blue-500/20 dark:text-blue-400' :
-                                            exam.type === 'training' ? 'bg-green-500/10 text-green-600 dark:bg-green-500/20 dark:text-green-400' :
+                                        <span className={`text-xs px-2 py-0.5 rounded-full ${exam.type === 'exam' ? 'bg-blue-500/10 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400' :
+                                            exam.type === 'training' ? 'bg-blue-500/10 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400' :
                                                 'bg-purple-500/10 text-purple-600 dark:bg-purple-500/20 dark:text-purple-400'
                                             }`}>
                                             {exam.displayType}
@@ -502,7 +502,7 @@ const CourseExamsDashboard = () => {
                                 </div>
                             </div>
 
-                            <FaChevronRight className="text-gray-400 dark:text-gray-500 group-hover:text-green-500 dark:group-hover:text-blue-400 transition-colors" />
+                            <FaChevronRight className="text-gray-400 dark:text-gray-500 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors" />
                         </div>
                     </div>
                 ))
@@ -517,8 +517,8 @@ const CourseExamsDashboard = () => {
             {selectedExam && (
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
                     <div className="flex items-center gap-4 mb-4">
-                        <div className={`w-14 h-14 rounded-xl flex items-center justify-center ${selectedExam.type === 'exam' ? 'bg-gradient-to-br from-green-500 to-green-600 dark:from-blue-500 dark:to-blue-600' :
-                            selectedExam.type === 'training' ? 'bg-gradient-to-br from-green-500 to-green-600' :
+                        <div className={`w-14 h-14 rounded-xl flex items-center justify-center ${selectedExam.type === 'exam' ? 'bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-500 dark:to-blue-600' :
+                            selectedExam.type === 'training' ? 'bg-gradient-to-br from-blue-500 to-blue-600' :
                                 'bg-gradient-to-br from-purple-500 to-purple-600'
                             }`}>
                             {selectedExam.type === 'exam' ? <FaClipboardCheck className="text-white text-2xl" /> :
@@ -532,12 +532,12 @@ const CourseExamsDashboard = () => {
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div className="bg-green-50 dark:bg-gray-700/50 rounded-xl p-4 text-center">
-                            <p className="text-3xl font-bold text-green-500 dark:text-blue-400">{selectedExam.questions?.length || 0}</p>
+                        <div className="bg-blue-50 dark:bg-gray-700/50 rounded-xl p-4 text-center">
+                            <p className="text-3xl font-bold text-blue-500 dark:text-blue-400">{selectedExam.questions?.length || 0}</p>
                             <p className="text-sm text-gray-500 dark:text-gray-400">سؤال</p>
                         </div>
-                        <div className="bg-green-50 dark:bg-gray-700/50 rounded-xl p-4 text-center">
-                            <p className="text-3xl font-bold text-green-500 dark:text-green-400">{selectedExam.timeLimit || 0}</p>
+                        <div className="bg-blue-50 dark:bg-gray-700/50 rounded-xl p-4 text-center">
+                            <p className="text-3xl font-bold text-blue-500 dark:text-blue-400">{selectedExam.timeLimit || 0}</p>
                             <p className="text-sm text-gray-500 dark:text-gray-400">دقيقة</p>
                         </div>
                         <div className="bg-yellow-50 dark:bg-gray-700/50 rounded-xl p-4 text-center">
@@ -589,7 +589,7 @@ const CourseExamsDashboard = () => {
                                         <td className="px-6 py-4 text-gray-500 dark:text-gray-400">{index + 1}</td>
                                         <td className="px-6 py-4">
                                             <div className="flex items-center gap-3">
-                                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-green-500 to-green-600 dark:from-blue-500 dark:to-purple-600 flex items-center justify-center">
+                                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-500 dark:to-purple-600 flex items-center justify-center">
                                                     <FaUser className="text-white" />
                                                 </div>
                                                 <span className="text-gray-900 dark:text-white font-medium">
@@ -611,7 +611,7 @@ const CourseExamsDashboard = () => {
                                         </td>
                                         <td className="px-6 py-4">
                                             <div className="flex items-center gap-2">
-                                                <span className="flex items-center gap-1 text-green-500 dark:text-green-400">
+                                                <span className="flex items-center gap-1 text-blue-500 dark:text-blue-400">
                                                     <FaCheckCircle />
                                                     <span>{attempt.answers?.filter(a => a.isCorrect).length || 0}</span>
                                                 </span>
@@ -636,7 +636,7 @@ const CourseExamsDashboard = () => {
                                                     e.stopPropagation();
                                                     handleViewStudentDetails(attempt);
                                                 }}
-                                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-500/10 text-green-600 hover:bg-green-500/20 dark:bg-blue-500/20 dark:text-blue-400 dark:hover:bg-blue-500/30 transition-colors"
+                                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/10 text-blue-600 hover:bg-blue-500/20 dark:bg-blue-500/20 dark:text-blue-400 dark:hover:bg-blue-500/30 transition-colors"
                                             >
                                                 <FaEye />
                                                 <span>عرض التفاصيل</span>
@@ -664,7 +664,7 @@ const CourseExamsDashboard = () => {
                     {/* Header */}
                     <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-white/10">
                         <h2 className="text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
-                            <FaInfoCircle className="text-green-500 dark:text-blue-400" />
+                            <FaInfoCircle className="text-blue-500 dark:text-blue-400" />
                             تفاصيل محاولة الطالب
                         </h2>
                         <button
@@ -680,7 +680,7 @@ const CourseExamsDashboard = () => {
                         {/* Student info */}
                         <div className="mb-6">
                             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                                <FaUser className="text-green-500 dark:text-blue-400" />
+                                <FaUser className="text-blue-500 dark:text-blue-400" />
                                 معلومات الطالب
                             </h3>
                             <div className="bg-gray-50 dark:bg-white/5 rounded-xl p-4">
@@ -706,7 +706,7 @@ const CourseExamsDashboard = () => {
                         {/* Exam results summary */}
                         <div className="mb-6">
                             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                                <FaChartBar className="text-green-500 dark:text-green-400" />
+                                <FaChartBar className="text-blue-500 dark:text-blue-400" />
                                 ملخص النتائج
                             </h3>
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -721,8 +721,8 @@ const CourseExamsDashboard = () => {
                                     })()}
                                     <p className="text-sm text-gray-500 dark:text-gray-400">الدرجة</p>
                                 </div>
-                                <div className="bg-green-50 dark:bg-white/5 rounded-xl p-4 text-center">
-                                    <p className="text-3xl font-bold text-green-500 dark:text-green-400">
+                                <div className="bg-blue-50 dark:bg-white/5 rounded-xl p-4 text-center">
+                                    <p className="text-3xl font-bold text-blue-500 dark:text-blue-400">
                                         {attempt.answers?.filter(a => a.isCorrect).length || 0}
                                     </p>
                                     <p className="text-sm text-gray-500 dark:text-gray-400">إجابة صحيحة</p>
@@ -733,8 +733,8 @@ const CourseExamsDashboard = () => {
                                     </p>
                                     <p className="text-sm text-gray-500 dark:text-gray-400">إجابة خاطئة</p>
                                 </div>
-                                <div className="bg-green-50 dark:bg-white/5 rounded-xl p-4 text-center">
-                                    <p className="text-3xl font-bold text-green-500 dark:text-blue-400">{attempt.totalQuestions || attempt.answers?.length || 0}</p>
+                                <div className="bg-blue-50 dark:bg-white/5 rounded-xl p-4 text-center">
+                                    <p className="text-3xl font-bold text-blue-500 dark:text-blue-400">{attempt.totalQuestions || attempt.answers?.length || 0}</p>
                                     <p className="text-sm text-gray-500 dark:text-gray-400">إجمالي الأسئلة</p>
                                 </div>
                             </div>
@@ -753,12 +753,12 @@ const CourseExamsDashboard = () => {
                                         <div
                                             key={idx}
                                             className={`p-4 rounded-xl border ${answer.isCorrect
-                                                ? 'bg-green-500/10 border-green-500/30'
+                                                ? 'bg-blue-500/10 border-blue-500/30'
                                                 : 'bg-red-500/10 border-red-500/30'
                                                 }`}
                                         >
                                             <div className="flex items-start gap-3">
-                                                <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${answer.isCorrect ? 'bg-green-500' : 'bg-red-500'
+                                                <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${answer.isCorrect ? 'bg-blue-500' : 'bg-red-500'
                                                     }`}>
                                                     {answer.isCorrect ? <FaCheckCircle className="text-white" /> : <FaTimesCircle className="text-white" />}
                                                 </div>
@@ -769,14 +769,14 @@ const CourseExamsDashboard = () => {
                                                     <div className="text-sm">
                                                         <p className="text-gray-400">
                                                             <span className="text-gray-500">إجابة الطالب: </span>
-                                                            <span className={answer.isCorrect ? 'text-green-400' : 'text-red-400'}>
+                                                            <span className={answer.isCorrect ? 'text-blue-400' : 'text-red-400'}>
                                                                 {question?.options?.[answer.selectedAnswer] || `الخيار ${answer.selectedAnswer + 1}`}
                                                             </span>
                                                         </p>
                                                         {!answer.isCorrect && question && (
                                                             <p className="text-gray-400 mt-1">
                                                                 <span className="text-gray-500">الإجابة الصحيحة: </span>
-                                                                <span className="text-green-400">
+                                                                <span className="text-blue-400">
                                                                     {question.options?.[question.correctAnswer] || `الخيار ${question.correctAnswer + 1}`}
                                                                 </span>
                                                             </p>
@@ -797,12 +797,12 @@ const CourseExamsDashboard = () => {
 
     return (
         <Layout>
-            <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-8 px-4 md:px-8" dir="rtl">
+            <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-8 px-4 md:px-8" dir="rtl">
                 <div className="max-w-7xl mx-auto">
                     {/* Header */}
                     <div className="mb-8">
                         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-3">
-                            <FaClipboardCheck className="text-green-500 dark:text-blue-400" />
+                            <FaClipboardCheck className="text-blue-500 dark:text-blue-400" />
                             إدارة الامتحانات والنتائج
                         </h1>
                         <p className="text-gray-600 dark:text-gray-400">استعرض الكورسات والدروس والامتحانات وشاهد نتائج الطلاب</p>

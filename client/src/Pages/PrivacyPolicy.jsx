@@ -5,11 +5,11 @@ import { FaShieldAlt, FaDatabase, FaEye, FaLock, FaUserSecret, FaInfoCircle, FaC
 export default function PrivacyPolicy() {
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
-            <div className="mx-auto h-16 w-16 bg-gradient-to-r from-green-600 to-green-600 rounded-full flex items-center justify-center mb-6 shadow-lg">
+            <div className="mx-auto h-16 w-16 bg-gradient-to-r from-blue-600 to-blue-600 rounded-full flex items-center justify-center mb-6 shadow-lg">
               <FaShieldAlt className="h-8 w-8 text-white" />
             </div>
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
               {/* Introduction */}
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                  <FaInfoCircle className="ml-3 text-green-600" />
+                  <FaInfoCircle className="ml-3 text-blue-600" />
                   مقدمة
                 </h2>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
@@ -85,9 +85,9 @@ export default function PrivacyPolicy() {
                       </ul>
                     </div>
                     
-                    <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4 border border-green-200 dark:border-green-800">
-                      <h4 className="font-semibold text-green-800 dark:text-green-200 mb-2">ما يعتبر انتهاكاً:</h4>
-                      <ul className="space-y-1 text-green-700 dark:text-green-300 text-sm">
+                    <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border border-blue-200 dark:border-blue-800">
+                      <h4 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">ما يعتبر انتهاكاً:</h4>
+                      <ul className="space-y-1 text-blue-700 dark:text-blue-300 text-sm">
                         <li>• تسجيل شاشة الفيديوهات التعليمية</li>
                         <li>• مشاركة روابط المحتوى مع أشخاص آخرين</li>
                         <li>• نشر المحتوى على وسائل التواصل الاجتماعي</li>
@@ -102,7 +102,7 @@ export default function PrivacyPolicy() {
               {/* Information We Collect */}
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                  <FaDatabase className="ml-3 text-green-600" />
+                  <FaDatabase className="ml-3 text-blue-600" />
                   المعلومات التي نجمعها
                 </h2>
                 
@@ -112,23 +112,23 @@ export default function PrivacyPolicy() {
                     <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                       <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                         <li className="flex items-start">
-                          <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                          <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                           <span>الاسم الكامل ومعلومات الاتصال</span>
                         </li>
                         <li className="flex items-start">
-                          <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                          <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                           <span>عنوان البريد الإلكتروني وأرقام الهواتف</span>
                         </li>
                         <li className="flex items-start">
-                          <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                          <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                           <span>العمر والتفاصيل التعليمية</span>
                         </li>
                         <li className="flex items-start">
-                          <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                          <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                           <span>الموقع الجغرافي (المدينة)</span>
                         </li>
                         <li className="flex items-start">
-                          <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                          <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                           <span>صورة الملف الشخصي والصورة الرمزية</span>
                         </li>
                       </ul>
@@ -140,19 +140,19 @@ export default function PrivacyPolicy() {
                     <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                       <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                         <li className="flex items-start">
-                          <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                          <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                           <span>بيانات تقدم الدرس وإكمالها</span>
                         </li>
                         <li className="flex items-start">
-                          <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                          <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                           <span>تفضيلات التعلم والتفاعلات</span>
                         </li>
                         <li className="flex items-start">
-                          <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                          <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                           <span>معلومات الجهاز وعناوين IP</span>
                         </li>
                         <li className="flex items-start">
-                          <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                          <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                           <span>أنماط الاستخدام والتحليلات</span>
                         </li>
                       </ul>
@@ -164,7 +164,7 @@ export default function PrivacyPolicy() {
               {/* How We Use Information */}
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                  <FaEye className="ml-3 text-green-600" />
+                  <FaEye className="ml-3 text-blue-600" />
                   كيف نستخدم المعلومات
                 </h2>
                 <div className="space-y-4">
@@ -174,23 +174,23 @@ export default function PrivacyPolicy() {
                   <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                     <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                       <li className="flex items-start">
-                        <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                        <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                         <span>تقديم وتحسين خدمات التعلم</span>
                       </li>
                       <li className="flex items-start">
-                        <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                        <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                         <span>التواصل معك بشأن حسابك والدورات</span>
                       </li>
                       <li className="flex items-start">
-                        <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                        <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                         <span>تحليل استخدام المنصة لتحسين التجربة</span>
                       </li>
                       <li className="flex items-start">
-                        <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                        <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                         <span>ضمان أمان المنصة ومنع الاحتيال</span>
                       </li>
                       <li className="flex items-start">
-                        <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                        <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                         <span>الامتثال للالتزامات القانونية</span>
                       </li>
                     </ul>
@@ -201,7 +201,7 @@ export default function PrivacyPolicy() {
               {/* Information Sharing */}
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                  <FaUserSecret className="ml-3 text-green-600" />
+                  <FaUserSecret className="ml-3 text-blue-600" />
                   مشاركة المعلومات
                 </h2>
                 <div className="space-y-4">
@@ -211,19 +211,19 @@ export default function PrivacyPolicy() {
                   <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                     <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                       <li className="flex items-start">
-                        <FaExclamationTriangle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                        <FaExclamationTriangle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                         <span>بموافقتك الصريحة</span>
                       </li>
                       <li className="flex items-start">
-                        <FaExclamationTriangle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                        <FaExclamationTriangle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                         <span>لتقديم الخدمات المطلوبة (مثل معالجة الدفع)</span>
                       </li>
                       <li className="flex items-start">
-                        <FaExclamationTriangle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                        <FaExclamationTriangle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                         <span>للامتثال للقوانين والأنظمة</span>
                       </li>
                       <li className="flex items-start">
-                        <FaExclamationTriangle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                        <FaExclamationTriangle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                         <span>لحماية حقوقنا وممتلكاتنا</span>
                       </li>
                     </ul>
@@ -234,7 +234,7 @@ export default function PrivacyPolicy() {
               {/* Data Security */}
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                  <FaLock className="ml-3 text-green-600" />
+                  <FaLock className="ml-3 text-blue-600" />
                   أمان البيانات
                 </h2>
                 <div className="space-y-4">
@@ -244,19 +244,19 @@ export default function PrivacyPolicy() {
                   <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                     <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                       <li className="flex items-start">
-                        <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                        <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                         <span>التشفير أثناء النقل والتخزين</span>
                       </li>
                       <li className="flex items-start">
-                        <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                        <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                         <span>الوصول المقيد للموظفين المصرح لهم</span>
                       </li>
                       <li className="flex items-start">
-                        <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                        <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                         <span>مراقبة الأمان المنتظمة</span>
                       </li>
                       <li className="flex items-start">
-                        <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                        <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                         <span>النسخ الاحتياطية الآمنة</span>
                       </li>
                     </ul>
@@ -292,23 +292,23 @@ export default function PrivacyPolicy() {
                   <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                     <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                       <li className="flex items-start">
-                        <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                        <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                         <span>الوصول إلى معلوماتك الشخصية</span>
                       </li>
                       <li className="flex items-start">
-                        <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                        <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                         <span>تصحيح المعلومات غير الدقيقة</span>
                       </li>
                       <li className="flex items-start">
-                        <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                        <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                         <span>حذف معلوماتك الشخصية</span>
                       </li>
                       <li className="flex items-start">
-                        <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                        <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                         <span>تقييد معالجة معلوماتك</span>
                       </li>
                       <li className="flex items-start">
-                        <FaCheckCircle className="text-green-500 mt-1 ml-3 flex-shrink-0" />
+                        <FaCheckCircle className="text-blue-500 mt-1 ml-3 flex-shrink-0" />
                         <span>الاعتراض على معالجة معلوماتك</span>
                       </li>
                     </ul>

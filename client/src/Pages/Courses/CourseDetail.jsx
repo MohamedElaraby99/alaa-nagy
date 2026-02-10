@@ -798,11 +798,11 @@ export default function CourseDetail() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4 sm:mb-6">
             <div className={`border rounded-xl p-3 sm:p-4 ${courseAccessState?.hasAccess
               ? 'bg-gradient-to-r from-primary/10 to-primary/10 dark:from-primary/20 dark:to-primary/20 border-primary/30 dark:border-primary/50'
-              : 'bg-gradient-to-r from-red-50 to-green-50 dark:from-red-900/20 dark:to-green-900/20 border-red-200 dark:border-red-700'
+              : 'bg-gradient-to-r from-red-50 to-blue-50 dark:from-red-900/20 dark:to-blue-900/20 border-red-200 dark:border-red-700'
               }`}>
               <div className="flex items-center justify-center gap-2 sm:gap-3">
                 {courseAccessState?.hasAccess ? (
-                  <FaClock className="text-green-600 text-lg sm:text-xl flex-shrink-0" />
+                  <FaClock className="text-blue-600 text-lg sm:text-xl flex-shrink-0" />
                 ) : (
                   <FaExclamationTriangle className="text-red-600 text-lg sm:text-xl flex-shrink-0" />
                 )}
@@ -840,7 +840,7 @@ export default function CourseDetail() {
                         className="flex flex-col sm:flex-row sm:items-center justify-between p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg gap-3 sm:gap-4"
                       >
                         <div className="flex items-start sm:items-center gap-3 min-w-0 flex-1">
-                          <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                          <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                             <FaPlay className="text-white text-sm" />
                           </div>
                           <div className="min-w-0 flex-1">
@@ -881,7 +881,7 @@ export default function CourseDetail() {
                           onClick={() => toggleUnit(unit._id || unitIndex)}
                         >
                           <div className="flex items-start sm:items-center gap-3 min-w-0 flex-1">
-                            <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                               <FaBookOpen className="text-white text-sm" />
                             </div>
                             <div className="min-w-0 flex-1">
@@ -914,7 +914,7 @@ export default function CourseDetail() {
                                   className="flex flex-col sm:flex-row sm:items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg gap-3 sm:gap-4"
                                 >
                                   <div className="flex items-start sm:items-center gap-3 min-w-0 flex-1">
-                                    <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                                       <FaPlay className="text-white text-xs" />
                                     </div>
                                     <div className="min-w-0 flex-1">
@@ -1011,7 +1011,7 @@ export default function CourseDetail() {
                       {previewItem.videos.slice(0, 2).map((video, index) => (
                         <div key={index} className="p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
                           <div className="flex items-center gap-2">
-                            <FaPlay className="text-green-600" />
+                            <FaPlay className="text-blue-600" />
                             <span className="text-sm text-gray-700 dark:text-gray-300">{video.title}</span>
                           </div>
                         </div>
@@ -1055,7 +1055,7 @@ export default function CourseDetail() {
                       {previewItem.exams.slice(0, 2).map((exam, index) => (
                         <div key={index} className="p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
                           <div className="flex items-center gap-2">
-                            <FaGraduationCap className="text-green-600" />
+                            <FaGraduationCap className="text-blue-600" />
                             <span className="text-sm text-gray-700 dark:text-gray-300">{exam.title}</span>
                           </div>
                         </div>
@@ -1077,7 +1077,7 @@ export default function CourseDetail() {
                       {previewItem.trainings.slice(0, 2).map((training, index) => (
                         <div key={index} className="p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
                           <div className="flex items-center gap-2">
-                            <FaStar className="text-green-600" />
+                            <FaStar className="text-blue-600" />
                             <span className="text-sm text-gray-700 dark:text-gray-300">{training.title}</span>
                           </div>
                         </div>
@@ -1092,30 +1092,30 @@ export default function CourseDetail() {
                 )}
 
                 {/* Show content summary instead of "Content will be added soon" */}
-                <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-lg p-4 mb-4">
-                  <h6 className="font-medium text-green-900 dark:text-green-100 mb-3">ملخص المحتوى</h6>
+                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-4 mb-4">
+                  <h6 className="font-medium text-blue-900 dark:text-blue-100 mb-3">ملخص المحتوى</h6>
                   <div className="grid grid-cols-2 gap-3 text-sm">
                     <div className="flex items-center gap-2">
-                      <FaPlay className="text-green-600" />
-                      <span className="text-green-700 dark:text-green-300">
+                      <FaPlay className="text-blue-600" />
+                      <span className="text-blue-700 dark:text-blue-300">
                         {previewItem.videosCount || 0} فيديو
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
                       <FaBookOpen className="text-red-600" />
-                      <span className="text-green-700 dark:text-green-300">
+                      <span className="text-blue-700 dark:text-blue-300">
                         {previewItem.pdfsCount || 0} ملف PDF
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <FaClipboardList className="text-green-600" />
-                      <span className="text-green-700 dark:text-green-300">
+                      <FaClipboardList className="text-blue-600" />
+                      <span className="text-blue-700 dark:text-blue-300">
                         {previewItem.examsCount || 0} اختبار
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <FaStar className="text-green-600" />
-                      <span className="text-green-700 dark:text-green-300">
+                      <FaStar className="text-blue-600" />
+                      <span className="text-blue-700 dark:text-blue-300">
                         {previewItem.trainingsCount || 0} تدريب
                       </span>
                     </div>
@@ -1142,7 +1142,7 @@ export default function CourseDetail() {
                         navigate('/login', { state: { from: `/courses/${id}` } });
                       }, 2000);
                     }}
-                    className="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 flex items-center justify-center gap-2"
+                    className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center justify-center gap-2"
                   >
                     <FaUser />
                     <span>سجل دخول للمشاهدة</span>
@@ -1154,7 +1154,7 @@ export default function CourseDetail() {
                       setShowPreviewModal(false);
                       handleWatchClick(previewItem, previewItem.purchaseType, null);
                     }}
-                    className="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 flex items-center justify-center gap-2"
+                    className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center justify-center gap-2"
                   >
                     <FaPlay />
                     <span>مشاهدة</span>
@@ -1205,8 +1205,8 @@ export default function CourseDetail() {
 
               <div className="p-4 sm:p-6">
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <FaShoppingCart className="text-green-600 text-2xl" />
+                  <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <FaShoppingCart className="text-blue-600 text-2xl" />
                   </div>
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     {currentCourse.title}
@@ -1219,17 +1219,17 @@ export default function CourseDetail() {
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     <span className="text-gray-600 dark:text-gray-300">سعر الكورس:</span>
-                    <span className="font-bold text-green-600 text-lg">{currentCourse.price} جنيه</span>
+                    <span className="font-bold text-blue-600 text-lg">{currentCourse.price} جنيه</span>
                   </div>
                   <div className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     <span className="text-gray-600 dark:text-gray-300">رصيد المحفظة:</span>
-                    <span className={`font-bold text-lg ${walletBalance >= currentCourse.price ? 'text-green-600' : 'text-red-600'}`}>
+                    <span className={`font-bold text-lg ${walletBalance >= currentCourse.price ? 'text-blue-600' : 'text-red-600'}`}>
                       {walletBalance} جنيه
                     </span>
                   </div>
-                  <div className="flex items-center justify-between p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-700">
+                  <div className="flex items-center justify-between p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700">
                     <span className="text-gray-700 dark:text-gray-200 font-medium">الرصيد بعد الشراء:</span>
-                    <span className={`font-bold text-lg ${walletBalance - currentCourse.price >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                    <span className={`font-bold text-lg ${walletBalance - currentCourse.price >= 0 ? 'text-blue-600' : 'text-red-600'}`}>
                       {walletBalance - currentCourse.price} جنيه
                     </span>
                   </div>
@@ -1253,7 +1253,7 @@ export default function CourseDetail() {
                   <button
                     onClick={handleCoursePurchase}
                     disabled={paymentLoading || walletBalance < currentCourse.price}
-                    className="flex-1 px-4 py-3 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
+                    className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
                   >
                     {paymentLoading ? (
                       <>

@@ -219,7 +219,7 @@ const Financial = () => {
       change: selectedMonthData?.isCurrent ? '+12.5%' : 'بيانات مؤرشفة',
       changeType: selectedMonthData?.isCurrent ? 'positive' : 'archived',
       icon: FaMoneyBillWave,
-      color: 'text-green-600 dark:text-green-400'
+      color: 'text-blue-600 dark:text-blue-400'
     },
     {
       title: selectedMonthData?.isCurrent ? 'المصروفات الشهرية' : `مصروفات ${selectedMonthData?.label || 'الشهر'}`,
@@ -235,7 +235,7 @@ const Financial = () => {
       change: selectedMonthData?.isCurrent ? '+15.3%' : 'بيانات مؤرشفة',
       changeType: selectedMonthData?.isCurrent ? 'positive' : 'archived',
       icon: FaChartBar,
-      color: 'text-green-600 dark:text-green-400'
+      color: 'text-blue-600 dark:text-blue-400'
     },
     {
       title: selectedMonthData?.isCurrent ? 'المدفوعات المعلقة' : `مدفوعات ${selectedMonthData?.label || 'الشهر'}`,
@@ -342,7 +342,7 @@ const Financial = () => {
                     </p>
                     <p className={`text-sm mt-1 ${
                       stat.changeType === 'positive' 
-                        ? 'text-green-600 dark:text-green-400' 
+                        ? 'text-blue-600 dark:text-blue-400' 
                         : stat.changeType === 'negative'
                         ? 'text-red-600 dark:text-red-400'
                         : 'text-gray-500 dark:text-gray-400'
@@ -362,7 +362,7 @@ const Financial = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
             <div className="flex items-center mb-4">
-              <FaPiggyBank className="text-2xl text-green-600 dark:text-green-400 mr-3" />
+              <FaPiggyBank className="text-2xl text-blue-600 dark:text-blue-400 mr-3" />
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                 إضافة إيراد
               </h3>
@@ -372,7 +372,7 @@ const Financial = () => {
             </p>
             <button 
               onClick={() => setIsAddIncomeModalOpen(true)}
-              className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition-colors"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors"
             >
               إضافة إيراد
             </button>
@@ -398,7 +398,7 @@ const Financial = () => {
 
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
             <div className="flex items-center mb-4">
-              <FaFilePdf className="text-2xl text-green-600 dark:text-green-400 mr-3" />
+              <FaFilePdf className="text-2xl text-blue-600 dark:text-blue-400 mr-3" />
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                 تقرير مالي
               </h3>
@@ -408,7 +408,7 @@ const Financial = () => {
             </p>
             <button 
               onClick={() => setIsReportModalOpen(true)}
-              className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2 rtl:space-x-reverse"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2 rtl:space-x-reverse"
             >
               <FaFilePdf />
               <span>إنشاء تقرير</span>
@@ -437,7 +437,7 @@ const Financial = () => {
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   placeholder="البحث في المعاملات..."
-                  className="w-full px-4 py-2 pr-10 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-2 pr-10 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 />
                 <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -445,7 +445,7 @@ const Financial = () => {
               </div>
               <button
                 type="submit"
-                className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
+                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
               >
                 بحث
               </button>
@@ -459,7 +459,7 @@ const Financial = () => {
                   onClick={() => handleTypeFilter('')}
                   className={`px-3 py-1 rounded-full text-sm transition-colors ${
                     transactionType === '' 
-                      ? 'bg-green-600 text-white' 
+                      ? 'bg-blue-600 text-white' 
                       : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                   }`}
                 >
@@ -469,7 +469,7 @@ const Financial = () => {
                   onClick={() => handleTypeFilter('income')}
                   className={`px-3 py-1 rounded-full text-sm transition-colors ${
                     transactionType === 'income' 
-                      ? 'bg-green-600 text-white' 
+                      ? 'bg-blue-600 text-white' 
                       : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                   }`}
                 >
@@ -546,7 +546,7 @@ const Financial = () => {
                  {loading ? (
                    <tr>
                      <td colSpan="6" className="py-8 text-center">
-                       <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-500 mx-auto mb-2"></div>
+                       <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-2"></div>
                        <p className="text-gray-500 dark:text-gray-400">جاري تحميل المعاملات...</p>
                      </td>
                    </tr>
@@ -562,7 +562,7 @@ const Financial = () => {
                        <td className="py-3 px-4">
                          <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                            transaction.type === 'income'
-                             ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
+                             ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
                              : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
                          }`}>
                            {transaction.type === 'income' ? 'إيراد' : 'مصروف'}
@@ -605,7 +605,7 @@ const Financial = () => {
                        <td className="py-3 px-4">
                          <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                            transaction.status === 'completed'
-                             ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
+                             ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
                              : transaction.status === 'pending'
                              ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200'
                              : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
@@ -658,7 +658,7 @@ const Financial = () => {
                         onClick={() => handlePageChange(pageNum)}
                         className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                           currentPage === pageNum
-                            ? 'bg-green-600 text-white'
+                            ? 'bg-blue-600 text-white'
                             : 'text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-600'
                         }`}
                       >
@@ -714,7 +714,7 @@ const Financial = () => {
         >
           <div className={`flex items-center p-4 rounded-lg shadow-lg max-w-md ${
             toast.type === 'success' 
-              ? 'bg-green-500 text-white' 
+              ? 'bg-blue-500 text-white' 
               : 'bg-red-500 text-white'
           }`}>
             <div className="flex-shrink-0">

@@ -102,7 +102,7 @@ const CourseList = ({ courses, loading, pagination, onEditCourse, role, onRefres
               {/* Featured Badge Overlay */}
               {course.featured && (
                 <div className="absolute top-2 right-2 z-10">
-                  <span className="inline-flex items-center px-2 py-1 bg-green-400 text-green-900 text-xs font-bold rounded-full shadow-lg">
+                  <span className="inline-flex items-center px-2 py-1 bg-blue-400 text-blue-900 text-xs font-bold rounded-full shadow-lg">
                     <FaStar className="w-3 h-3 mr-1 fill-current" />
                     مميز
                   </span>
@@ -123,7 +123,7 @@ const CourseList = ({ courses, loading, pagination, onEditCourse, role, onRefres
                 </>
               ) : (
                 <>
-                  <div className="w-full h-full bg-gradient-to-br from-green-500 to-green-600"></div>
+                  <div className="w-full h-full bg-gradient-to-br from-blue-500 to-blue-600"></div>
                   <div className="absolute inset-0 bg-black bg-opacity-20"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-white text-4xl">📚</div>
@@ -132,7 +132,7 @@ const CourseList = ({ courses, loading, pagination, onEditCourse, role, onRefres
               )}
 
               {/* Fallback gradient for broken images */}
-              <div className="hidden w-full h-full bg-gradient-to-br from-green-500 to-green-600">
+              <div className="hidden w-full h-full bg-gradient-to-br from-blue-500 to-blue-600">
                 <div className="absolute inset-0 bg-black bg-opacity-20"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-white text-4xl">📚</div>
@@ -172,7 +172,7 @@ const CourseList = ({ courses, loading, pagination, onEditCourse, role, onRefres
                 {/* Stage Info */}
                 {course.stage && (
                   <div className="mb-3">
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
                       {course.stage.name}
                     </span>
                   </div>
@@ -181,7 +181,7 @@ const CourseList = ({ courses, loading, pagination, onEditCourse, role, onRefres
                 {/* Featured Badge */}
                 {course.featured && (
                   <div className="mb-3">
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
                       <FaStar className="w-3 h-3 mr-1 fill-current" />
                       مميز
                     </span>
@@ -191,7 +191,7 @@ const CourseList = ({ courses, loading, pagination, onEditCourse, role, onRefres
                 {/* Course Price */}
                 <div className="mb-3">
                   {course.price > 0 ? (
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-bold bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-bold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
                       💰 {course.price} جنيه
                     </span>
                   ) : (
@@ -204,7 +204,7 @@ const CourseList = ({ courses, loading, pagination, onEditCourse, role, onRefres
                 {/* Category Info */}
                 {course.category && (
                   <div className="mb-3">
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
                       {course.category.name}
                     </span>
                   </div>
@@ -215,7 +215,7 @@ const CourseList = ({ courses, loading, pagination, onEditCourse, role, onRefres
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => onEditCourse(course)}
-                    className="text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 p-2 rounded-lg hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors"
+                    className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 p-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
                     title="تعديل"
                   >
                     <FaEdit className="text-sm" />
@@ -233,8 +233,8 @@ const CourseList = ({ courses, loading, pagination, onEditCourse, role, onRefres
                     <button
                       onClick={() => handleToggleFeatured(course._id, course.featured)}
                       className={`p-2 rounded-lg transition-colors ${course.featured
-                        ? 'text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 hover:bg-green-50 dark:hover:bg-green-900/20'
-                        : 'text-gray-400 dark:text-gray-500 hover:text-green-600 dark:hover:text-green-400 hover:bg-green-50 dark:hover:bg-green-900/20'
+                        ? 'text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:bg-blue-50 dark:hover:bg-blue-900/20'
+                        : 'text-gray-400 dark:text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20'
                         }`}
                       title={course.featured ? 'إلغاء التمييز' : 'تمييز الدورة'}
                     >
@@ -243,7 +243,7 @@ const CourseList = ({ courses, loading, pagination, onEditCourse, role, onRefres
                   )}
                   <button
                     onClick={() => setStructureModalCourse(course._id)}
-                    className="text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 p-2 rounded-lg hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors"
+                    className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 p-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
                     title="إدارة الهيكل"
                   >
                     <FaList className="text-sm" />

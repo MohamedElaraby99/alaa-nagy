@@ -54,11 +54,11 @@ export default function QAPendingQuestions() {
 
   const getCategoryColor = (category) => {
     const colors = {
-      'General': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
+      'General': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
       'Technical': 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200',
-      'Course Related': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
-      'Payment': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
-      'Account': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
+      'Course Related': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
+      'Payment': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
+      'Account': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
       'Other': 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200'
     };
     return colors[category] || colors['Other'];
@@ -72,7 +72,7 @@ export default function QAPendingQuestions() {
           <div className="mb-8">
             <Link
               to="/admin/qa-dashboard"
-              className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 transition-colors mb-4"
+              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors mb-4"
             >
               <FaArrowLeft />
               العودة إلى لوحة تحكم الأسئلة والأجوبة
@@ -87,7 +87,7 @@ export default function QAPendingQuestions() {
                 </p>
               </div>
               <div className="text-right">
-                <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
                   {pendingQuestions.length}
                 </div>
                 <div className="text-sm text-gray-500 dark:text-gray-400">
@@ -100,7 +100,7 @@ export default function QAPendingQuestions() {
           {/* Questions List */}
           {loading ? (
             <div className="text-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
               <p className="mt-4 text-gray-600 dark:text-gray-300">جاري تحميل الأسئلة المعلقة...</p>
             </div>
           ) : pendingQuestions.length === 0 ? (
@@ -164,7 +164,7 @@ export default function QAPendingQuestions() {
                           setSelectedQuestion(question);
                           setShowAnswerModal(true);
                         }}
-                        className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+                        className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
                       >
                         <FaEdit />
                         إجابة
@@ -211,7 +211,7 @@ export default function QAPendingQuestions() {
                 <textarea
                   value={answer}
                   onChange={(e) => setAnswer(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-gray-700 dark:text-white"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
                   rows="6"
                   placeholder="قدم إجابة مفصلة ومفيدة..."
                 />
@@ -230,7 +230,7 @@ export default function QAPendingQuestions() {
                 </button>
                 <button
                   onClick={() => handleAnswerQuestion(selectedQuestion._id)}
-                  className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+                  className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
                 >
                   <FaCheck />
                   إرسال الإجابة

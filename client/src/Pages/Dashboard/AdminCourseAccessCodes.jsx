@@ -335,7 +335,7 @@ export default function AdminCourseAccessCodes() {
             <input name="quantity" type="number" min="1" max="200" value={form.quantity} onChange={onChange} className="w-full p-2 rounded border dark:bg-gray-700" />
           </div>
           <div className="flex items-end">
-            <button type="submit" className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">توليد الأكواد</button>
+            <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">توليد الأكواد</button>
           </div>
         </form>
 
@@ -368,7 +368,7 @@ export default function AdminCourseAccessCodes() {
                 الأكواد المُستخدمة فقط
               </label>
               {admin.listing && <span className="text-sm text-gray-500">جاري التحميل...</span>}
-              <button onClick={openExportModal} className="px-3 py-2 rounded bg-green-600 hover:bg-green-700 text-white text-sm w-full sm:w-auto">تصدير</button>
+              <button onClick={openExportModal} className="px-3 py-2 rounded bg-blue-600 hover:bg-blue-700 text-white text-sm w-full sm:w-auto">تصدير</button>
               <button onClick={handleBulkDelete} disabled={selected.size === 0} className={`px-3 py-2 rounded text-white text-sm w-full sm:w-auto ${selected.size === 0 ? 'bg-red-300 cursor-not-allowed' : 'bg-red-600 hover:bg-red-700'}`}>حذف المحدد</button>
             </div>
           </div>
@@ -397,7 +397,7 @@ export default function AdminCourseAccessCodes() {
                     <td className="p-2">{getCourseName(c)}</td>
                     <td className="p-2 hidden sm:table-cell">{c.accessStartAt && c.accessEndAt ? `${new Date(c.accessStartAt).toLocaleString('ar-EG')} ← ${new Date(c.accessEndAt).toLocaleString('ar-EG')}` : '-'}</td>
                     <td className="p-2">
-                      <span className={`px-2 py-1 rounded text-xs ${c.isUsed ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800'}`}>
+                      <span className={`px-2 py-1 rounded text-xs ${c.isUsed ? 'bg-red-100 text-red-800' : 'bg-blue-100 text-blue-800'}`}>
                         {c.isUsed ? "مُستخدم" : "متاح"}
                       </span>
                     </td>
@@ -497,7 +497,7 @@ export default function AdminCourseAccessCodes() {
                 </div>
                 <div className="flex items-center justify-end gap-2 mt-4">
                   <button onClick={closeExportModal} className="px-3 py-1 rounded border">إلغاء</button>
-                  <button onClick={handleExport} disabled={exporting} className={`px-3 py-1 rounded text-white ${exporting ? 'bg-green-300' : 'bg-green-600 hover:bg-green-700'}`}>{exporting ? 'جاري التصدير...' : 'تصدير CSV'}</button>
+                  <button onClick={handleExport} disabled={exporting} className={`px-3 py-1 rounded text-white ${exporting ? 'bg-blue-300' : 'bg-blue-600 hover:bg-blue-700'}`}>{exporting ? 'جاري التصدير...' : 'تصدير CSV'}</button>
                 </div>
               </div>
             </div>

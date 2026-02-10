@@ -238,7 +238,7 @@ const QRCodeScanner = ({ onScan, onScanSuccess, onClose, courseId, liveMeetingId
         {/* Header */}
         <div className="flex justify-between items-center p-6 border-b border-gray-200 dark:border-gray-700">
           <h2 className="text-xl font-semibold text-gray-800 dark:text-white flex items-center gap-2">
-            <FaQrcode className="text-green-500" />
+            <FaQrcode className="text-blue-500" />
             مسح رمز الحضور
           </h2>
           <button
@@ -275,7 +275,7 @@ const QRCodeScanner = ({ onScan, onScanSuccess, onClose, courseId, liveMeetingId
                 {!isScanning ? (
                   <button
                     onClick={startScanning}
-                    className="flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors"
                   >
                     <FaCamera size={16} />
                     بدء المسح
@@ -312,7 +312,7 @@ const QRCodeScanner = ({ onScan, onScanSuccess, onClose, courseId, liveMeetingId
               </p>
               <button
                 onClick={handleManualQRInput}
-                className="flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors mx-auto"
+                className="flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors mx-auto"
               >
                 <FaQrcode size={16} />
                 إدخال يدوي
@@ -322,25 +322,25 @@ const QRCodeScanner = ({ onScan, onScanSuccess, onClose, courseId, liveMeetingId
 
           {/* Scanned Data Display */}
           {scannedData && (
-            <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
-              <h3 className="text-lg font-semibold text-green-800 dark:text-green-200 mb-3 flex items-center gap-2">
-                <FaCheck className="text-green-600" />
+            <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-3 flex items-center gap-2">
+                <FaCheck className="text-blue-600" />
                 تم مسح البيانات بنجاح
               </h3>
               
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
-                  <FaUser className="text-green-500" />
+                  <FaUser className="text-blue-500" />
                   <span className="font-medium">الاسم:</span>
                   <span>{scannedData.fullName || 'غير متوفر'}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <FaUser className="text-green-500" />
+                  <FaUser className="text-blue-500" />
                   <span className="font-medium">اسم المستخدم:</span>
                   <span>{scannedData.username || 'غير متوفر'}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <FaCalendarAlt className="text-green-500" />
+                  <FaCalendarAlt className="text-blue-500" />
                   <span className="font-medium">وقت إنشاء الرمز:</span>
                   <span>
                     {scannedData.timestamp 
@@ -364,7 +364,7 @@ const QRCodeScanner = ({ onScan, onScanSuccess, onClose, courseId, liveMeetingId
                 value={scanLocation}
                 onChange={(e) => setScanLocation(e.target.value)}
                 placeholder="مثال: الفصل الدراسي الأول"
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               />
             </div>
 
@@ -377,7 +377,7 @@ const QRCodeScanner = ({ onScan, onScanSuccess, onClose, courseId, liveMeetingId
                 onChange={(e) => setNotes(e.target.value)}
                 placeholder="أي ملاحظات إضافية..."
                 rows={3}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               />
             </div>
           </div>
@@ -390,7 +390,7 @@ const QRCodeScanner = ({ onScan, onScanSuccess, onClose, courseId, liveMeetingId
               className={`flex items-center gap-2 px-6 py-3 rounded-lg transition-colors ${
                 !scannedData || isProcessing
                   ? 'bg-gray-400 cursor-not-allowed text-white'
-                  : 'bg-green-500 hover:bg-green-600 text-white'
+                  : 'bg-blue-500 hover:bg-blue-600 text-white'
               }`}
             >
               {isProcessing ? (

@@ -55,20 +55,20 @@ export default function QADetail() {
 
   const getStatusColor = (status) => {
     switch (status) {
-      case 'featured': return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
-      case 'answered': return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
-      case 'pending': return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
+      case 'featured': return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
+      case 'answered': return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
+      case 'pending': return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
       default: return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200';
     }
   };
 
   const getCategoryColor = (category) => {
     const colors = {
-      'General': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
+      'General': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
       'Technical': 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200',
-      'Course Related': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
-      'Payment': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
-      'Account': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
+      'Course Related': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
+      'Payment': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
+      'Account': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
       'Other': 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200'
     };
     return colors[category] || colors['Other'];
@@ -115,7 +115,7 @@ export default function QADetail() {
       <Layout>
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
             <p className="mt-4 text-gray-600 dark:text-gray-300">Loading Q&A...</p>
           </div>
         </div>
@@ -137,7 +137,7 @@ export default function QADetail() {
             </p>
             <Link
               to="/qa"
-              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg transition-colors duration-200"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-200"
             >
               <FaArrowLeft />
               Back to Q&As
@@ -156,7 +156,7 @@ export default function QADetail() {
           <div className="mb-6">
             <Link
               to="/qa"
-              className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 transition-colors"
+              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors"
             >
               <FaArrowLeft />
               Back to Q&As
@@ -188,7 +188,7 @@ export default function QADetail() {
                   <>
                     <Link
                       to={`/qa/edit/${currentQA._id}`}
-                      className="p-2 text-green-500 hover:text-green-700 transition-colors"
+                      className="p-2 text-blue-500 hover:text-blue-700 transition-colors"
                       title="Edit"
                     >
                       <FaEdit />
@@ -216,7 +216,7 @@ export default function QADetail() {
                   <div className="flex items-center gap-2">
                     <Link
                       to={`/qa/edit/${id}`}
-                      className="flex items-center gap-1 px-3 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg text-sm transition-colors"
+                      className="flex items-center gap-1 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm transition-colors"
                     >
                       <FaEdit />
                       Edit
@@ -272,7 +272,7 @@ export default function QADetail() {
                 {isAdmin && !currentQA.answer && (
                   <button
                     onClick={() => setShowAnswerForm(true)}
-                    className="flex items-center gap-1 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg text-sm transition-colors"
+                    className="flex items-center gap-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm transition-colors"
                   >
                     <FaEdit />
                     Provide Answer
@@ -287,8 +287,8 @@ export default function QADetail() {
                   </p>
                 </div>
               ) : isAdmin && (
-                <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
-                  <p className="text-green-800 dark:text-green-200">
+                <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
+                  <p className="text-blue-800 dark:text-blue-200">
                     This question is waiting for an admin to provide an answer.
                   </p>
                 </div>
@@ -305,14 +305,14 @@ export default function QADetail() {
                       value={answer}
                       onChange={(e) => setAnswer(e.target.value)}
                       placeholder="Write your answer here..."
-                      className="w-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white resize-none"
+                      className="w-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white resize-none"
                       rows="6"
                       required
                     />
                     <div className="flex items-center gap-3 mt-4">
                       <button
                         type="submit"
-                        className="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
+                        className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
                       >
                         Submit Answer
                       </button>
@@ -336,7 +336,7 @@ export default function QADetail() {
                   <div className="flex items-center gap-4">
                     <button
                       onClick={() => handleVote('upvote')}
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-50 text-green-600 hover:bg-green-100 dark:bg-green-900/20 dark:text-green-400 dark:hover:bg-green-900/30 transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors"
                     >
                       <FaThumbsUp />
                       <span className="font-medium">{currentQA.upvotes}</span>

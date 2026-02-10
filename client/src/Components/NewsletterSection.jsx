@@ -16,7 +16,7 @@ const NewsletterSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-r from-green-600 via-green-600 to-green-800">
+    <section className="py-20 bg-gradient-to-r from-blue-600 via-blue-600 to-blue-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="relative">
           {/* Floating elements */}
@@ -34,7 +34,7 @@ const NewsletterSection = () => {
               لا تفوت فرصة التعلم أبدًا
             </h2>
             
-            <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               احصل على تحديثات أسبوعية حول الدورات التدريبية الجديدة والمحتوى الحصري ونصائح التعلم التي يتم إرسالها مباشرة إلى صندوق الوارد الخاص بك.
             </p>
 
@@ -59,7 +59,7 @@ const NewsletterSection = () => {
                 </div>
                 <button
                   type="submit"
-                  className="group px-8 py-4 bg-white text-green-600 font-semibold rounded-full hover:bg-green-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  className="group px-8 py-4 bg-white text-blue-600 font-semibold rounded-full hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
                   <span className="flex items-center gap-2">
                     اشتراك
@@ -70,14 +70,14 @@ const NewsletterSection = () => {
             </form>
 
             {isSubscribed && (
-              <div className="mt-6 p-4 bg-green-500/20 backdrop-blur-sm rounded-lg border border-green-400/30">
-                <p className="text-green-100 font-semibold">
+              <div className="mt-6 p-4 bg-blue-500/20 backdrop-blur-sm rounded-lg border border-blue-400/30">
+                <p className="text-blue-100 font-semibold">
                   🎉 شكراً لك على الاشتراك! تحقق من بريدك الإلكتروني للتأكيد.
                 </p>
               </div>
             )}
 
-            <p className="text-green-200 text-sm mt-6">
+            <p className="text-blue-200 text-sm mt-6">
               انضم إلى أكثر من 50,000 متعلم يحصلون على أفضل محتوى تعليمي
             </p>
           </div>

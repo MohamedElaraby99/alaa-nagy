@@ -158,7 +158,7 @@ const UserNumberAttendanceForm = ({ selectedGroup, selectedDate, onSuccess, onCl
         {/* User Number Search */}
         <div>
           <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            <FaIdCard className="inline mr-2 text-green-500" />
+            <FaIdCard className="inline mr-2 text-blue-500" />
             رقم المستخدم
           </label>
           <div className="flex gap-2">
@@ -168,14 +168,14 @@ const UserNumberAttendanceForm = ({ selectedGroup, selectedDate, onSuccess, onCl
               value={formData.userNumber}
               onChange={handleInputChange}
               placeholder="رقم الهوية، اسم المستخدم، أو رقم الهاتف"
-              className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+              className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
               dir="ltr"
             />
             <button
               type="button"
               onClick={searchUserByNumber}
               disabled={usersLoading}
-              className="px-4 py-2 bg-green-500 hover:bg-green-600 disabled:bg-green-300 text-white rounded-lg transition-colors flex items-center gap-2"
+              className="px-4 py-2 bg-blue-500 hover:bg-blue-600 disabled:bg-blue-300 text-white rounded-lg transition-colors flex items-center gap-2"
             >
               {usersLoading ? (
                 <>
@@ -199,15 +199,15 @@ const UserNumberAttendanceForm = ({ selectedGroup, selectedDate, onSuccess, onCl
         {searchAttempted && (
           <div className={`p-4 rounded-lg border ${
             foundUser 
-              ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
+              ? 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
               : 'bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800'
           }`}>
             {foundUser ? (
               <>
-                <h4 className="text-sm font-medium text-green-800 dark:text-green-300 mb-2">
+                <h4 className="text-sm font-medium text-blue-800 dark:text-blue-300 mb-2">
                   ✓ تم العثور على الطالب:
                 </h4>
-                <div className="space-y-1 text-sm text-green-700 dark:text-green-400">
+                <div className="space-y-1 text-sm text-blue-700 dark:text-blue-400">
                   <p><strong>الاسم:</strong> {foundUser.fullName}</p>
                   <p><strong>رقم الهاتف:</strong> {foundUser.phoneNumber}</p>
                   {foundUser.email && <p><strong>البريد الإلكتروني:</strong> {foundUser.email}</p>}
@@ -238,7 +238,7 @@ const UserNumberAttendanceForm = ({ selectedGroup, selectedDate, onSuccess, onCl
             name="status"
             value={formData.status}
             onChange={handleInputChange}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
           >
             <option value="present">حاضر</option>
             <option value="late">متأخر</option>
@@ -249,7 +249,7 @@ const UserNumberAttendanceForm = ({ selectedGroup, selectedDate, onSuccess, onCl
         {/* Location (Optional) */}
         <div>
           <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            <FaMapMarkerAlt className="inline mr-2 text-green-500" />
+            <FaMapMarkerAlt className="inline mr-2 text-blue-500" />
             موقع المسح (اختياري)
           </label>
           <input
@@ -258,7 +258,7 @@ const UserNumberAttendanceForm = ({ selectedGroup, selectedDate, onSuccess, onCl
             value={formData.scanLocation}
             onChange={handleInputChange}
             placeholder="مثال: قاعة المحاضرات الرئيسية"
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
           />
         </div>
 
@@ -274,7 +274,7 @@ const UserNumberAttendanceForm = ({ selectedGroup, selectedDate, onSuccess, onCl
             onChange={handleInputChange}
             placeholder="أي ملاحظات إضافية..."
             rows={3}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white resize-none"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white resize-none"
           />
         </div>
 
@@ -286,7 +286,7 @@ const UserNumberAttendanceForm = ({ selectedGroup, selectedDate, onSuccess, onCl
             className={`flex items-center gap-2 px-6 py-3 rounded-lg transition-colors ${
               isLoading || !formData.userNumber.trim()
                 ? 'bg-gray-400 cursor-not-allowed text-white'
-                : 'bg-green-500 hover:bg-green-600 text-white'
+                : 'bg-blue-500 hover:bg-blue-600 text-white'
             }`}
           >
             {isLoading ? (
@@ -316,11 +316,11 @@ const UserNumberAttendanceForm = ({ selectedGroup, selectedDate, onSuccess, onCl
       </form>
 
       {/* Info Section */}
-      <div className="mt-6 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
-        <h4 className="text-sm font-medium text-green-800 dark:text-green-300 mb-2">
+      <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+        <h4 className="text-sm font-medium text-blue-800 dark:text-blue-300 mb-2">
           كيفية الاستخدام:
         </h4>
-        <ul className="text-xs text-green-700 dark:text-green-400 space-y-1">
+        <ul className="text-xs text-blue-700 dark:text-blue-400 space-y-1">
           <li>• أدخل رقم الهوية، اسم المستخدم، أو رقم الهاتف</li>
           <li>• اضغط على "بحث" للتحقق من وجود الطالب محلياً (اختياري)</li>
           <li>• يمكنك تسجيل الحضور حتى لو لم يتم العثور على الطالب محلياً</li>

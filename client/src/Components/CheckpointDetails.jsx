@@ -10,10 +10,10 @@ const CheckpointDetails = ({ checkpoints = [], currentTime = 0, reachedCheckpoin
 
   const getCheckpointStatus = (checkpoint, index) => {
     if (checkpoint.reached) {
-      return { icon: FaCheckCircle, color: 'text-green-500', bgColor: 'bg-green-100 dark:bg-green-900/20' };
+      return { icon: FaCheckCircle, color: 'text-blue-500', bgColor: 'bg-blue-100 dark:bg-blue-900/20' };
     }
     if (reachedCheckpoints.has(index) || currentTime >= checkpoint.time) {
-      return { icon: FaCheckCircle, color: 'text-green-500', bgColor: 'bg-green-100 dark:bg-green-900/20' };
+      return { icon: FaCheckCircle, color: 'text-blue-500', bgColor: 'bg-blue-100 dark:bg-blue-900/20' };
     }
     return { icon: FaCircle, color: 'text-gray-400', bgColor: 'bg-gray-100 dark:bg-gray-800' };
   };
@@ -43,7 +43,7 @@ const CheckpointDetails = ({ checkpoints = [], currentTime = 0, reachedCheckpoin
               key={index} 
               className={`p-3 rounded-lg border transition-all duration-200 ${
                 isReached 
-                  ? 'border-green-200 dark:border-green-700' 
+                  ? 'border-blue-200 dark:border-blue-700' 
                   : 'border-gray-200 dark:border-gray-600'
               } ${bgColor}`}
             >
@@ -76,14 +76,14 @@ const CheckpointDetails = ({ checkpoints = [], currentTime = 0, reachedCheckpoin
         })}
       </div>
       
-      <div className="mt-4 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-700">
-        <div className="text-sm text-green-800 dark:text-green-200">
+      <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700">
+        <div className="text-sm text-blue-800 dark:text-blue-200">
           <strong>Progress Summary:</strong>
         </div>
-        <div className="text-xs text-green-600 dark:text-green-300 mt-1">
+        <div className="text-xs text-blue-600 dark:text-blue-300 mt-1">
           • {checkpoints.filter(cp => cp.reached).length} of {checkpoints.length} checkpoints reached
         </div>
-        <div className="text-xs text-green-600 dark:text-green-300">
+        <div className="text-xs text-blue-600 dark:text-blue-300">
           • Current progress: {(() => {
             const maxTime = checkpoints[checkpoints.length - 1]?.time || 1;
             return maxTime > 0 ? Math.round((currentTime / maxTime) * 100) : 0;

@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 
 dotenv.config();
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/demo';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/alaanagy';
 
 const dropIndex = async () => {
     try {

@@ -195,7 +195,7 @@ export default function Overview() {
       title: 'إجمالي الطلاب',
       value: centerStats.totalStudents.toLocaleString(),
       icon: FaUsers,
-      color: 'bg-green-500',
+      color: 'bg-blue-500',
       change: loading ? '...' : selectedMonthData?.isCurrent ? '+12%' : 'بيانات مؤرشفة',
       changeType: selectedMonthData?.isCurrent ? 'positive' : 'archived'
     },
@@ -203,7 +203,7 @@ export default function Overview() {
       title: 'المدرسين النشطين',
       value: centerStats.activeInstructors,
       icon: FaGraduationCap,
-      color: 'bg-green-500',
+      color: 'bg-blue-500',
       change: loading ? '...' : selectedMonthData?.isCurrent ? '+3' : 'بيانات مؤرشفة',
       changeType: selectedMonthData?.isCurrent ? 'positive' : 'archived'
     },
@@ -269,7 +269,7 @@ export default function Overview() {
                       {stat.value}
                     </p>
                     <div className="flex items-center mt-2">
-                      <span className={`text-xs font-medium ${stat.changeType === 'positive' ? 'text-green-600' :
+                      <span className={`text-xs font-medium ${stat.changeType === 'positive' ? 'text-blue-600' :
                           stat.changeType === 'negative' ? 'text-red-600' :
                             'text-gray-500 dark:text-gray-400'
                         }`}>
@@ -302,18 +302,18 @@ export default function Overview() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <a
                 href="/admin/center-management/attendance"
-                className="flex items-center p-4 bg-green-50 dark:bg-green-900/20 rounded-lg hover:bg-green-100 dark:hover:bg-green-900/30 transition-colors"
+                className="flex items-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
               >
-                <FaQrcode className="text-green-600 dark:text-green-400 text-xl ml-3" />
-                <span className="text-green-800 dark:text-green-200 font-medium">إدارة الحضور</span>
+                <FaQrcode className="text-blue-600 dark:text-blue-400 text-xl ml-3" />
+                <span className="text-blue-800 dark:text-blue-200 font-medium">إدارة الحضور</span>
               </a>
 
               <a
                 href="/admin/center-management/groups"
-                className="flex items-center p-4 bg-green-50 dark:bg-green-900/20 rounded-lg hover:bg-green-100 dark:hover:bg-green-900/30 transition-colors"
+                className="flex items-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
               >
-                <FaBook className="text-green-600 dark:text-green-400 text-xl ml-3" />
-                <span className="text-green-800 dark:text-green-200 font-medium">إدارة المجموعات</span>
+                <FaBook className="text-blue-600 dark:text-blue-400 text-xl ml-3" />
+                <span className="text-blue-800 dark:text-blue-200 font-medium">إدارة المجموعات</span>
               </a>
 
               <a

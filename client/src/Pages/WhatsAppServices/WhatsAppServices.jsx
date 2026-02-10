@@ -48,13 +48,13 @@ export default function WhatsAppServices() {
     const getCategoryIcon = (category) => {
         switch (category) {
             case 'course':
-                return <FaBook className="text-green-500" />;
+                return <FaBook className="text-blue-500" />;
             case 'tutoring':
-                return <FaUsers className="text-green-500" />;
+                return <FaUsers className="text-blue-500" />;
             case 'consultation':
-                return <FaHeadset className="text-green-500" />;
+                return <FaHeadset className="text-blue-500" />;
             case 'support':
-                return <FaCog className="text-green-500" />;
+                return <FaCog className="text-blue-500" />;
             default:
                 return <FaInfoCircle className="text-gray-500" />;
         }
@@ -63,13 +63,13 @@ export default function WhatsAppServices() {
     const getCategoryColor = (category) => {
         switch (category) {
             case 'course':
-                return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
+                return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
             case 'tutoring':
-                return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
+                return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
             case 'consultation':
-                return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
+                return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
             case 'support':
-                return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
+                return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
             default:
                 return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200';
         }
@@ -99,11 +99,11 @@ export default function WhatsAppServices() {
 
     return (
         <Layout>
-            <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-8">
+            <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-8">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Header */}
                     <div className="text-center mb-8">
-                        <div className="mx-auto h-16 w-16 bg-gradient-to-r from-green-600 to-green-600 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                        <div className="mx-auto h-16 w-16 bg-gradient-to-r from-blue-600 to-blue-600 rounded-full flex items-center justify-center mb-4 shadow-lg">
                             <FaWhatsapp className="h-8 w-8 text-white" />
                         </div>
                         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
@@ -119,8 +119,8 @@ export default function WhatsAppServices() {
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
                         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 border border-gray-200 dark:border-gray-700">
                             <div className="flex items-center">
-                                <div className="p-3 bg-green-100 dark:bg-green-900 rounded-lg">
-                                    <FaBook className="h-6 w-6 text-green-600 dark:text-green-400" />
+                                <div className="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg">
+                                    <FaBook className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                                 </div>
                                 <div className="ml-4">
                                     <p className="text-sm font-medium text-gray-600 dark:text-gray-400">إجمالي الخدمات</p>
@@ -130,8 +130,8 @@ export default function WhatsAppServices() {
                         </div>
                         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 border border-gray-200 dark:border-gray-700">
                             <div className="flex items-center">
-                                <div className="p-3 bg-green-100 dark:bg-green-900 rounded-lg">
-                                    <FaUsers className="h-6 w-6 text-green-600 dark:text-green-400" />
+                                <div className="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg">
+                                    <FaUsers className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                                 </div>
                                 <div className="ml-4">
                                     <p className="text-sm font-medium text-gray-600 dark:text-gray-400">الخدمات النشطة</p>
@@ -143,8 +143,8 @@ export default function WhatsAppServices() {
                         </div>
                         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 border border-gray-200 dark:border-gray-700">
                             <div className="flex items-center">
-                                <div className="p-3 bg-green-100 dark:bg-green-900 rounded-lg">
-                                    <FaHeadset className="h-6 w-6 text-green-600 dark:text-green-400" />
+                                <div className="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg">
+                                    <FaHeadset className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                                 </div>
                                 <div className="ml-4">
                                     <p className="text-sm font-medium text-gray-600 dark:text-gray-400">الفئات</p>
@@ -156,8 +156,8 @@ export default function WhatsAppServices() {
                         </div>
                         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 border border-gray-200 dark:border-gray-700">
                             <div className="flex items-center">
-                                <div className="p-3 bg-green-100 dark:bg-green-900 rounded-lg">
-                                    <FaPhone className="h-6 w-6 text-green-600 dark:text-green-400" />
+                                <div className="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg">
+                                    <FaPhone className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                                 </div>
                                 <div className="ml-4">
                                     <p className="text-sm font-medium text-gray-600 dark:text-gray-400">أرقام الاتصال</p>
@@ -179,13 +179,13 @@ export default function WhatsAppServices() {
                                     placeholder="البحث في الخدمات..."
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
-                                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                                 />
                             </div>
                             <select
                                 value={categoryFilter}
                                 onChange={(e) => setCategoryFilter(e.target.value)}
-                                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                             >
                                 <option value="all">جميع الفئات</option>
                                 {categories.map(category => (
@@ -197,7 +197,7 @@ export default function WhatsAppServices() {
                             <select
                                 value={sortBy}
                                 onChange={(e) => setSortBy(e.target.value)}
-                                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                             >
                                 <option value="name">الاسم أ-ي</option>
                                 <option value="price">السعر منخفض-عالي</option>
@@ -212,7 +212,7 @@ export default function WhatsAppServices() {
                     {/* Services Grid */}
                     {loading ? (
                         <div className="flex justify-center items-center py-12">
-                            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600"></div>
+                            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
                         </div>
                     ) : (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -232,7 +232,7 @@ export default function WhatsAppServices() {
                                                 </div>
                                             </div>
                                             <div className="flex items-center gap-1">
-                                                <FaStar className="text-green-400 text-sm" />
+                                                <FaStar className="text-blue-400 text-sm" />
                                                 <span className="text-sm text-gray-500 dark:text-gray-400">4.8</span>
                                             </div>
                                         </div>
@@ -243,7 +243,7 @@ export default function WhatsAppServices() {
 
                                         <div className="flex items-center justify-between mb-4">
                                             <div>
-                                                <span className="text-2xl font-bold text-green-600 dark:text-green-400">
+                                                <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">
                                                     {service.price} {service.currency}
                                                 </span>
                                             </div>
@@ -256,8 +256,8 @@ export default function WhatsAppServices() {
                                         </div>
 
                                         {service.instructions && (
-                                            <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-3 mb-4">
-                                                <p className="text-sm text-green-800 dark:text-green-200">
+                                            <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-3 mb-4">
+                                                <p className="text-sm text-blue-800 dark:text-blue-200">
                                                     {service.instructions}
                                                 </p>
                                             </div>
@@ -273,8 +273,8 @@ export default function WhatsAppServices() {
                                                 {service.whatsappNumbers.map((number, index) => (
                                                     <div key={number._id || index} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
                                                         <div className="flex items-center gap-3">
-                                                            <div className="p-2 bg-green-100 dark:bg-green-900 rounded-lg">
-                                                                <FaWhatsapp className="text-green-600 dark:text-green-400" />
+                                                            <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
+                                                                <FaWhatsapp className="text-blue-600 dark:text-blue-400" />
                                                             </div>
                                                             <div>
                                                                 <div className="text-sm font-medium text-gray-900 dark:text-white">
@@ -293,7 +293,7 @@ export default function WhatsAppServices() {
                                                         </div>
                                                         <button
                                                             onClick={() => handleWhatsAppClick(number.number, service.name)}
-                                                            className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+                                                            className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors"
                                                         >
                                                             <FaWhatsapp />
                                                             <span className="hidden sm:inline">تواصل</span>
@@ -320,22 +320,22 @@ export default function WhatsAppServices() {
                     )}
 
                     {/* Call to Action */}
-                    <div className="mt-12 bg-gradient-to-r from-green-600 to-green-600 rounded-lg p-8 text-center text-white">
+                    <div className="mt-12 bg-gradient-to-r from-blue-600 to-blue-600 rounded-lg p-8 text-center text-white">
                         <h2 className="text-2xl font-bold mb-4">تحتاج مساعدة؟</h2>
-                        <p className="text-green-100 mb-6 max-w-2xl mx-auto">
+                        <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
                             لا تجد ما تبحث عنه؟ فريق الدعم لدينا متاح على مدار الساعة لمساعدتك في أي أسئلة أو طلبات خاصة.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <button
                                 onClick={() => handleWhatsAppClick("1234567890", "General Support")}
-                                className="bg-white text-green-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
+                                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
                             >
                                 <FaWhatsapp />
                                 تواصل مع الدعم
                             </button>
                             <a
                                 href="/contact"
-                                className="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-green-600 transition-colors flex items-center justify-center gap-2"
+                                className="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center gap-2"
                             >
                                 <FaPhone />
                                 طرق الاتصال الأخرى

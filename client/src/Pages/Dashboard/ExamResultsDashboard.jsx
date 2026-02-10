@@ -419,8 +419,8 @@ const ExamResultsDashboard = () => {
   };
 
   const getScoreColor = (score) => {
-    if (score >= 80) return 'text-green-600 bg-green-100';
-    if (score >= 50) return 'text-green-600 bg-green-100';
+    if (score >= 80) return 'text-blue-600 bg-blue-100';
+    if (score >= 50) return 'text-blue-600 bg-blue-100';
     return 'text-red-600 bg-red-100';
   };
 
@@ -456,15 +456,15 @@ const ExamResultsDashboard = () => {
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
             <div>
               <h1 className="text-3xl font-bold text-gray-900 dark:text-white flex items-center gap-3">
-                <FaClipboardCheck className="text-green-600 text-4xl" />
-                <span className="bg-gradient-to-l from-green-600 to-amber-600 bg-clip-text text-transparent">لوحة تحكم النتائج</span>
+                <FaClipboardCheck className="text-blue-600 text-4xl" />
+                <span className="bg-gradient-to-l from-blue-600 to-amber-600 bg-clip-text text-transparent">لوحة تحكم النتائج</span>
               </h1>
               <p className="mt-2 text-gray-500 dark:text-gray-400">تابع أداء الطلاب ونتائج الامتحانات بشكل مفصل</p>
             </div>
             <div className="flex flex-wrap gap-3">
               <button
                 onClick={exportResults}
-                className="flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-xl transition-all shadow-lg shadow-green-600/20 active:scale-95 font-semibold"
+                className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl transition-all shadow-lg shadow-blue-600/20 active:scale-95 font-semibold"
               >
                 <FaDownload className="text-lg" />
                 تصدير Excel
@@ -481,7 +481,7 @@ const ExamResultsDashboard = () => {
               <div className="relative z-10">
                 <p className="text-sm font-medium text-gray-500 dark:text-gray-400">إجمالي المحاولات</p>
                 <h3 className="text-3xl font-bold text-blue-600 mt-2">{summary.totalAttempts || 0}</h3>
-                <div className="mt-2 text-xs text-green-600 bg-green-100 dark:bg-green-900/30 inline-block px-2 py-1 rounded-full">
+                <div className="mt-2 text-xs text-blue-600 bg-blue-100 dark:bg-blue-900/30 inline-block px-2 py-1 rounded-full">
                   + كل المحاولات المسجلة
                 </div>
               </div>
@@ -489,12 +489,12 @@ const ExamResultsDashboard = () => {
 
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                <FaChartBar className="text-6xl text-green-600" />
+                <FaChartBar className="text-6xl text-blue-600" />
               </div>
               <div className="relative z-10">
                 <p className="text-sm font-medium text-gray-500 dark:text-gray-400">متوسط الدرجات</p>
-                <h3 className="text-3xl font-bold text-green-600 mt-2">{Math.round(summary.averageScore || 0)}%</h3>
-                <div className={`mt-2 text-xs inline-block px-2 py-1 rounded-full ${summary.averageScore >= 50 ? 'text-green-600 bg-green-100' : 'text-red-600 bg-red-100'}`}>
+                <h3 className="text-3xl font-bold text-blue-600 mt-2">{Math.round(summary.averageScore || 0)}%</h3>
+                <div className={`mt-2 text-xs inline-block px-2 py-1 rounded-full ${summary.averageScore >= 50 ? 'text-blue-600 bg-blue-100' : 'text-red-600 bg-red-100'}`}>
                   {summary.averageScore >= 50 ? 'مستوى جيد' : 'يحتاج تحسين'}
                 </div>
               </div>
@@ -502,11 +502,11 @@ const ExamResultsDashboard = () => {
 
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                <FaCheckCircle className="text-6xl text-green-600" />
+                <FaCheckCircle className="text-6xl text-blue-600" />
               </div>
               <div className="relative z-10">
                 <p className="text-sm font-medium text-gray-500 dark:text-gray-400">نسبة النجاح</p>
-                <h3 className="text-3xl font-bold text-green-600 mt-2">{Math.round(summary.passRate || 0)}%</h3>
+                <h3 className="text-3xl font-bold text-blue-600 mt-2">{Math.round(summary.passRate || 0)}%</h3>
                 <p className="text-xs text-gray-500 mt-2">
                   {summary.passedCount || 0} ناجح / {summary.failedCount || 0} راسب
                 </p>
@@ -533,7 +533,7 @@ const ExamResultsDashboard = () => {
                   onClick={() => {
                     clearCourseFilter();
                   }}
-                  className="flex items-center gap-2 text-green-600 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300 transition-colors font-medium"
+                  className="flex items-center gap-2 text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors font-medium"
                 >
                   <FaHome className="text-lg" />
                   <span>جميع الدورات</span>
@@ -547,8 +547,8 @@ const ExamResultsDashboard = () => {
                         clearLessonFilter();
                       }}
                       className={`flex items-center gap-2 transition-colors font-medium ${filters.lessonId
-                        ? 'text-gray-600 hover:text-green-600 dark:text-gray-400 dark:hover:text-green-400'
-                        : 'text-green-600 dark:text-green-400'
+                        ? 'text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400'
+                        : 'text-blue-600 dark:text-blue-400'
                         }`}
                     >
                       <FaBookOpen />
@@ -560,7 +560,7 @@ const ExamResultsDashboard = () => {
                 {filters.lessonId && (
                   <>
                     <FaChevronRight className="text-gray-400 dark:text-gray-500" />
-                    <span className="flex items-center gap-2 text-green-600 dark:text-green-400 font-medium">
+                    <span className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium">
                       <FaClipboardCheck />
                       <span>{getSelectedLessonName()}</span>
                     </span>
@@ -583,21 +583,21 @@ const ExamResultsDashboard = () => {
           <div className="flex flex-wrap gap-2 border-b border-gray-200 dark:border-gray-700 pb-1">
             <button
               onClick={() => setActiveTab('all_attempts')}
-              className={`px-6 py-3 rounded-t-lg font-medium transition-all flex items-center gap-2 ${activeTab === 'all_attempts' ? 'bg-green-600 text-white shadow-lg' : 'text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800'}`}
+              className={`px-6 py-3 rounded-t-lg font-medium transition-all flex items-center gap-2 ${activeTab === 'all_attempts' ? 'bg-blue-600 text-white shadow-lg' : 'text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800'}`}
             >
               <FaListAlt />
               سجل المحاولات
             </button>
             <button
               onClick={() => setActiveTab('by_exam')}
-              className={`px-6 py-3 rounded-t-lg font-medium transition-all flex items-center gap-2 ${activeTab === 'by_exam' ? 'bg-green-600 text-white shadow-lg' : 'text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800'}`}
+              className={`px-6 py-3 rounded-t-lg font-medium transition-all flex items-center gap-2 ${activeTab === 'by_exam' ? 'bg-blue-600 text-white shadow-lg' : 'text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800'}`}
             >
               <FaBookOpen />
               الامتحانات
             </button>
             <button
               onClick={() => setActiveTab('analytics')}
-              className={`px-6 py-3 rounded-t-lg font-medium transition-all flex items-center gap-2 ${activeTab === 'analytics' ? 'bg-green-600 text-white shadow-lg' : 'text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800'}`}
+              className={`px-6 py-3 rounded-t-lg font-medium transition-all flex items-center gap-2 ${activeTab === 'analytics' ? 'bg-blue-600 text-white shadow-lg' : 'text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800'}`}
             >
               <FaChartLine />
               تحليلات ورسوم بيانية
@@ -616,14 +616,14 @@ const ExamResultsDashboard = () => {
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   placeholder="بحث باسم الطالب، الإيميل، الهاتف، الدورة..."
-                  className="w-full pr-11 pl-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-green-500 outline-none transition-all dark:text-white"
+                  className="w-full pr-11 pl-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition-all dark:text-white"
                 />
               </div>
 
               <select
                 value={filters.courseId}
                 onChange={(e) => handleFilterChange('courseId', e.target.value)}
-                className="px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-green-500 outline-none transition-all dark:text-white"
+                className="px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition-all dark:text-white"
               >
                 <option value="">جميع الدورات</option>
                 {courses.map(c => <option key={c._id} value={c._id}>{c.title}</option>)}
@@ -633,7 +633,7 @@ const ExamResultsDashboard = () => {
                 value={filters.lessonId}
                 onChange={(e) => handleFilterChange('lessonId', e.target.value)}
                 disabled={!filters.courseId}
-                className="px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-green-500 outline-none transition-all dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition-all dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <option value="">جميع الدروس</option>
                 {lessons.map(lesson => (
@@ -644,7 +644,7 @@ const ExamResultsDashboard = () => {
               <select
                 value={filters.examType}
                 onChange={(e) => handleFilterChange('examType', e.target.value)}
-                className="px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-green-500 outline-none transition-all dark:text-white"
+                className="px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition-all dark:text-white"
               >
                 <option value="">كل أنواع الامتحانات</option>
                 <option value="training">تدريبات</option>
@@ -654,7 +654,7 @@ const ExamResultsDashboard = () => {
               <select
                 value={filters.passed}
                 onChange={(e) => handleFilterChange('passed', e.target.value)}
-                className="px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-green-500 outline-none transition-all dark:text-white"
+                className="px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition-all dark:text-white"
               >
                 <option value="">كل الحالات</option>
                 <option value="true">ناجح</option>
@@ -665,7 +665,7 @@ const ExamResultsDashboard = () => {
               <select
                 value={filters.limit}
                 onChange={(e) => handleFilterChange('limit', parseInt(e.target.value))}
-                className="px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-green-500 outline-none transition-all dark:text-white"
+                className="px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition-all dark:text-white"
               >
                 <option value={20}>20 نتيجة</option>
                 <option value={50}>50 نتيجة</option>
@@ -680,7 +680,7 @@ const ExamResultsDashboard = () => {
               <div className="overflow-x-auto">
                 {loading ? (
                   <div className="flex flex-col items-center justify-center py-20">
-                    <FaSpinner className="animate-spin text-5xl text-green-600 mb-4" />
+                    <FaSpinner className="animate-spin text-5xl text-blue-600 mb-4" />
                     <p className="text-gray-500">جاري تحميل البيانات...</p>
                   </div>
                 ) : examResults.length > 0 ? (
@@ -701,11 +701,11 @@ const ExamResultsDashboard = () => {
                           <tr key={result._id} className="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors group">
                             <td className="px-6 py-4">
                               <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 text-white flex items-center justify-center font-bold text-lg shadow-sm">
+                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-sky-600 text-white flex items-center justify-center font-bold text-lg shadow-sm">
                                   {result.user?.fullName?.charAt(0) || <FaUsers />}
                                 </div>
                                 <div>
-                                  <div className="font-bold text-gray-900 dark:text-white group-hover:text-green-600 transition-colors">
+                                  <div className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors">
                                     {result.user?.fullName || 'مستخدم غير معروف'}
                                   </div>
                                   <div className="text-xs text-gray-500 dark:text-gray-400 font-mono">
@@ -720,7 +720,7 @@ const ExamResultsDashboard = () => {
                                   {result.course?.title}
                                 </span>
                                 <span className="text-xs text-gray-500 flex items-center gap-1 mt-1">
-                                  <FaBookOpen className="text-green-500/70" />
+                                  <FaBookOpen className="text-blue-500/70" />
                                   {result.lessonTitle}
                                 </span>
                                 <span className={`text-[10px] mt-1 px-2 py-0.5 rounded-full w-fit ${result.examType === 'final' ? 'bg-purple-100 text-purple-700' : 'bg-blue-100 text-blue-700'}`}>
@@ -731,14 +731,14 @@ const ExamResultsDashboard = () => {
                             <td className="px-6 py-4">
                               <div className="flex items-center gap-2">
                                 <div className="w-12 bg-gray-200 rounded-full h-1.5 dark:bg-gray-700 overflow-hidden">
-                                  <div className={`h-1.5 rounded-full ${result.displayScore >= 50 ? 'bg-green-500' : 'bg-red-500'}`} style={{ width: `${result.displayScore}%` }}></div>
+                                  <div className={`h-1.5 rounded-full ${result.displayScore >= 50 ? 'bg-blue-500' : 'bg-red-500'}`} style={{ width: `${result.displayScore}%` }}></div>
                                 </div>
                                 <span className="font-bold text-sm text-gray-700 dark:text-gray-300">{result.displayScore}%</span>
                               </div>
                             </td>
                             <td className="px-6 py-4">
                               {result.passed ? (
-                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 border border-green-200 dark:border-green-800">
+                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 border border-blue-200 dark:border-blue-800">
                                   <FaCheckCircle /> ناجح
                                 </span>
                               ) : (
@@ -756,7 +756,7 @@ const ExamResultsDashboard = () => {
                             <td className="px-6 py-4">
                               <button
                                 onClick={() => openDetailsModal(result)}
-                                className="p-2 text-gray-400 hover:text-green-600 hover:bg-green-50 dark:hover:bg-gray-700 rounded-lg transition-all"
+                                className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all"
                                 title="عرض التفاصيل"
                               >
                                 <FaEye className="text-lg" />
@@ -773,7 +773,7 @@ const ExamResultsDashboard = () => {
                       <div className="flex flex-wrap items-center justify-between gap-4">
                         <div className="flex items-center gap-4">
                           <span className="text-sm text-gray-500 dark:text-gray-400">
-                            إجمالي النتائج: <strong className="text-green-600 text-lg">{pagination.total || examResults.length}</strong>
+                            إجمالي النتائج: <strong className="text-blue-600 text-lg">{pagination.total || examResults.length}</strong>
                           </span>
                           <span className="text-sm text-gray-500 dark:text-gray-400 hidden sm:inline">
                             | عرض {Math.min(((pagination.currentPage || 1) - 1) * filters.limit + 1, pagination.total || examResults.length)} - {Math.min((pagination.currentPage || 1) * filters.limit, pagination.total || examResults.length)}
@@ -793,7 +793,7 @@ const ExamResultsDashboard = () => {
                           <button
                             disabled={pagination.currentPage === 1}
                             onClick={() => handlePageChange(1)}
-                            className="px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm disabled:opacity-50 hover:bg-green-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
+                            className="px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm disabled:opacity-50 hover:bg-blue-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
                             title="الصفحة الأولى"
                           >
                             ⟪
@@ -803,7 +803,7 @@ const ExamResultsDashboard = () => {
                           <button
                             disabled={pagination.currentPage === 1}
                             onClick={() => handlePageChange(pagination.currentPage - 1)}
-                            className="px-4 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm disabled:opacity-50 hover:bg-green-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
+                            className="px-4 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm disabled:opacity-50 hover:bg-blue-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
                           >
                             السابق
                           </button>
@@ -821,7 +821,7 @@ const ExamResultsDashboard = () => {
                                   <button
                                     key={1}
                                     onClick={() => handlePageChange(1)}
-                                    className="w-10 h-10 rounded-lg text-sm font-medium bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:bg-green-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
+                                    className="w-10 h-10 rounded-lg text-sm font-medium bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:bg-blue-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
                                   >
                                     1
                                   </button>
@@ -838,8 +838,8 @@ const ExamResultsDashboard = () => {
                                     key={i}
                                     onClick={() => handlePageChange(i)}
                                     className={`w-10 h-10 rounded-lg text-sm font-medium transition-colors ${i === currentPage
-                                      ? 'bg-green-600 text-white border-green-600 shadow-lg shadow-green-200'
-                                      : 'bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:bg-green-50 dark:hover:bg-gray-600 dark:text-white'
+                                      ? 'bg-blue-600 text-white border-blue-600 shadow-lg shadow-blue-200'
+                                      : 'bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:bg-blue-50 dark:hover:bg-gray-600 dark:text-white'
                                       }`}
                                   >
                                     {i}
@@ -856,7 +856,7 @@ const ExamResultsDashboard = () => {
                                   <button
                                     key={totalPages}
                                     onClick={() => handlePageChange(totalPages)}
-                                    className="w-10 h-10 rounded-lg text-sm font-medium bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:bg-green-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
+                                    className="w-10 h-10 rounded-lg text-sm font-medium bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:bg-blue-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
                                   >
                                     {totalPages}
                                   </button>
@@ -871,7 +871,7 @@ const ExamResultsDashboard = () => {
                           <button
                             disabled={pagination.currentPage === pagination.totalPages}
                             onClick={() => handlePageChange(pagination.currentPage + 1)}
-                            className="px-4 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm disabled:opacity-50 hover:bg-green-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
+                            className="px-4 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm disabled:opacity-50 hover:bg-blue-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
                           >
                             التالي
                           </button>
@@ -880,7 +880,7 @@ const ExamResultsDashboard = () => {
                           <button
                             disabled={pagination.currentPage === pagination.totalPages}
                             onClick={() => handlePageChange(pagination.totalPages)}
-                            className="px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm disabled:opacity-50 hover:bg-green-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
+                            className="px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm disabled:opacity-50 hover:bg-blue-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
                             title="الصفحة الأخيرة"
                           >
                             ⟫
@@ -905,7 +905,7 @@ const ExamResultsDashboard = () => {
               <div className="overflow-x-auto">
                 {loading ? (
                   <div className="flex flex-col items-center justify-center py-20">
-                    <FaSpinner className="animate-spin text-5xl text-green-600 mb-4" />
+                    <FaSpinner className="animate-spin text-5xl text-blue-600 mb-4" />
                     <p className="text-gray-500">جاري تحميل قائمة الامتحانات...</p>
                   </div>
                 ) : examsList.length > 0 ? (
@@ -937,14 +937,14 @@ const ExamResultsDashboard = () => {
                               {exam.totalAttempts}
                             </td>
                             <td className="px-6 py-4">
-                              <span className={`font-bold ${exam.passRate >= 50 ? 'text-green-600' : 'text-red-600'}`}>
+                              <span className={`font-bold ${exam.passRate >= 50 ? 'text-blue-600' : 'text-red-600'}`}>
                                 {exam.passRate}%
                               </span>
                               <div className="w-20 bg-gray-200 rounded-full h-1 mt-1 dark:bg-gray-700">
-                                <div className={`h-1 rounded-full ${exam.passRate >= 50 ? 'bg-green-500' : 'bg-red-500'}`} style={{ width: `${exam.passRate}%` }}></div>
+                                <div className={`h-1 rounded-full ${exam.passRate >= 50 ? 'bg-blue-500' : 'bg-red-500'}`} style={{ width: `${exam.passRate}%` }}></div>
                               </div>
                             </td>
-                            <td className="px-6 py-4 font-bold text-green-600">
+                            <td className="px-6 py-4 font-bold text-blue-600">
                               {Math.round(exam.averageScore)}%
                             </td>
                             <td className="px-6 py-4">
@@ -953,7 +953,7 @@ const ExamResultsDashboard = () => {
                                   setFilters(prev => ({ ...prev, courseId: exam.courseId, lessonId: exam.lessonId, examType: exam.examType, page: 1 }));
                                   setActiveTab('all_attempts');
                                 }}
-                                className="flex items-center gap-2 px-3 py-1.5 bg-green-100 text-green-700 hover:bg-green-200 rounded-lg text-sm font-semibold transition-colors"
+                                className="flex items-center gap-2 px-3 py-1.5 bg-blue-100 text-blue-700 hover:bg-blue-200 rounded-lg text-sm font-semibold transition-colors"
                               >
                                 <FaEye /> عرض النتائج
                               </button>
@@ -974,7 +974,7 @@ const ExamResultsDashboard = () => {
                           <div className="flex flex-wrap items-center justify-between gap-4">
                             <div className="flex items-center gap-4">
                               <span className="text-sm text-gray-500 dark:text-gray-400">
-                                إجمالي الامتحانات: <strong className="text-green-600 text-lg">{totalExams}</strong>
+                                إجمالي الامتحانات: <strong className="text-blue-600 text-lg">{totalExams}</strong>
                               </span>
                               <span className="text-sm text-gray-500 dark:text-gray-400 hidden sm:inline">
                                 | عرض {Math.min((examsPage - 1) * examsLimit + 1, totalExams)} - {Math.min(examsPage * examsLimit, totalExams)}
@@ -983,7 +983,7 @@ const ExamResultsDashboard = () => {
                               <select
                                 value={examsLimit}
                                 onChange={(e) => { setExamsLimit(parseInt(e.target.value)); setExamsPage(1); }}
-                                className="px-3 py-1.5 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm focus:ring-2 focus:ring-green-500 outline-none transition-all dark:text-white"
+                                className="px-3 py-1.5 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all dark:text-white"
                               >
                                 <option value={20}>20 لكل صفحة</option>
                                 <option value={50}>50 لكل صفحة</option>
@@ -1005,7 +1005,7 @@ const ExamResultsDashboard = () => {
                               <button
                                 disabled={examsPage === 1}
                                 onClick={() => setExamsPage(1)}
-                                className="px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm disabled:opacity-50 hover:bg-green-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
+                                className="px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm disabled:opacity-50 hover:bg-blue-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
                                 title="الصفحة الأولى"
                               >
                                 ⟪
@@ -1015,7 +1015,7 @@ const ExamResultsDashboard = () => {
                               <button
                                 disabled={examsPage === 1}
                                 onClick={() => setExamsPage(examsPage - 1)}
-                                className="px-4 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm disabled:opacity-50 hover:bg-green-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
+                                className="px-4 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm disabled:opacity-50 hover:bg-blue-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
                               >
                                 السابق
                               </button>
@@ -1032,7 +1032,7 @@ const ExamResultsDashboard = () => {
                                       <button
                                         key={1}
                                         onClick={() => setExamsPage(1)}
-                                        className="w-10 h-10 rounded-lg text-sm font-medium bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:bg-green-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
+                                        className="w-10 h-10 rounded-lg text-sm font-medium bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:bg-blue-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
                                       >
                                         1
                                       </button>
@@ -1049,8 +1049,8 @@ const ExamResultsDashboard = () => {
                                         key={i}
                                         onClick={() => setExamsPage(i)}
                                         className={`w-10 h-10 rounded-lg text-sm font-medium transition-colors ${i === currentPage
-                                          ? 'bg-green-600 text-white border-green-600 shadow-lg shadow-green-200'
-                                          : 'bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:bg-green-50 dark:hover:bg-gray-600 dark:text-white'
+                                          ? 'bg-blue-600 text-white border-blue-600 shadow-lg shadow-blue-200'
+                                          : 'bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:bg-blue-50 dark:hover:bg-gray-600 dark:text-white'
                                           }`}
                                       >
                                         {i}
@@ -1067,7 +1067,7 @@ const ExamResultsDashboard = () => {
                                       <button
                                         key={totalExamsPages}
                                         onClick={() => setExamsPage(totalExamsPages)}
-                                        className="w-10 h-10 rounded-lg text-sm font-medium bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:bg-green-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
+                                        className="w-10 h-10 rounded-lg text-sm font-medium bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:bg-blue-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
                                       >
                                         {totalExamsPages}
                                       </button>
@@ -1082,7 +1082,7 @@ const ExamResultsDashboard = () => {
                               <button
                                 disabled={examsPage === totalExamsPages}
                                 onClick={() => setExamsPage(examsPage + 1)}
-                                className="px-4 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm disabled:opacity-50 hover:bg-green-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
+                                className="px-4 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm disabled:opacity-50 hover:bg-blue-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
                               >
                                 التالي
                               </button>
@@ -1091,7 +1091,7 @@ const ExamResultsDashboard = () => {
                               <button
                                 disabled={examsPage === totalExamsPages}
                                 onClick={() => setExamsPage(totalExamsPages)}
-                                className="px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm disabled:opacity-50 hover:bg-green-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
+                                className="px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm disabled:opacity-50 hover:bg-blue-50 dark:hover:bg-gray-600 transition-colors dark:text-white"
                                 title="الصفحة الأخيرة"
                               >
                                 ⟫
@@ -1118,7 +1118,7 @@ const ExamResultsDashboard = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                   <div className="bg-white dark:bg-gray-700 p-6 rounded-2xl border border-gray-200 dark:border-gray-600 shadow-sm">
                     <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-                      <FaChartPie className="text-green-500" /> نسب النجاح والرسوب
+                      <FaChartPie className="text-blue-500" /> نسب النجاح والرسوب
                     </h3>
                     <div className="h-64 flex items-center justify-center relative">
                       {(summary.passedCount > 0 || summary.failedCount > 0) ? (
@@ -1149,7 +1149,7 @@ const ExamResultsDashboard = () => {
                     {(summary.passedCount > 0 || summary.failedCount > 0) && (
                       <div className="flex justify-center gap-8 mt-4 text-sm">
                         <div className="flex items-center gap-2">
-                          <div className="w-4 h-4 rounded-full bg-green-500"></div>
+                          <div className="w-4 h-4 rounded-full bg-blue-500"></div>
                           <span className="text-gray-700 dark:text-gray-300">ناجح: {summary.passedCount || 0}</span>
                         </div>
                         <div className="flex items-center gap-2">
@@ -1170,14 +1170,14 @@ const ExamResultsDashboard = () => {
                       {topActiveUsers.map((user, idx) => (
                         <div key={idx} className={`flex items-center justify-between p-3 rounded-xl transition-all hover:scale-[1.02] ${idx === 0 ? 'bg-gradient-to-r from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20 border border-yellow-200 dark:border-yellow-700' :
                           idx === 1 ? 'bg-gradient-to-r from-gray-50 to-slate-100 dark:from-gray-800 dark:to-slate-800 border border-gray-200 dark:border-gray-600' :
-                            idx === 2 ? 'bg-gradient-to-r from-green-50 to-amber-50 dark:from-green-900/20 dark:to-amber-900/20 border border-green-200 dark:border-green-700' :
+                            idx === 2 ? 'bg-gradient-to-r from-blue-50 to-amber-50 dark:from-blue-900/20 dark:to-amber-900/20 border border-blue-200 dark:border-blue-700' :
                               'bg-gray-50 dark:bg-gray-800'
                           }`}>
                           <div className="flex items-center gap-3">
                             <div className={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm shadow-sm ${idx === 0 ? 'bg-gradient-to-br from-yellow-400 to-yellow-600 text-white' :
                               idx === 1 ? 'bg-gradient-to-br from-gray-300 to-gray-500 text-white' :
-                                idx === 2 ? 'bg-gradient-to-br from-green-400 to-green-600 text-white' :
-                                  'bg-green-100 text-green-600'
+                                idx === 2 ? 'bg-gradient-to-br from-blue-400 to-blue-600 text-white' :
+                                  'bg-blue-100 text-blue-600'
                               }`}>
                               {idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : idx + 1}
                             </div>
@@ -1187,7 +1187,7 @@ const ExamResultsDashboard = () => {
                             </div>
                           </div>
                           <div className="text-center">
-                            <span className="block font-bold text-xl text-green-600">{user.attempts}</span>
+                            <span className="block font-bold text-xl text-blue-600">{user.attempts}</span>
                             <span className="text-[10px] text-gray-400">محاولة</span>
                           </div>
                         </div>
@@ -1208,13 +1208,13 @@ const ExamResultsDashboard = () => {
                       {topPerformers.slice(0, 9).map((user, idx) => (
                         <div key={idx} className={`flex items-center justify-between p-4 rounded-xl transition-all hover:shadow-lg hover:scale-[1.02] ${idx === 0 ? 'bg-gradient-to-br from-yellow-100 via-amber-50 to-yellow-100 dark:from-yellow-900/30 dark:via-amber-900/20 dark:to-yellow-900/30 border-2 border-yellow-300 dark:border-yellow-600 shadow-lg shadow-yellow-100' :
                           idx === 1 ? 'bg-gradient-to-br from-gray-100 via-slate-50 to-gray-100 dark:from-gray-800 dark:via-slate-800 dark:to-gray-800 border-2 border-gray-300 dark:border-gray-500 shadow-lg shadow-gray-100' :
-                            idx === 2 ? 'bg-gradient-to-br from-green-100 via-amber-50 to-green-100 dark:from-green-900/30 dark:via-amber-900/20 dark:to-green-900/30 border-2 border-green-300 dark:border-green-600 shadow-lg shadow-green-100' :
+                            idx === 2 ? 'bg-gradient-to-br from-blue-100 via-amber-50 to-blue-100 dark:from-blue-900/30 dark:via-amber-900/20 dark:to-blue-900/30 border-2 border-blue-300 dark:border-blue-600 shadow-lg shadow-blue-100' :
                               'bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600'
                           }`}>
                           <div className="flex items-center gap-3">
                             <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg shadow-md ${idx === 0 ? 'bg-gradient-to-br from-yellow-400 to-yellow-600 text-white' :
                               idx === 1 ? 'bg-gradient-to-br from-gray-300 to-gray-500 text-white' :
-                                idx === 2 ? 'bg-gradient-to-br from-green-400 to-green-600 text-white' :
+                                idx === 2 ? 'bg-gradient-to-br from-blue-400 to-blue-600 text-white' :
                                   'bg-gradient-to-br from-purple-400 to-purple-600 text-white'
                               }`}>
                               {idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : idx + 1}
@@ -1223,14 +1223,14 @@ const ExamResultsDashboard = () => {
                               <p className="font-bold text-sm text-gray-900 dark:text-white truncate max-w-[120px]">{user.userName || 'غير معروف'}</p>
                               <p className="text-xs text-gray-500 truncate max-w-[120px]">{user.userEmail || ''}</p>
                               <div className="flex items-center gap-2 mt-1">
-                                <span className="text-[10px] px-1.5 py-0.5 bg-green-100 text-green-700 rounded-full">{user.passedExams} ناجح</span>
+                                <span className="text-[10px] px-1.5 py-0.5 bg-blue-100 text-blue-700 rounded-full">{user.passedExams} ناجح</span>
                                 <span className="text-[10px] px-1.5 py-0.5 bg-gray-100 text-gray-600 rounded-full">{user.totalExams} امتحان</span>
                               </div>
                             </div>
                           </div>
                           <div className="text-center">
-                            <div className={`text-2xl font-bold ${user.averageScore >= 80 ? 'text-green-600' :
-                              user.averageScore >= 60 ? 'text-green-600' :
+                            <div className={`text-2xl font-bold ${user.averageScore >= 80 ? 'text-blue-600' :
+                              user.averageScore >= 60 ? 'text-blue-600' :
                                 'text-red-600'
                               }`}>
                               {Math.round(user.averageScore)}%
@@ -1238,8 +1238,8 @@ const ExamResultsDashboard = () => {
                             <span className="text-[10px] text-gray-400">متوسط الدرجات</span>
                             <div className="w-16 bg-gray-200 rounded-full h-1.5 mt-1 mx-auto dark:bg-gray-700">
                               <div
-                                className={`h-1.5 rounded-full ${user.averageScore >= 80 ? 'bg-green-500' :
-                                  user.averageScore >= 60 ? 'bg-green-500' :
+                                className={`h-1.5 rounded-full ${user.averageScore >= 80 ? 'bg-blue-500' :
+                                  user.averageScore >= 60 ? 'bg-blue-500' :
                                     'bg-red-500'
                                   }`}
                                 style={{ width: `${Math.min(user.averageScore, 100)}%` }}
@@ -1271,7 +1271,7 @@ const ExamResultsDashboard = () => {
               {/* Modal Header */}
               <div className="p-6 border-b border-gray-100 dark:border-gray-700 flex items-center justify-between bg-gray-50/50 dark:bg-gray-700/50">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center text-xl font-bold">
+                  <div className="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center text-xl font-bold">
                     {selectedResult.score}%
                   </div>
                   <div>
@@ -1293,7 +1293,7 @@ const ExamResultsDashboard = () => {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className="p-4 rounded-xl bg-gray-50 dark:bg-gray-700/50 text-center">
                     <p className="text-xs text-gray-500 mb-1">نتيجة الطالب</p>
-                    <p className={`text-xl font-bold ${selectedResult.passed ? 'text-green-600' : 'text-red-600'}`}>
+                    <p className={`text-xl font-bold ${selectedResult.passed ? 'text-blue-600' : 'text-red-600'}`}>
                       {selectedResult.passed ? 'ناجح' : 'راسب'}
                     </p>
                   </div>
@@ -1305,7 +1305,7 @@ const ExamResultsDashboard = () => {
                   </div>
                   <div className="p-4 rounded-xl bg-gray-50 dark:bg-gray-700/50 text-center">
                     <p className="text-xs text-gray-500 mb-1">الإجابات الصحيحة</p>
-                    <p className="text-xl font-bold text-green-600">
+                    <p className="text-xl font-bold text-blue-600">
                       {selectedResult.correctAnswers} <span className="text-gray-400 text-sm">/ {selectedResult.totalQuestions}</span>
                     </p>
                   </div>
@@ -1325,9 +1325,9 @@ const ExamResultsDashboard = () => {
                   <div className="space-y-4">
                     {selectedResult.answers && selectedResult.answers.length > 0 ? (
                       selectedResult.answers.map((ans, idx) => (
-                        <div key={idx} className={`p-4 rounded-xl border ${ans.isCorrect ? 'border-green-200 bg-green-50/50 dark:border-green-800 dark:bg-green-900/10' : 'border-red-200 bg-red-50/50 dark:border-red-800 dark:bg-red-900/10'}`}>
+                        <div key={idx} className={`p-4 rounded-xl border ${ans.isCorrect ? 'border-blue-200 bg-blue-50/50 dark:border-blue-800 dark:bg-blue-900/10' : 'border-red-200 bg-red-50/50 dark:border-red-800 dark:bg-red-900/10'}`}>
                           <div className="flex items-start gap-4">
-                            <span className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shrink-0 ${ans.isCorrect ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+                            <span className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shrink-0 ${ans.isCorrect ? 'bg-blue-100 text-blue-700' : 'bg-red-100 text-red-700'}`}>
                               {idx + 1}
                             </span>
                             <div className="flex-1">
@@ -1335,18 +1335,18 @@ const ExamResultsDashboard = () => {
                                 السؤال رقم {ans.questionIndex + 1}
                               </p>
                               <div className="flex flex-wrap gap-4 text-sm">
-                                <span className={ans.isCorrect ? 'text-green-700' : 'text-red-700'}>
+                                <span className={ans.isCorrect ? 'text-blue-700' : 'text-red-700'}>
                                   إجابة الطالب: <strong>{ans.selectedAnswer + 1}</strong>
                                 </span>
                                 {!ans.isCorrect && (
-                                  <span className="text-green-700">
+                                  <span className="text-blue-700">
                                     الإجابة الصحيحة: <strong>{ans.correctAnswer + 1}</strong>
                                   </span>
                                 )}
                               </div>
                             </div>
                             <div className="self-center">
-                              {ans.isCorrect ? <FaCheckCircle className="text-green-500 text-xl" /> : <FaTimesCircle className="text-red-500 text-xl" />}
+                              {ans.isCorrect ? <FaCheckCircle className="text-blue-500 text-xl" /> : <FaTimesCircle className="text-red-500 text-xl" />}
                             </div>
                           </div>
                         </div>

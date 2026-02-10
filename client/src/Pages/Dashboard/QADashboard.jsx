@@ -113,20 +113,20 @@ export default function QADashboard() {
 
   const getStatusColor = (status) => {
     switch (status) {
-      case 'featured': return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
-      case 'answered': return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
-      case 'pending': return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
+      case 'featured': return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
+      case 'answered': return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
+      case 'pending': return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
       default: return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200';
     }
   };
 
   const getCategoryColor = (category) => {
     const colors = {
-      'General': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
+      'General': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
       'Technical': 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200',
-      'Course Related': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
-      'Payment': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
-      'Account': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
+      'Course Related': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
+      'Payment': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
+      'Account': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
       'Other': 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200'
     };
     return colors[category] || colors['Other'];
@@ -157,14 +157,14 @@ export default function QADashboard() {
             <div className="flex gap-3">
               <button
                 onClick={() => setShowCreateModal(true)}
-                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg transition-colors duration-200"
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-200"
               >
                 <FaPlus />
                 إنشاء سؤال وجواب جديد
               </button>
               <Link
                 to="/admin/qa-pending"
-                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg transition-colors duration-200"
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-200"
               >
                 <FaClock />
                 الأسئلة المعلقة
@@ -182,14 +182,14 @@ export default function QADashboard() {
                   placeholder="البحث في الأسئلة والأجوبة..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                 />
               </div>
 
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               >
                 <option value="">جميع الفئات</option>
                 {categories.map((cat) => (
@@ -200,7 +200,7 @@ export default function QADashboard() {
               <select
                 value={status}
                 onChange={(e) => setStatus(e.target.value)}
-                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               >
                 <option value="">جميع الحالات</option>
                 <option value="answered">تم الرد</option>
@@ -217,7 +217,7 @@ export default function QADashboard() {
           {/* Q&A List */}
           {loading ? (
             <div className="text-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
               <p className="mt-4 text-gray-600 dark:text-gray-300">جاري تحميل الأسئلة والأجوبة...</p>
             </div>
           ) : (
@@ -280,7 +280,7 @@ export default function QADashboard() {
                         </td>
                         <td className="px-6 py-4">
                           <div className="flex items-center gap-2 text-sm">
-                            <span className="text-green-600 flex items-center gap-1">
+                            <span className="text-blue-600 flex items-center gap-1">
                               <FaThumbsUp />
                               {qa.upvotes}
                             </span>
@@ -303,7 +303,7 @@ export default function QADashboard() {
                           <div className="flex items-center gap-2">
                             <Link
                               to={`/qa/edit/${qa._id}`}
-                              className="text-green-600 hover:text-green-900 dark:text-green-400 dark:hover:text-green-300"
+                              className="text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300"
                             >
                               <FaEdit />
                             </Link>
@@ -337,7 +337,7 @@ export default function QADashboard() {
                   <textarea
                     value={formData.question}
                     onChange={(e) => setFormData({...formData, question: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                     rows="3"
                     placeholder="أدخل السؤال هنا..."
                     required
@@ -351,7 +351,7 @@ export default function QADashboard() {
                   <textarea
                     value={formData.answer}
                     onChange={(e) => setFormData({...formData, answer: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                     rows="5"
                     placeholder="أدخل الإجابة هنا..."
                     required
@@ -366,7 +366,7 @@ export default function QADashboard() {
                     <select
                       value={formData.category}
                       onChange={(e) => setFormData({...formData, category: e.target.value})}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                       required
                     >
                       <option value="">اختر الفئة</option>
@@ -383,7 +383,7 @@ export default function QADashboard() {
                     <select
                       value={formData.status}
                       onChange={(e) => setFormData({...formData, status: e.target.value})}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                       required
                     >
                       <option value="answered">تم الرد</option>
@@ -402,7 +402,7 @@ export default function QADashboard() {
                       type="text"
                       value={formData.author}
                       onChange={(e) => setFormData({...formData, author: e.target.value})}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                       required
                     />
                   </div>
@@ -415,7 +415,7 @@ export default function QADashboard() {
                       type="text"
                       value={formData.tags}
                       onChange={(e) => setFormData({...formData, tags: e.target.value})}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                       placeholder="علامة1، علامة2، علامة3"
                     />
                   </div>
@@ -431,7 +431,7 @@ export default function QADashboard() {
                   </button>
                   <button
                     type="submit"
-                    className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                    className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     إنشاء سؤال وجواب
                   </button>
@@ -454,7 +454,7 @@ export default function QADashboard() {
                   <textarea
                     value={formData.question}
                     onChange={(e) => setFormData({...formData, question: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     rows="3"
                     required
                     placeholder="أدخل السؤال هنا..."
@@ -468,7 +468,7 @@ export default function QADashboard() {
                   <textarea
                     value={formData.answer}
                     onChange={(e) => setFormData({...formData, answer: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     rows="5"
                     required
                   />
@@ -482,7 +482,7 @@ export default function QADashboard() {
                     <select
                       value={formData.category}
                       onChange={(e) => setFormData({...formData, category: e.target.value})}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                       required
 
                     >
@@ -500,7 +500,7 @@ export default function QADashboard() {
                     <select
                       value={formData.status}
                       onChange={(e) => setFormData({...formData, status: e.target.value})}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                       required
                     >
                       <option value="answered">تم الرد</option>
@@ -519,7 +519,7 @@ export default function QADashboard() {
                       type="text"
                       value={formData.author}
                       onChange={(e) => setFormData({...formData, author: e.target.value})}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                       required
                     />
                   </div>
@@ -532,7 +532,7 @@ export default function QADashboard() {
                       type="text"
                       value={formData.tags}
                       onChange={(e) => setFormData({...formData, tags: e.target.value})}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                       placeholder="علامة1، علامة2، علامة3"
                     />
                   </div>
@@ -548,7 +548,7 @@ export default function QADashboard() {
                   </button>
                   <button
                     type="submit"
-                    className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                    className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     تحديث السؤال والجواب
                   </button>
