@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import Course from './models/course.model.js';
 
 // Set default environment variables
-process.env.MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/demo
+process.env.MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/alaanagy
 
 const testDatabase = async () => {
   try {

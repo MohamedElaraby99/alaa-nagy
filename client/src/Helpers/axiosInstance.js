@@ -39,7 +39,7 @@ const getBaseUrl = () => {
     }
 
     // Production fallback
-    return 'https://api.demo.fikra.solutions/api/v1';
+    return 'https://api.alaanagi.online/api/v1';
 };
 
 const BASE_URL = getBaseUrl();

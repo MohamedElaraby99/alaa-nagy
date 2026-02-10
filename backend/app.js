@@ -66,9 +66,9 @@ const allowedOrigins = new Set([
   'http://127.0.0.1:5173',
   'http://localhost:5190',
   'http://127.0.0.1:5190',
-  'https://demo.fikra.solutions',
-  'https://www.demo.fikra.solutions',
-  'https://api.demo.fikra.solutions'
+  'https://alaanagi.online',
+  'https://www.alaanagi.online',
+  'https://api.alaanagi.online'
 ]);
 
 // Add any additional origins from environment variables

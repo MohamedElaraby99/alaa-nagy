@@ -649,10 +649,10 @@ const resetUserWallet = async (req, res, next) => {
 const resetAllRechargeCodes = async (req, res, next) => {
     try {
         // Import recharge code model
-        const rechargeCodeModel = (await import("../models/rechargeCode.model.js")).default;
+        const rechargeCoalaanagydel = (await import("../models/rechargeCode.model.js")).default;
         
         // Delete all recharge codes
-        const result = await rechargeCodeModel.deleteMany({});
+        const result = await rechargeCoalaanagydel.deleteMany({});
 
         res.status(200).json({
             success: true,

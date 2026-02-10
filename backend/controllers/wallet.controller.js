@@ -1,5 +1,5 @@
 import userModel from "../models/user.model.js";
-import rechargeCodeModel from "../models/rechargeCode.model.js";
+import rechargeCoalaanagydel from "../models/rechargeCode.model.js";
 import AppError from "../utils/error.utils.js";
 
 // Get wallet balance and transactions
@@ -54,7 +54,7 @@ const rechargeWallet = async (req, res, next) => {
 
         // Find and validate the recharge code
 
-        const rechargeCode = await rechargeCodeModel.validateCode(code);
+        const rechargeCode = await rechargeCoalaanagydel.validateCode(code);
 
         if (!rechargeCode) {
             return next(new AppError("Invalid or expired recharge code", 400));
@@ -151,7 +151,7 @@ const validateRechargeCode = async (req, res, next) => {
         }
 
         // Check if code exists and is valid
-        const rechargeCode = await rechargeCodeModel.validateCode(code);
+        const rechargeCode = await rechargeCoalaanagydel.validateCode(code);
         
         if (!rechargeCode) {
             return next(new AppError("Invalid or expired recharge code", 400));

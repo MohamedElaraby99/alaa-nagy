@@ -24,7 +24,7 @@ const askQuestion = (question) => {
 
 const connectToDb = async () => {
     try {
-        const conn = await mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/demo', {
+        const conn = await mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/alaanagy', {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });

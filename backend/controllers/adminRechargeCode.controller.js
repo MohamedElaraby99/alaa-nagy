@@ -1,4 +1,4 @@
-import rechargeCodeModel from "../models/rechargeCode.model.js";
+import rechargeCoalaanagydel from "../models/rechargeCode.model.js";
 import AppError from "../utils/error.utils.js";
 
 // Generate new recharge code
@@ -23,14 +23,14 @@ const generateRechargeCode = async (req, res, next) => {
             
             // Generate unique code
             while (!isUnique) {
-                code = rechargeCodeModel.generateCode();
-                const existingCode = await rechargeCodeModel.findOne({ code });
+                code = rechargeCoalaanagydel.generateCode();
+                const existingCode = await rechargeCoalaanagydel.findOne({ code });
                 if (!existingCode) {
                     isUnique = true;
                 }
             }
 
-            const rechargeCode = await rechargeCodeModel.create({
+            const rechargeCode = await rechargeCoalaanagydel.create({
                 code,
                 amount: parseFloat(amount),
                 createdBy: adminId
@@ -78,18 +78,18 @@ const getAllRechargeCodes = async (req, res, next) => {
             query.amount = parseFloat(amount);
         }
 
-        const codes = await rechargeCodeModel.find(query)
+        const codes = await rechargeCoalaanagydel.find(query)
             .populate('createdBy', 'fullName email')
             .populate('usedBy', 'fullName email')
             .sort({ createdAt: -1 })
             .skip(skip)
             .limit(parseInt(limit));
 
-        const total = await rechargeCodeModel.countDocuments(query);
+        const total = await rechargeCoalaanagydel.countDocuments(query);
         const totalPages = Math.ceil(total / limit);
 
         // Calculate statistics
-        const stats = await rechargeCodeModel.aggregate([
+        const stats = await rechargeCoalaanagydel.aggregate([
             {
                 $group: {
                     _id: null,
@@ -142,7 +142,7 @@ const deleteRechargeCode = async (req, res, next) => {
     try {
         const { id } = req.params;
 
-        const code = await rechargeCodeModel.findById(id);
+        const code = await rechargeCoalaanagydel.findById(id);
         if (!code) {
             return next(new AppError("Recharge code not found", 404));
         }
@@ -151,7 +151,7 @@ const deleteRechargeCode = async (req, res, next) => {
             return next(new AppError("Cannot delete used codes", 400));
         }
 
-        await rechargeCodeModel.findByIdAndDelete(id);
+        await rechargeCoalaanagydel.findByIdAndDelete(id);
 
         res.status(200).json({
             success: true,
@@ -165,7 +165,7 @@ const deleteRechargeCode = async (req, res, next) => {
 // Get recharge code statistics
 const getRechargeCodeStats = async (req, res, next) => {
     try {
-        const stats = await rechargeCodeModel.aggregate([
+        const stats = await rechargeCoalaanagydel.aggregate([
             {
                 $group: {
                     _id: null,
@@ -180,13 +180,13 @@ const getRechargeCodeStats = async (req, res, next) => {
         ]);
 
         // Get recent codes
-        const recentCodes = await rechargeCodeModel.find()
+        const recentCodes = await rechargeCoalaanagydel.find()
             .sort({ createdAt: -1 })
             .limit(5)
             .populate('createdBy', 'fullName');
 
         // Get monthly stats
-        const monthlyStats = await rechargeCodeModel.aggregate([
+        const monthlyStats = await rechargeCoalaanagydel.aggregate([
             {
                 $group: {
                     _id: {

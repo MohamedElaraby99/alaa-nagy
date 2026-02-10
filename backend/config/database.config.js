@@ -6,7 +6,7 @@ mongoose.set('strictQuery', false);
 const dbConfig = {
     // MongoDB Atlas (Recommended for production)
     atlas: {
-        uri: process.env.MONGO_URI_ATLAS || "mongodb://127.0.0.1:27017/demo",
+        uri: process.env.MONGO_URI_ATLAS || "mongodb://127.0.0.1:27017/alaanagy",
         options: {
             useNewUrlParser: true,
             useUnifiedTopology: true,
@@ -18,7 +18,7 @@ const dbConfig = {
 
     // MongoDB Compass (Local/External)
     compass: {
-        uri: process.env.MONGO_URI_COMPASS || "mongodb://127.0.0.1:27017/demo",
+        uri: process.env.MONGO_URI_COMPASS || "mongodb://127.0.0.1:27017/alaanagy",
         options: {
             useNewUrlParser: true,
             useUnifiedTopology: true,
@@ -27,7 +27,7 @@ const dbConfig = {
 
     // MongoDB Community Server
     community: {
-        uri: process.env.MONGO_URI_COMMUNITY || "mongodb://127.0.0.1:27017/demo",
+        uri: process.env.MONGO_URI_COMMUNITY || "mongodb://127.0.0.1:27017/alaanagy",
         options: {
             useNewUrlParser: true,
             useUnifiedTopology: true,

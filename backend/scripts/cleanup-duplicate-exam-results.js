@@ -4,7 +4,7 @@ import ExamResult from '../models/examResult.model.js';
 // Connect to MongoDB
 const connectDB = async () => {
     try {
-        await mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/demo');
+        await mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/alaanagy');
         console.log('✅ Connected to MongoDB');
     } catch (error) {
         console.error('❌ MongoDB connection error:', error);

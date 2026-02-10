@@ -58,12 +58,12 @@ const setupEnvironment = async () => {
             case "2":
                 dbType = "compass";
                 console.log("\n📊 MongoDB Compass Configuration");
-                dbUri = await askQuestion("Enter your MongoDB Compass connection string (default: mongodb://127.0.0.1:27017/demo): ") || "mongodb://127.0.0.1:27017/demo";
+                dbUri = await askQuestion("Enter your MongoDB Compass connection string (default: mongodb://127.0.0.1:27017/alaanagy): ") || "mongodb://127.0.0.1:27017/alaanagy";
                 break;
             case "3":
                 dbType = "community";
                 console.log("\n📊 MongoDB Community Configuration");
-                dbUri = await askQuestion("Enter your MongoDB Community connection string (default: mongodb://127.0.0.1:27017/demo): ") || "mongodb://127.0.0.1:27017/demo";
+                dbUri = await askQuestion("Enter your MongoDB Community connection string (default: mongodb://127.0.0.1:27017/alaanagy): ") || "mongodb://127.0.0.1:27017/alaanagy";
                 break;
             default:
                 console.log("❌ Invalid choice. Using MongoDB Atlas.");

@@ -1,6 +1,6 @@
 import express from "express";
 import { isLoggedIn, authorisedRoles } from "../middleware/auth.middleware.js";
-import rechargeCodeModel from "../models/rechargeCode.model.js";
+import rechargeCoalaanagydel from "../models/rechargeCode.model.js";
 import { 
     generateRechargeCode, 
     getAllRechargeCodes, 
@@ -34,7 +34,7 @@ router.get("/test-role", isLoggedIn, (req, res) => {
 // Test endpoint to list all codes (for debugging)
 router.get("/list-codes", isLoggedIn, authorisedRoles("ADMIN"), async (req, res) => {
     try {
-        const codes = await rechargeCodeModel.find().select('code amount isUsed createdAt');
+        const codes = await rechargeCoalaanagydel.find().select('code amount isUsed createdAt');
         res.json({
             success: true,
             message: "Codes retrieved successfully",

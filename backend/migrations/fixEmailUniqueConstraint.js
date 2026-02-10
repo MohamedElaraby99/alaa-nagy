@@ -5,9 +5,9 @@ dotenv.config();
 
 // Set default environment variables if not provided (same as server.js)
 process.env.JWT_SECRET = process.env.JWT_SECRET || 'your_jwt_secret_key_here';
-process.env.MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/demo';
-process.env.CLIENT_URL = process.env.CLIENT_URL || 'https://demo.fikra.solutions';
-process.env.BACKEND_URL = process.env.BACKEND_URL || 'https://api.demo.fikra.solutions';
+process.env.MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/alaanagy';
+process.env.CLIENT_URL = process.env.CLIENT_URL || 'https://alaanagi.online';
+process.env.BACKEND_URL = process.env.BACKEND_URL || 'https://api.alaanagi.online';
 
 const MONGODB_URI = process.env.MONGODB_URI;
 
