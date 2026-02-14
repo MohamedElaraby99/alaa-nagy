@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         'sans': ['Lemonada', 'cursive'],
         'lemonada': ['Lemonada', 'cursive'],
+        'playpen': ['"Playpen Sans Arabic"', 'cursive'],
         'inter': ['Inter', 'sans-serif'],
         'lato': ['Lato', 'sans-serif'],
         'nunito-sans': ['Nunito Sans', 'sans-serif'],

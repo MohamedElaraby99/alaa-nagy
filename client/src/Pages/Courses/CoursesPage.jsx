@@ -336,9 +336,9 @@ export default function CoursesPage() {
                       {/* Instructor */}
                       <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                         <FaUser className="text-gray-400" />
-                        <span>{course.instructor?.name || 'غير محدد'}</span>
+                        <span className="font-playpen">{course.instructor?.name || 'غير محدد'}</span>
                         <FaStar className="text-primary" />
-                        <span>{getTotalLessons(course)} درس متاح</span>
+                        <span className="font-playpen">{getTotalLessons(course)} درس متاح</span>
                       </div>
 
                       {/* Course Title */}
@@ -347,7 +347,7 @@ export default function CoursesPage() {
                       </h3>
 
                       {/* Course Description */}
-                      <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+                      <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 font-playpen">
                         {course.description}
                       </p>
 
@@ -359,13 +359,13 @@ export default function CoursesPage() {
                       <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">
                         {(course.price || 0) > 0 ? (
                           <div className="flex items-center justify-between">
-                            <span className="text-sm text-gray-600 dark:text-gray-400">سعر الكورس:</span>
-                            <span className="text-lg font-bold text-primary">{course.price} جنيه</span>
+                            <span className="text-sm text-gray-600 dark:text-gray-400 font-playpen">سعر الكورس:</span>
+                            <span className="text-lg font-bold text-primary font-playpen">{course.price} جنيه</span>
                           </div>
                         ) : (
                           <div className="flex items-center justify-between">
-                            <span className="text-sm text-gray-600 dark:text-gray-400">سعر الكورس:</span>
-                            <span className="text-lg font-bold text-primary">مجاني ✓</span>
+                            <span className="text-sm text-gray-600 dark:text-gray-400 font-playpen">سعر الكورس:</span>
+                            <span className="text-lg font-bold text-primary font-playpen">مجاني ✓</span>
                           </div>
                         )}
                       </div>
@@ -375,7 +375,7 @@ export default function CoursesPage() {
                     <div className="flex gap-2">
                       <Link
                         to={`/courses/${course._id}`}
-                        className="flex-1 btn-primary hover:bg-primary-dark text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
+                        className="flex-1 btn-primary hover:bg-primary-dark text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 font-playpen"
                       >
                         <FaEye />
                         <span>عرض التفاصيل</span>
@@ -383,7 +383,7 @@ export default function CoursesPage() {
                       {(course.price || 0) > 0 ? (
                         <Link
                           to={`/courses/${course._id}`}
-                          className="flex-1 bg-accent hover:bg-accent/80 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
+                          className="flex-1 bg-accent hover:bg-accent/80 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 font-playpen"
                         >
                           <FaGraduationCap />
                           <span>شراء الكورس</span>
@@ -391,7 +391,7 @@ export default function CoursesPage() {
                       ) : (
                         <Link
                           to={`/courses/${course._id}`}
-                          className="flex-1 btn-primary hover:bg-primary-dark text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
+                          className="flex-1 btn-primary hover:bg-primary-dark text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 font-playpen"
                         >
                           <FaPlay />
                           <span>ابدأ مجاناً</span>

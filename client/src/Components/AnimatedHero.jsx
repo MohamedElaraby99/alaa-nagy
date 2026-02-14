@@ -71,13 +71,13 @@ const AnimatedHero = ({ onGetStarted }) => {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Illustration (Top on mobile) */}
           <div className="relative order-1 lg:order-2">
-            <div className="relative inline-block p-4 rounded-full ring-4 ring-blue-500 dark:ring-blue-400">
+           
               <img
                 src={HERO.teacherImageUrl || logo}
                 alt={BRAND.teacherName}
                 className="w-100 h-100 object-contain relative z-10 rounded-full"
               />
-            </div>
+            
           </div>
 
           {/* Right Side - Text Content (Bottom on mobile) */}
